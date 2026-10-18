@@ -1,0 +1,14 @@
+2026-10-04T07:59:27.866782170Z 2026-10-04 07:59:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T07:59:27.888874437Z 2026-10-04 07:59:27 INFO  AbstractOperator:242 - Reconciliation #139(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T07:59:29.729633884Z 2026-10-04 07:59:29 INFO  AbstractOperator:521 - Reconciliation #139(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:01:27.861450539Z 2026-10-04 08:01:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:01:28.029202866Z 2026-10-04 08:01:28 INFO  AbstractOperator:242 - Reconciliation #140(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:01:30.003017645Z 2026-10-04 08:01:30 INFO  AbstractOperator:521 - Reconciliation #140(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:02:26.062089150Z 2026-10-04 08:02:26 INFO  StrimziPodSetController:350 - Reconciliation #141(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:02:26.064420357Z 2026-10-04 08:02:26 INFO  StrimziPodSetController:388 - Reconciliation #141(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:03:27.857550686Z 2026-10-04 08:03:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:03:27.882933952Z 2026-10-04 08:03:27 INFO  AbstractOperator:242 - Reconciliation #142(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:03:29.857245016Z 2026-10-04 08:03:29 INFO  AbstractOperator:521 - Reconciliation #142(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:05:27.861557584Z 2026-10-04 08:05:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:05:27.889256550Z 2026-10-04 08:05:27 INFO  AbstractOperator:242 - Reconciliation #143(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:05:29.932190805Z 2026-10-04 08:05:29 INFO  AbstractOperator:521 - Reconciliation #143(timer) Kafka(kafka/bench): reconciled

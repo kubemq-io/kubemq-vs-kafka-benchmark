@@ -1,0 +1,12 @@
+== gke-kkshow-b-broker-35790078-0jnw
+System time     : 0.000001928 seconds slow of NTP time
+Last offset     : -0.000000859 seconds
+RMS offset      : 0.000020059 seconds
+== gke-kkshow-b-broker-35790078-lf46
+System time     : 0.000000805 seconds fast of NTP time
+Last offset     : +0.000000842 seconds
+RMS offset      : 0.000010033 seconds
+== gke-kkshow-b-broker-35790078-vqgs
+System time     : 0.000006511 seconds fast of NTP time
+Last offset     : +0.000006522 seconds
+RMS offset      : 0.000014371 seconds

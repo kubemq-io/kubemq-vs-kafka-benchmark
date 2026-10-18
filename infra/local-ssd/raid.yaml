@@ -1,0 +1,72 @@
+# Assembles the broker node's NVMe Local SSDs (exposed by GKE as raw block devices,
+# NOT ephemeral-storage mode) into one RAID-0 array, formats it ext4 and mounts it at
+# /mnt/disks/raid0 on the host. The local static provisioner (provisioner.yaml) then
+# publishes that mount as one local PersistentVolume per broker node.
+#
+# One volume per node on both sides: KubeMQ requests exactly one volume per server,
+# so Kafka gets one too (single-disk JBOD) and both see the same two-disk stripe.
+#
+# ext4 is formatted with lazy init OFF, so no background inode-table zeroing competes
+# with fio or with the first benchmark cells.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: local-ssd
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: raid0
+  namespace: local-ssd
+spec:
+  selector:
+    matchLabels: {app: raid0}
+  template:
+    metadata:
+      labels: {app: raid0}
+    spec:
+      nodeSelector:
+        kkbench/pool: broker
+      hostPID: true
+      containers:
+        - name: raid0
+          image: debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251
+          securityContext:
+            privileged: true
+          resources:
+            requests: {cpu: 5m, memory: 16Mi}
+            limits: {memory: 256Mi}
+          command: ["/bin/bash", "-c"]
+          args:
+            - |
+              set -euo pipefail
+              MNT=/mnt/disks/raid0
+              host() { nsenter -t 1 -m -- "$@"; }
+              if host mountpoint -q "$MNT"; then
+                echo "already mounted: $(host findmnt -n -o SOURCE,FSTYPE,SIZE "$MNT")"
+              else
+                DEVS=$(ls /dev/disk/by-id/google-local-nvme-ssd-* 2>/dev/null | sort || true)
+                N=$(echo "$DEVS" | grep -c . || true)
+                echo "local NVMe devices ($N): $DEVS"
+                [ "$N" -ge 1 ] || { echo "FAIL: no local NVMe SSDs on this node"; exit 1; }
+                if [ ! -e /dev/md0 ]; then
+                  apt-get update -qq >/dev/null && apt-get install -y -qq mdadm >/dev/null
+                  mdadm --create /dev/md0 --run --level=0 --chunk=256 --raid-devices="$N" $DEVS
+                fi
+                if ! blkid /dev/md0 >/dev/null 2>&1; then
+                  mkfs.ext4 -F -q -m 0 -E lazy_itable_init=0,lazy_journal_init=0,nodiscard /dev/md0
+                fi
+                host mkdir -p "$MNT"
+                host mount -o noatime,nodiscard /dev/md0 "$MNT"
+                echo "mounted: $(host findmnt -n -o SOURCE,FSTYPE,SIZE "$MNT")"
+              fi
+              touch /tmp/ready
+              exec sleep infinity
+          readinessProbe:
+            exec: {command: ["test", "-f", "/tmp/ready"]}
+            periodSeconds: 5
+          volumeMounts:
+            - {name: dev, mountPath: /dev}
+      volumes:
+        - name: dev
+          hostPath: {path: /dev}

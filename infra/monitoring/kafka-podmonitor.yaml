@@ -1,0 +1,22 @@
+# Scrape the Kafka broker pods' JMX exporter (port tcp-prometheus, 9404, from metricsConfig in
+# infra/kafka/kafka.yaml) at 1 s, the same cadence as the KubeMQ PodMonitor. Applied by up.sh
+# right after the Kafka CR.
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: kafka-bench
+  namespace: kafka
+  labels:
+    release: kps
+spec:
+  selector:
+    matchLabels:
+      strimzi.io/cluster: bench
+      strimzi.io/kind: Kafka
+  namespaceSelector:
+    matchNames: [kafka]
+  podMetricsEndpoints:
+    - port: tcp-prometheus
+      path: /metrics
+      interval: 1s
+      scrapeTimeout: 1s

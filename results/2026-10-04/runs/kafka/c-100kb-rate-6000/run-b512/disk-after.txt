@@ -1,0 +1,3 @@
+gke-kkshow-a-broker-f6b9690e-xm4c 28% 207GB
+gke-kkshow-a-broker-f6b9690e-ltjs 28% 207GB
+gke-kkshow-a-broker-f6b9690e-vg9s 28% 207GB

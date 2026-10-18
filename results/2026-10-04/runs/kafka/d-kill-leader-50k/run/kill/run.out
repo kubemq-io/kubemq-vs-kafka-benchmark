@@ -1,0 +1,12 @@
+driver files: identical except bootstrap.servers (guard caught a planted linger.ms change)
+==> kafka / d-kill-leader-50k / run on kkshow-a
+topics: no benchmark topics present
+==> disk before: gke-kkshow-a-broker-f6b9690e-xm4c 7% 51GB;gke-kkshow-a-broker-f6b9690e-ltjs 7% 51GB;gke-kkshow-a-broker-f6b9690e-vg9s 7% 51GB;
+==> OMB start 2026-10-04T08:49:50Z — workers: http://omb-worker-0.omb-worker.omb.svc.cluster.local:8080,http://omb-worker-1.omb-worker.omb.svc.cluster.local:8080
+==> OMB end 2026-10-04T09:07:43Z, exit 0
+prom export: 87 metric names, 2675557 samples, 2 families missing
+prom export: families missing, see results/2026-10-04/runs/kafka/d-kill-leader-50k/run/prom/MISSING.txt
+partitions: test-topic-0000000-rgyMlmM has 16 partitions (want 16), 0 with no records
+reclaim: 7 s after topic delete: gke-kkshow-a-broker-f6b9690e-xm4c 7% 51GB;gke-kkshow-a-broker-f6b9690e-ltjs 7% 51GB;gke-kkshow-a-broker-f6b9690e-vg9s 7% 51GB;
+publish rate avg: 50009 msg/s   consume rate avg: 50009 msg/s   publish latency p99 (aggregated): 4336.959 ms
+==> recorded results/2026-10-04/runs/kafka/d-kill-leader-50k/run

@@ -1,0 +1,465 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "annotations": {
+            "prometheus.io/path": "/metrics",
+            "prometheus.io/port": "8080",
+            "prometheus.io/scrape": "true"
+        },
+        "creationTimestamp": "2026-10-16T19:17:36Z",
+        "generateName": "bench-",
+        "generation": 1,
+        "labels": {
+            "app": "bench",
+            "apps.kubernetes.io/pod-index": "1",
+            "controller-revision-hash": "bench-6d588bb9cc",
+            "statefulset.kubernetes.io/pod-name": "bench-1",
+            "topology.kubernetes.io/region": "us-east1",
+            "topology.kubernetes.io/zone": "us-east1-b"
+        },
+        "name": "bench-1",
+        "namespace": "kubemq",
+        "ownerReferences": [
+            {
+                "apiVersion": "apps/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "StatefulSet",
+                "name": "bench",
+                "uid": "f71385e5-cebe-4bc7-bd6f-147c89a17c4f"
+            }
+        ],
+        "resourceVersion": "1792178268337727014",
+        "uid": "dd4a30af-d43d-460b-ab6d-a90c2482287f"
+    },
+    "spec": {
+        "affinity": {
+            "podAntiAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": [
+                    {
+                        "labelSelector": {
+                            "matchLabels": {
+                                "app": "bench"
+                            }
+                        },
+                        "topologyKey": "kubernetes.io/hostname"
+                    }
+                ]
+            }
+        },
+        "containers": [
+            {
+                "env": [
+                    {
+                        "name": "CLUSTER_NAME",
+                        "value": "bench"
+                    },
+                    {
+                        "name": "CLUSTER_ROUTES",
+                        "value": "bench-0.bench.kubemq.svc.cluster.local:5228,bench-1.bench.kubemq.svc.cluster.local:5228,bench-2.bench.kubemq.svc.cluster.local:5228"
+                    },
+                    {
+                        "name": "CLUSTER_ENABLE",
+                        "value": "true"
+                    },
+                    {
+                        "name": "POD_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.name"
+                            }
+                        }
+                    },
+                    {
+                        "name": "CLUSTER_REPLICATION_PEERS",
+                        "value": "1@bench-0.bench.kubemq.svc.cluster.local:5229,2@bench-1.bench.kubemq.svc.cluster.local:5229,3@bench-2.bench.kubemq.svc.cluster.local:5229"
+                    },
+                    {
+                        "name": "CONNECTORS_KAFKA_ADVERTISED_HOST",
+                        "value": "$(POD_NAME).bench.kubemq.svc.cluster.local"
+                    },
+                    {
+                        "name": "KUBEMQ_OPERATOR_MANAGED",
+                        "value": "true"
+                    },
+                    {
+                        "name": "NODE_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "spec.nodeName"
+                            }
+                        }
+                    },
+                    {
+                        "name": "KUBEMQ_IMAGE_DIGEST",
+                        "value": "sha256:87f3e1aa3cf3e4c324893e482d8ee4e20f53e40390b41e8722b472854eb801be"
+                    },
+                    {
+                        "name": "CHECKSUM",
+                        "value": "243819e6457eb10c681d7cf16d04608524ab34f5625f808762731b3ee17e155503baca331b688c514d523513191bc7b67b8f790eb9d52e7d4c4c7910a790ad7d"
+                    },
+                    {
+                        "name": "KUBEMQ_DEPLOYMENT_ID",
+                        "value": "ae8c74c1-639e-4fb1-aa9d-25cd61fa7fb3"
+                    },
+                    {
+                        "name": "KUBEMQ_LICENSE_CACHED_LEASE",
+                        "valueFrom": {
+                            "secretKeyRef": {
+                                "key": "lease",
+                                "name": "bench-license-cache",
+                                "optional": true
+                            }
+                        }
+                    }
+                ],
+                "envFrom": [
+                    {
+                        "secretRef": {
+                            "name": "bench"
+                        }
+                    },
+                    {
+                        "configMapRef": {
+                            "name": "bench"
+                        }
+                    }
+                ],
+                "image": "europe-docker.pkg.dev/kubemq/images/kubemq-next:v3.6.22@sha256:87f3e1aa3cf3e4c324893e482d8ee4e20f53e40390b41e8722b472854eb801be",
+                "imagePullPolicy": "IfNotPresent",
+                "livenessProbe": {
+                    "failureThreshold": 12,
+                    "httpGet": {
+                        "path": "/health",
+                        "port": 8080,
+                        "scheme": "HTTP"
+                    },
+                    "initialDelaySeconds": 5,
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "name": "bench",
+                "ports": [
+                    {
+                        "containerPort": 50000,
+                        "name": "grpc-port",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 8080,
+                        "name": "api-port",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 9090,
+                        "name": "rest-port",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 1883,
+                        "name": "mqtt",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 8883,
+                        "name": "mqtt-tls",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 8083,
+                        "name": "mqtt-ws",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 5672,
+                        "name": "amqp",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 5671,
+                        "name": "amqp-tls",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 61613,
+                        "name": "stomp",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 61614,
+                        "name": "stomp-tls",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 4566,
+                        "name": "aws-http",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 8085,
+                        "name": "gcp-grpc",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 9092,
+                        "name": "kafka",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 9093,
+                        "name": "kafka-tls",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 5228,
+                        "name": "cluster-port",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 5229,
+                        "name": "raft-port",
+                        "protocol": "TCP"
+                    }
+                ],
+                "readinessProbe": {
+                    "failureThreshold": 3,
+                    "httpGet": {
+                        "path": "/ready",
+                        "port": 8080,
+                        "scheme": "HTTP"
+                    },
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 1
+                },
+                "resources": {
+                    "limits": {
+                        "cpu": "7",
+                        "memory": "26Gi"
+                    },
+                    "requests": {
+                        "cpu": "7",
+                        "memory": "26Gi"
+                    }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "./kubemq/store",
+                        "name": "bench-vol"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-f7jg8",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "hostname": "bench-1",
+        "nodeName": "gke-kkshow-b-broker-35790078-0jnw",
+        "nodeSelector": {
+            "kkbench/pool": "broker"
+        },
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {
+            "fsGroup": 200
+        },
+        "serviceAccount": "kubemq-cluster-next",
+        "serviceAccountName": "kubemq-cluster-next",
+        "subdomain": "bench",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            }
+        ],
+        "volumes": [
+            {
+                "name": "bench-vol",
+                "persistentVolumeClaim": {
+                    "claimName": "bench-vol-bench-1"
+                }
+            },
+            {
+                "name": "kube-api-access-f7jg8",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "allocatedResources": {
+            "cpu": "7",
+            "memory": "26Gi"
+        },
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-16T19:17:38Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-16T19:17:37Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-16T19:17:48Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-16T19:17:48Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-16T19:17:37Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "allocatedResources": {
+                    "cpu": "7",
+                    "memory": "26Gi"
+                },
+                "containerID": "containerd://b1c733f1371102100481edf0d4fa60150901883dbb8fd86e199abd5ebf5f6789",
+                "image": "sha256:99708b7398c3ba9f2b50e5d68ebb0d872cd7cefcacc35827906c32301cff888f",
+                "imageID": "europe-docker.pkg.dev/kubemq/images/kubemq-next@sha256:87f3e1aa3cf3e4c324893e482d8ee4e20f53e40390b41e8722b472854eb801be",
+                "lastState": {},
+                "name": "bench",
+                "ready": true,
+                "resources": {
+                    "limits": {
+                        "cpu": "7",
+                        "memory": "26Gi"
+                    },
+                    "requests": {
+                        "cpu": "7",
+                        "memory": "26Gi"
+                    }
+                },
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2026-10-16T19:17:38Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 0,
+                        "supplementalGroups": [
+                            0,
+                            200
+                        ],
+                        "uid": 1001
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "./kubemq/store",
+                        "name": "bench-vol"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-f7jg8",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "10.142.0.101",
+        "hostIPs": [
+            {
+                "ip": "10.142.0.101"
+            }
+        ],
+        "observedGeneration": 1,
+        "phase": "Running",
+        "podIP": "10.112.4.11",
+        "podIPs": [
+            {
+                "ip": "10.112.4.11"
+            }
+        ],
+        "qosClass": "Guaranteed",
+        "resources": {
+            "limits": {
+                "cpu": "7",
+                "memory": "26Gi"
+            },
+            "requests": {
+                "cpu": "6992m",
+                "memory": "26Gi"
+            }
+        },
+        "startTime": "2026-10-16T19:17:37Z"
+    }
+}

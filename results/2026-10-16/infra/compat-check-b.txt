@@ -1,0 +1,8 @@
+==> compatibility checks against kubemq (bench-kafka.kubemq.svc.cluster.local:9092)
+PASS  metadata: 3 brokers at 3 distinct addresses (bench-1.bench.kubemq.svc.cluster.local:9092 bench-2.bench.kubemq.svc.cluster.local:9092 bench-0.bench.kubemq.svc.cluster.local:9092 )
+PASS  topic config: driver topicConfig is 'min.insync.replicas=2 ' (nothing known to be rejected)
+PASS  topic config: created topic reads back 16 partitions, 3 replicas, min.insync.replicas=2
+PASS  CreateTime: round-trips exactly from every partition (and the planted 1 ms shift FAILs)
+PASS  acked loss: 2000/2000 PASS clean; -drop-nth 40 FAILs as it must
+
+==> ALL PASS against kubemq; recorded results/2026-10-16/compat/kubemq-181817

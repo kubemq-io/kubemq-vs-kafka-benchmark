@@ -1,0 +1,4 @@
+NAME                CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE   VOLUMEMODE
+local-pv-4694893    736Gi      RWO            Delete           Available           local-ssd      <unset>                          2s    Filesystem
+local-pv-57ddc998   736Gi      RWO            Delete           Available           local-ssd      <unset>                          2s    Filesystem
+local-pv-b639d048   736Gi      RWO            Delete           Available           local-ssd      <unset>                          2s    Filesystem

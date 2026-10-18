@@ -1,0 +1,15 @@
+[pod/raid0-269j9/raid0] /dev/disk/by-id/google-local-nvme-ssd-1
+[pod/raid0-269j9/raid0] debconf: delaying package configuration, since apt-utils is not installed
+[pod/raid0-269j9/raid0] mdadm: Defaulting to version 1.2 metadata
+[pod/raid0-269j9/raid0] mdadm: array /dev/md0 started.
+[pod/raid0-269j9/raid0] mounted: /dev/md0 ext4   736.9G
+[pod/raid0-kcrq6/raid0] /dev/disk/by-id/google-local-nvme-ssd-1
+[pod/raid0-kcrq6/raid0] debconf: delaying package configuration, since apt-utils is not installed
+[pod/raid0-kcrq6/raid0] mdadm: Defaulting to version 1.2 metadata
+[pod/raid0-kcrq6/raid0] mdadm: array /dev/md0 started.
+[pod/raid0-kcrq6/raid0] mounted: /dev/md0 ext4   736.9G
+[pod/raid0-n7dq2/raid0] /dev/disk/by-id/google-local-nvme-ssd-1
+[pod/raid0-n7dq2/raid0] debconf: delaying package configuration, since apt-utils is not installed
+[pod/raid0-n7dq2/raid0] mdadm: Defaulting to version 1.2 metadata
+[pod/raid0-n7dq2/raid0] mdadm: array /dev/md0 started.
+[pod/raid0-n7dq2/raid0] mounted: /dev/md0 ext4   736.9G

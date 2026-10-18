@@ -1,0 +1,13 @@
+2026-10-04T08:49:17Z run.sh started (pid 14412)
+2026-10-04T08:52:09Z OMB measured window started
+2026-10-04T08:52:16Z verifier started on cr-kafka-k1-1791103929 at 5000 msg/s for 13 min
+2026-10-04T08:57:25Z locator: broker id 0 (bench-combined-0) leads 6 partitions of test-topic-0000000-rgyMlmM; counts [   6 0    5 2    5 1 ]
+2026-10-04T08:57:57Z KILL: SIGKILL host pid 20847 (/usr/bin/tini -w -e 143 -- /opt/kafka/bin/kafka-server-start.sh /tmp/strimzi.pro) of bench-combined-0 on gke-kkshow-a-broker-f6b9690e-xm4c, measured minute 5
+2026-10-04T08:58:20Z bench-combined-0 Ready again after 23 s
+2026-10-04T08:58:48Z kill proof: PASS (restartCount 0 -> 1, container changed, PV and data-dir inode and image identical; 2 survivors checked on restartCount/uid/containerID/incarnation)
+2026-10-04T08:58:54Z no under-replicated partition of test-topic-0000000-rgyMlmM 59 s after the kill
+2026-10-04T09:00:00Z boot evidence: bench-combined-0: restartCount 0 -> 1; 0 boot-phase samples; 506 boot log lines;
+2026-10-04T09:00:00Z evidence: 3 pods captured (pods/ logs/ identity/ events.txt operator.log nodes/ diag/); heap profiles copied: 0
+0
+2026-10-04T09:12:33Z verifier exit 0: PASS acked=3786100 observed=3786100 missing=0 longest zero-ack run=8 s
+2026-10-04T09:12:33Z run.sh exit 0

@@ -1,0 +1,16 @@
+test-topic-0000000-rirz-Ww:0:10570202
+test-topic-0000000-rirz-Ww:1:10505342
+test-topic-0000000-rirz-Ww:2:10985342
+test-topic-0000000-rirz-Ww:3:10511269
+test-topic-0000000-rirz-Ww:4:11155664
+test-topic-0000000-rirz-Ww:5:10504640
+test-topic-0000000-rirz-Ww:6:11149847
+test-topic-0000000-rirz-Ww:7:10477837
+test-topic-0000000-rirz-Ww:8:10556909
+test-topic-0000000-rirz-Ww:9:10666660
+test-topic-0000000-rirz-Ww:10:10326234
+test-topic-0000000-rirz-Ww:11:11209711
+test-topic-0000000-rirz-Ww:12:10547478
+test-topic-0000000-rirz-Ww:13:11108416
+test-topic-0000000-rirz-Ww:14:10478924
+test-topic-0000000-rirz-Ww:15:10486082

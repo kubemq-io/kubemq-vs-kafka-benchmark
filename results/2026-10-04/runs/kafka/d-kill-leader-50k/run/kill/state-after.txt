@@ -1,0 +1,1 @@
+1 containerd://bd7c3741df95f450f8a1a9f997ef643df796580d8928d562d1055e06b518693d dd347498-9740-478a-b47f-2c9b1da432b7 2 quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a gke-kkshow-a-broker-f6b9690e-xm4c

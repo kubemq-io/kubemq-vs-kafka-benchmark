@@ -1,0 +1,489 @@
+2026-10-16T21:58:01.401759575Z 2026-10-16 21:58:01.401606 I | dragonboat: [00001:00003] saved <00001:00003:10001>, term 2, file count 0
+2026-10-16T21:58:02.229848903Z 2026-10-16 21:58:02.229700 I | dragonboat: [00002:00003] saved <00002:00003:11251>, term 3, file count 0
+2026-10-16T21:58:11.953428669Z 2026-10-16 21:58:11.953303 I | dragonboat: [00004:00003] saved <00004:00003:13751>, term 2, file count 0
+2026-10-16T21:58:13.205196339Z 2026-10-16 21:58:13.205069 I | dragonboat: [00001:00003] saved <00001:00003:20002>, term 2, file count 0
+2026-10-16T21:58:13.207444301Z 2026-10-16 21:58:13.207341 I | raftpb: going to call compact on 10001
+2026-10-16T21:58:14.386125216Z 2026-10-16 21:58:14.386001 I | dragonboat: [00005:00003] saved <00005:00003:15001>, term 2, file count 0
+2026-10-16T21:58:15.730411030Z 2026-10-16 21:58:15.730295 I | dragonboat: [00002:00003] saved <00002:00003:22502>, term 3, file count 0
+2026-10-16T21:58:15.733096458Z 2026-10-16 21:58:15.733010 I | raftpb: going to call compact on 11251
+2026-10-16T21:58:17.508648711Z 2026-10-16 21:58:17.508528 I | dragonboat: [00007:00003] saved <00007:00003:17501>, term 2, file count 0
+2026-10-16T21:58:17.628306070Z 2026-10-16 21:58:17.628191 I | dragonboat: [00003:00003] saved <00003:00003:12501>, term 2, file count 0
+2026-10-16T21:58:19.507954392Z 2026-10-16 21:58:19.507828 I | dragonboat: [00008:00003] saved <00008:00003:18751>, term 2, file count 0
+2026-10-16T21:58:25.308374594Z 2026-10-16 21:58:25.308226 I | dragonboat: [00001:00003] saved <00001:00003:30003>, term 2, file count 0
+2026-10-16T21:58:25.310529633Z 2026-10-16 21:58:25.310431 I | raftpb: going to call compact on 20002
+2026-10-16T21:58:28.383335724Z 2026-10-16 21:58:28.383173 I | dragonboat: [00006:00003] saved <00006:00003:16251>, term 2, file count 0
+2026-10-16T21:58:28.457232841Z 2026-10-16 21:58:28.457087 I | dragonboat: [00002:00003] saved <00002:00003:33753>, term 3, file count 0
+2026-10-16T21:58:28.460241997Z 2026-10-16 21:58:28.460138 I | raftpb: going to call compact on 22502
+2026-10-16T21:58:34.920641832Z 2026-10-16 21:58:34.920508 I | dragonboat: [00004:00003] saved <00004:00003:27502>, term 2, file count 0
+2026-10-16T21:58:34.924574634Z 2026-10-16 21:58:34.924468 I | raftpb: going to call compact on 13751
+2026-10-16T21:58:37.684309401Z 2026-10-16 21:58:37.684162 I | dragonboat: [00001:00003] saved <00001:00003:40004>, term 2, file count 0
+2026-10-16T21:58:37.687054442Z 2026-10-16 21:58:37.686933 I | raftpb: going to call compact on 30003
+2026-10-16T21:58:39.199614148Z 2026-10-16 21:58:39.199502 I | dragonboat: [00005:00003] saved <00005:00003:30002>, term 2, file count 0
+2026-10-16T21:58:39.202302290Z 2026-10-16 21:58:39.202186 I | raftpb: going to call compact on 15001
+2026-10-16T21:58:43.274373756Z 2026-10-16 21:58:43.274271 I | dragonboat: [00002:00003] saved <00002:00003:45004>, term 3, file count 0
+2026-10-16T21:58:43.277054896Z 2026-10-16 21:58:43.276945 I | raftpb: going to call compact on 33753
+2026-10-16T21:58:46.521059382Z 2026-10-16 21:58:46.520914 I | dragonboat: [00003:00003] saved <00003:00003:25003>, term 2, file count 0
+2026-10-16T21:58:46.524526731Z 2026-10-16 21:58:46.524415 I | raftpb: going to call compact on 12501
+2026-10-16T21:58:47.494696987Z 2026-10-16 21:58:47.494573 I | dragonboat: [00007:00003] saved <00007:00003:35002>, term 2, file count 0
+2026-10-16T21:58:47.496939550Z 2026-10-16 21:58:47.496831 I | raftpb: going to call compact on 17501
+2026-10-16T21:58:48.182038649Z 2026-10-16 21:58:48.181853 I | dragonboat: [00008:00003] saved <00008:00003:37502>, term 2, file count 0
+2026-10-16T21:58:48.184581926Z 2026-10-16 21:58:48.184489 I | raftpb: going to call compact on 18751
+2026-10-16T21:58:50.912372999Z 2026-10-16 21:58:50.912275 I | dragonboat: [00001:00003] saved <00001:00003:50005>, term 2, file count 0
+2026-10-16T21:58:50.914295030Z 2026-10-16 21:58:50.914200 I | raftpb: going to call compact on 40004
+2026-10-16T21:58:50.916158577Z 2026-10-16 21:58:50.916082 I | dragonboat: [00001:00003] compacted log up to index 3
+2026-10-16T21:58:56.573612122Z 2026-10-16 21:58:56.573490 I | dragonboat: [00002:00003] saved <00002:00003:56255>, term 3, file count 0
+2026-10-16T21:58:56.576075824Z 2026-10-16 21:58:56.575972 I | raftpb: going to call compact on 45004
+2026-10-16T21:58:56.578118491Z 2026-10-16 21:58:56.578025 I | dragonboat: [00002:00003] compacted log up to index 3
+2026-10-16T21:58:57.485371643Z {"level":"INFO","time":"2026-10-16T21:58:57.485Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"1","raft_shard_id":2,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~1","raft_log_file":2}
+2026-10-16T21:58:57.700482344Z 2026-10-16 21:58:57.700369 I | dragonboat: [00004:00003] saved <00004:00003:41253>, term 2, file count 0
+2026-10-16T21:58:57.702831186Z 2026-10-16 21:58:57.702732 I | raftpb: going to call compact on 27502
+2026-10-16T21:59:02.162642521Z 2026-10-16 21:59:02.162497 I | dragonboat: [00001:00003] saved <00001:00003:60006>, term 2, file count 0
+2026-10-16T21:59:02.165129556Z 2026-10-16 21:59:02.165036 I | raftpb: going to call compact on 50005
+2026-10-16T21:59:03.269352757Z 2026-10-16 21:59:03.269208 I | dragonboat: [00005:00003] saved <00005:00003:45003>, term 2, file count 0
+2026-10-16T21:59:03.272078045Z 2026-10-16 21:59:03.271966 I | raftpb: going to call compact on 30002
+2026-10-16T21:59:06.005289672Z {"level":"INFO","time":"2026-10-16T21:59:06.004Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"0","raft_shard_id":1,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk","raft_log_file":2}
+2026-10-16T21:59:08.997251393Z 2026-10-16 21:59:08.997140 I | dragonboat: [00006:00003] saved <00006:00003:32502>, term 2, file count 0
+2026-10-16T21:59:09.000631487Z 2026-10-16 21:59:09.000519 I | raftpb: going to call compact on 16251
+2026-10-16T21:59:09.637339410Z 2026-10-16 21:59:09.637211 I | dragonboat: [00002:00003] saved <00002:00003:67506>, term 3, file count 0
+2026-10-16T21:59:09.639450949Z 2026-10-16 21:59:09.639359 I | raftpb: going to call compact on 56255
+2026-10-16T21:59:13.995463114Z 2026-10-16 21:59:13.995356 I | dragonboat: [00001:00003] saved <00001:00003:70008>, term 2, file count 0
+2026-10-16T21:59:13.998409840Z 2026-10-16 21:59:13.998325 I | raftpb: going to call compact on 60006
+2026-10-16T21:59:14.816212037Z 2026-10-16 21:59:14.816071 I | dragonboat: [00003:00003] saved <00003:00003:37504>, term 2, file count 0
+2026-10-16T21:59:14.818572520Z 2026-10-16 21:59:14.818500 I | raftpb: going to call compact on 25003
+2026-10-16T21:59:15.595735028Z 2026-10-16 21:59:15.595093 I | dragonboat: [00007:00003] saved <00007:00003:52503>, term 2, file count 0
+2026-10-16T21:59:15.598543969Z 2026-10-16 21:59:15.598356 I | raftpb: going to call compact on 35002
+2026-10-16T21:59:15.600913417Z 2026-10-16 21:59:15.600840 I | dragonboat: [00007:00003] compacted log up to index 3
+2026-10-16T21:59:19.254178997Z 2026-10-16 21:59:19.254060 I | dragonboat: [00008:00003] saved <00008:00003:56253>, term 2, file count 0
+2026-10-16T21:59:19.256721613Z 2026-10-16 21:59:19.256618 I | raftpb: going to call compact on 37502
+2026-10-16T21:59:19.258617210Z 2026-10-16 21:59:19.258528 I | dragonboat: [00008:00003] compacted log up to index 3
+2026-10-16T21:59:20.874516519Z 2026-10-16 21:59:20.874376 I | dragonboat: [00004:00003] saved <00004:00003:55004>, term 2, file count 0
+2026-10-16T21:59:20.877084712Z 2026-10-16 21:59:20.877010 I | raftpb: going to call compact on 41253
+2026-10-16T21:59:20.879769065Z 2026-10-16 21:59:20.879616 I | dragonboat: [00004:00003] compacted log up to index 3
+2026-10-16T21:59:22.508232045Z {"level":"INFO","time":"2026-10-16T21:59:22.508Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"7","raft_shard_id":8,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~14","raft_log_file":2}
+2026-10-16T21:59:23.271745574Z 2026-10-16 21:59:23.271599 I | dragonboat: [00002:00003] saved <00002:00003:78757>, term 3, file count 0
+2026-10-16T21:59:23.273890319Z 2026-10-16 21:59:23.273796 I | raftpb: going to call compact on 67506
+2026-10-16T21:59:25.793395844Z 2026-10-16 21:59:25.793271 I | dragonboat: [00001:00003] saved <00001:00003:80009>, term 2, file count 0
+2026-10-16T21:59:25.795923041Z 2026-10-16 21:59:25.795818 I | raftpb: going to call compact on 70008
+2026-10-16T21:59:27.749783059Z 2026-10-16 21:59:27.749680 I | dragonboat: [00005:00003] saved <00005:00003:60004>, term 2, file count 0
+2026-10-16T21:59:27.751737419Z 2026-10-16 21:59:27.751639 I | raftpb: going to call compact on 45003
+2026-10-16T21:59:27.753415477Z 2026-10-16 21:59:27.753338 I | dragonboat: [00005:00003] compacted log up to index 3
+2026-10-16T21:59:32.497129552Z {"level":"INFO","time":"2026-10-16T21:59:32.496Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"4","raft_shard_id":5,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~15","raft_log_file":2}
+2026-10-16T21:59:36.737858386Z 2026-10-16 21:59:36.737726 I | dragonboat: [00002:00003] saved <00002:00003:90008>, term 3, file count 0
+2026-10-16T21:59:36.740718035Z 2026-10-16 21:59:36.740582 I | raftpb: going to call compact on 78757
+2026-10-16T21:59:37.466789405Z 2026-10-16 21:59:37.466601 I | dragonboat: [00001:00003] saved <00001:00003:90010>, term 2, file count 0
+2026-10-16T21:59:37.469339096Z 2026-10-16 21:59:37.469189 I | raftpb: going to call compact on 80009
+2026-10-16T21:59:41.847284600Z 2026-10-16 21:59:41.847111 I | dragonboat: [00007:00003] saved <00007:00003:70004>, term 2, file count 0
+2026-10-16T21:59:41.850124713Z 2026-10-16 21:59:41.850031 I | raftpb: going to call compact on 52503
+2026-10-16T21:59:42.504544222Z {"level":"INFO","time":"2026-10-16T21:59:42.504Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"6","raft_shard_id":7,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~13","raft_log_file":2}
+2026-10-16T21:59:43.994592304Z 2026-10-16 21:59:43.994455 I | dragonboat: [00003:00003] saved <00003:00003:50006>, term 2, file count 0
+2026-10-16T21:59:43.997465688Z 2026-10-16 21:59:43.997355 I | raftpb: going to call compact on 37504
+2026-10-16T21:59:43.999414998Z 2026-10-16 21:59:43.999232 I | dragonboat: [00003:00003] compacted log up to index 3
+2026-10-16T21:59:44.398242945Z 2026-10-16 21:59:44.398066 I | dragonboat: [00004:00003] saved <00004:00003:68755>, term 2, file count 0
+2026-10-16T21:59:44.400629407Z 2026-10-16 21:59:44.400550 I | raftpb: going to call compact on 55004
+2026-10-16T21:59:47.492983826Z {"level":"INFO","time":"2026-10-16T21:59:47.492Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"3","raft_shard_id":4,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~10","raft_log_file":2}
+2026-10-16T21:59:47.565584840Z 2026-10-16 21:59:47.565034 I | dragonboat: [00006:00003] saved <00006:00003:48753>, term 2, file count 0
+2026-10-16T21:59:47.567771343Z 2026-10-16 21:59:47.567637 I | raftpb: going to call compact on 32502
+2026-10-16T21:59:48.140402782Z 2026-10-16 21:59:48.140334 I | dragonboat: [00008:00003] saved <00008:00003:75004>, term 2, file count 0
+2026-10-16T21:59:48.143827878Z 2026-10-16 21:59:48.142944 I | raftpb: going to call compact on 56253
+2026-10-16T21:59:49.451446707Z 2026-10-16 21:59:49.451308 I | dragonboat: [00001:00003] saved <00001:00003:100011>, term 2, file count 0
+2026-10-16T21:59:49.454145783Z 2026-10-16 21:59:49.454058 I | raftpb: going to call compact on 90010
+2026-10-16T21:59:50.809158070Z 2026-10-16 21:59:50.808999 I | dragonboat: [00002:00003] saved <00002:00003:101259>, term 3, file count 0
+2026-10-16T21:59:50.811559987Z 2026-10-16 21:59:50.811445 I | raftpb: going to call compact on 90008
+2026-10-16T21:59:51.323932130Z 2026-10-16 21:59:51.323825 I | dragonboat: [00005:00003] saved <00005:00003:75005>, term 2, file count 0
+2026-10-16T21:59:51.326724674Z 2026-10-16 21:59:51.326633 I | raftpb: going to call compact on 60004
+2026-10-16T21:59:59.319816052Z {"level":"INFO","time":"2026-10-16T21:59:59.319Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":7,"raft_shard_id":8,"since_first_pass":"3m28.215s"}
+2026-10-16T22:00:00.943428706Z {"level":"INFO","time":"2026-10-16T22:00:00.943Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":1,"raft_shard_id":2,"since_first_pass":"3m29.839s"}
+2026-10-16T22:00:01.493116320Z 2026-10-16 22:00:01.492988 I | dragonboat: [00001:00003] saved <00001:00003:110012>, term 2, file count 0
+2026-10-16T22:00:01.497037692Z 2026-10-16 22:00:01.496868 I | raftpb: going to call compact on 100011
+2026-10-16T22:00:02.967686373Z {"level":"INFO","time":"2026-10-16T22:00:02.967Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":2,"raft_shard_id":3,"since_first_pass":"3m31.863s"}
+2026-10-16T22:00:03.575081126Z {"level":"INFO","time":"2026-10-16T22:00:03.574Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":3,"raft_shard_id":4,"since_first_pass":"3m32.47s"}
+2026-10-16T22:00:04.588184383Z {"level":"INFO","time":"2026-10-16T22:00:04.587Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":2,"raft_shard_id":3,"since_first_pass":"3m33.483s"}
+2026-10-16T22:00:04.943018367Z 2026-10-16 22:00:04.942862 I | dragonboat: [00002:00003] saved <00002:00003:112510>, term 3, file count 0
+2026-10-16T22:00:04.946693617Z 2026-10-16 22:00:04.946568 I | raftpb: going to call compact on 101259
+2026-10-16T22:00:05.803629138Z {"level":"INFO","time":"2026-10-16T22:00:05.803Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":1,"raft_shard_id":2,"since_first_pass":"3m34.699s"}
+2026-10-16T22:00:06.799904844Z 2026-10-16 22:00:06.799736 I | dragonboat: [00004:00003] saved <00004:00003:82506>, term 2, file count 0
+2026-10-16T22:00:06.803210998Z 2026-10-16 22:00:06.803043 I | raftpb: going to call compact on 68755
+2026-10-16T22:00:06.816899933Z {"level":"INFO","time":"2026-10-16T22:00:06.816Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":0,"raft_shard_id":1,"since_first_pass":"3m35.712s"}
+2026-10-16T22:00:07.425509221Z {"level":"INFO","time":"2026-10-16T22:00:07.425Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":7,"raft_shard_id":8,"since_first_pass":"3m36.321s"}
+2026-10-16T22:00:08.437889624Z {"level":"INFO","time":"2026-10-16T22:00:08.437Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":0,"raft_shard_id":1,"since_first_pass":"3m37.333s"}
+2026-10-16T22:00:10.849749441Z 2026-10-16 22:00:10.849593 I | dragonboat: [00007:00003] saved <00007:00003:87505>, term 2, file count 0
+2026-10-16T22:00:10.853045779Z 2026-10-16 22:00:10.852898 I | raftpb: going to call compact on 70004
+2026-10-16T22:00:11.273621952Z {"level":"INFO","time":"2026-10-16T22:00:11.273Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-2","shard":3,"raft_shard_id":4,"since_first_pass":"3m40.169s"}
+2026-10-16T22:00:11.443440736Z 2026-10-16 22:00:11.443308 I | dragonboat: [00003:00003] saved <00003:00003:62507>, term 2, file count 0
+2026-10-16T22:00:11.445888063Z 2026-10-16 22:00:11.445799 I | raftpb: going to call compact on 50006
+2026-10-16T22:00:12.489217664Z {"level":"INFO","time":"2026-10-16T22:00:12.488Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"2","raft_shard_id":3,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~4","raft_log_file":2}
+2026-10-16T22:00:13.418254587Z 2026-10-16 22:00:13.418135 I | dragonboat: [00001:00003] saved <00001:00003:120013>, term 2, file count 0
+2026-10-16T22:00:13.420482815Z 2026-10-16 22:00:13.420374 I | raftpb: going to call compact on 110012
+2026-10-16T22:00:15.423518377Z 2026-10-16 22:00:15.423393 I | dragonboat: [00005:00003] saved <00005:00003:90007>, term 2, file count 0
+2026-10-16T22:00:15.427248081Z 2026-10-16 22:00:15.427084 I | raftpb: going to call compact on 75005
+2026-10-16T22:00:18.122600300Z 2026-10-16 22:00:18.122479 I | dragonboat: [00008:00003] saved <00008:00003:93755>, term 2, file count 0
+2026-10-16T22:00:18.125350425Z 2026-10-16 22:00:18.125252 I | raftpb: going to call compact on 75004
+2026-10-16T22:00:18.545773637Z 2026-10-16 22:00:18.545672 I | dragonboat: [00002:00003] saved <00002:00003:123761>, term 3, file count 0
+2026-10-16T22:00:18.548126644Z 2026-10-16 22:00:18.547923 I | raftpb: going to call compact on 112510
+2026-10-16T22:00:24.833443683Z 2026-10-16 22:00:24.833337 I | dragonboat: [00001:00003] saved <00001:00003:130014>, term 2, file count 0
+2026-10-16T22:00:24.835452290Z 2026-10-16 22:00:24.835388 I | raftpb: going to call compact on 120013
+2026-10-16T22:00:26.633196734Z 2026-10-16 22:00:26.633068 I | dragonboat: [00006:00003] saved <00006:00003:65004>, term 2, file count 0
+2026-10-16T22:00:26.635495446Z 2026-10-16 22:00:26.635395 I | raftpb: going to call compact on 48753
+2026-10-16T22:00:26.637428005Z 2026-10-16 22:00:26.637366 I | dragonboat: [00006:00003] compacted log up to index 3
+2026-10-16T22:00:27.500916600Z {"level":"INFO","time":"2026-10-16T22:00:27.500Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-2","shard":"5","raft_shard_id":6,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~5","raft_log_file":2}
+2026-10-16T22:00:29.721236227Z 2026-10-16 22:00:29.721139 I | dragonboat: [00004:00003] saved <00004:00003:96257>, term 2, file count 0
+2026-10-16T22:00:29.723114807Z 2026-10-16 22:00:29.723002 I | raftpb: going to call compact on 82506
+2026-10-16T22:00:32.071431753Z 2026-10-16 22:00:32.071288 I | dragonboat: [00002:00003] saved <00002:00003:135012>, term 3, file count 0
+2026-10-16T22:00:32.075218610Z 2026-10-16 22:00:32.075075 I | raftpb: going to call compact on 123761
+2026-10-16T22:00:36.841794887Z 2026-10-16 22:00:36.841686 I | dragonboat: [00001:00003] saved <00001:00003:140015>, term 2, file count 0
+2026-10-16T22:00:36.844124477Z 2026-10-16 22:00:36.844033 I | raftpb: going to call compact on 130014
+2026-10-16T22:00:37.987495743Z 2026-10-16 22:00:37.987216 I | dragonboat: [00003:00003] saved <00003:00003:75008>, term 2, file count 0
+2026-10-16T22:00:37.990254997Z 2026-10-16 22:00:37.989884 I | raftpb: going to call compact on 62507
+2026-10-16T22:00:39.300636063Z 2026-10-16 22:00:39.300511 I | dragonboat: [00007:00003] saved <00007:00003:105006>, term 2, file count 0
+2026-10-16T22:00:39.303109586Z 2026-10-16 22:00:39.303006 I | raftpb: going to call compact on 87505
+2026-10-16T22:00:39.645090414Z 2026-10-16 22:00:39.644978 I | dragonboat: [00005:00003] saved <00005:00003:105009>, term 2, file count 0
+2026-10-16T22:00:39.649038459Z 2026-10-16 22:00:39.648918 I | raftpb: going to call compact on 90007
+2026-10-16T22:00:46.429702686Z 2026-10-16 22:00:46.429552 I | dragonboat: [00002:00003] saved <00002:00003:146263>, term 3, file count 0
+2026-10-16T22:00:46.431831689Z 2026-10-16 22:00:46.431743 I | raftpb: going to call compact on 135012
+2026-10-16T22:00:46.619624184Z 2026-10-16 22:00:46.619498 I | dragonboat: [00008:00003] saved <00008:00003:112506>, term 2, file count 0
+2026-10-16T22:00:46.621489118Z 2026-10-16 22:00:46.621390 I | raftpb: going to call compact on 93755
+2026-10-16T22:00:49.014407362Z 2026-10-16 22:00:49.014276 I | dragonboat: [00001:00003] saved <00001:00003:150016>, term 2, file count 0
+2026-10-16T22:00:49.017438366Z 2026-10-16 22:00:49.017335 I | raftpb: going to call compact on 140015
+2026-10-16T22:00:51.462404643Z 2026-10-16 22:00:51.462279 I | dragonboat: [00004:00003] saved <00004:00003:110008>, term 2, file count 0
+2026-10-16T22:00:51.464642013Z 2026-10-16 22:00:51.464564 I | raftpb: going to call compact on 96257
+2026-10-16T22:01:00.382559021Z 2026-10-16 22:01:00.382438 I | dragonboat: [00001:00003] saved <00001:00003:160017>, term 2, file count 0
+2026-10-16T22:01:00.385282088Z 2026-10-16 22:01:00.385140 I | raftpb: going to call compact on 150016
+2026-10-16T22:01:00.439048364Z 2026-10-16 22:01:00.438911 I | dragonboat: [00002:00003] saved <00002:00003:157514>, term 3, file count 0
+2026-10-16T22:01:00.441670821Z 2026-10-16 22:01:00.441588 I | raftpb: going to call compact on 146263
+2026-10-16T22:01:03.418444804Z 2026-10-16 22:01:03.418287 I | dragonboat: [00005:00003] saved <00005:00003:120011>, term 2, file count 0
+2026-10-16T22:01:03.420961551Z 2026-10-16 22:01:03.420806 I | raftpb: going to call compact on 105009
+2026-10-16T22:01:03.444865982Z 2026-10-16 22:01:03.444754 I | dragonboat: [00006:00003] saved <00006:00003:81255>, term 2, file count 0
+2026-10-16T22:01:03.447504655Z 2026-10-16 22:01:03.447355 I | raftpb: going to call compact on 65004
+2026-10-16T22:01:06.082999481Z 2026-10-16 22:01:06.082907 I | dragonboat: [00003:00003] saved <00003:00003:87509>, term 2, file count 0
+2026-10-16T22:01:06.085734413Z 2026-10-16 22:01:06.085623 I | raftpb: going to call compact on 75008
+2026-10-16T22:01:06.958596430Z 2026-10-16 22:01:06.957242 I | dragonboat: [00007:00003] saved <00007:00003:122507>, term 2, file count 0
+2026-10-16T22:01:06.959901416Z 2026-10-16 22:01:06.959779 I | raftpb: going to call compact on 105006
+2026-10-16T22:01:12.467061006Z 2026-10-16 22:01:12.466882 I | dragonboat: [00001:00003] saved <00001:00003:170018>, term 2, file count 0
+2026-10-16T22:01:12.470041240Z 2026-10-16 22:01:12.469921 I | raftpb: going to call compact on 160017
+2026-10-16T22:01:12.753333172Z 2026-10-16 22:01:12.753213 I | dragonboat: [00004:00003] saved <00004:00003:123759>, term 2, file count 0
+2026-10-16T22:01:12.756300942Z 2026-10-16 22:01:12.756125 I | raftpb: going to call compact on 110008
+2026-10-16T22:01:14.739795236Z 2026-10-16 22:01:14.739611 I | dragonboat: [00002:00003] saved <00002:00003:168765>, term 3, file count 0
+2026-10-16T22:01:14.742485178Z 2026-10-16 22:01:14.742340 I | raftpb: going to call compact on 157514
+2026-10-16T22:01:16.100855653Z 2026-10-16 22:01:16.100736 I | dragonboat: [00008:00003] saved <00008:00003:131257>, term 2, file count 0
+2026-10-16T22:01:16.103866369Z 2026-10-16 22:01:16.103780 I | raftpb: going to call compact on 112506
+2026-10-16T22:01:24.543489449Z 2026-10-16 22:01:24.543372 I | dragonboat: [00001:00003] saved <00001:00003:180019>, term 2, file count 0
+2026-10-16T22:01:24.545768533Z 2026-10-16 22:01:24.545678 I | raftpb: going to call compact on 170018
+2026-10-16T22:01:26.841458148Z 2026-10-16 22:01:26.841349 I | dragonboat: [00005:00003] saved <00005:00003:135012>, term 2, file count 0
+2026-10-16T22:01:26.844003157Z 2026-10-16 22:01:26.843896 I | raftpb: going to call compact on 120011
+2026-10-16T22:01:28.400347134Z 2026-10-16 22:01:28.400225 I | dragonboat: [00002:00003] saved <00002:00003:180016>, term 3, file count 0
+2026-10-16T22:01:28.402069894Z 2026-10-16 22:01:28.401970 I | raftpb: going to call compact on 168765
+2026-10-16T22:01:33.920523427Z {"level":"WARN","time":"2026-10-16T22:01:33.920Z","component":"kafka-produce","caller":"kafka/produce.go:2501","msg":"kafka produce: answering an idempotent batch OUT_OF_ORDER_SEQUENCE_NUMBER (45)","host":"bench-2","channel":"kafka.cr-kafka-k1-1792187992~9","phase":"admission","producer_id":1005,"producer_epoch":0,"first_sequence":32832,"last_sequence":32839,"producer_known":true,"stored_last_sequence":32759,"admitted_last_sequence":32759,"stored_epoch":0}
+2026-10-16T22:01:34.123256727Z 2026-10-16 22:01:34.123125 I | dragonboat: [00003:00003] saved <00003:00003:100010>, term 2, file count 0
+2026-10-16T22:01:34.126058736Z 2026-10-16 22:01:34.125959 I | raftpb: going to call compact on 87509
+2026-10-16T22:01:34.895457269Z 2026-10-16 22:01:34.895344 I | dragonboat: [00004:00003] saved <00004:00003:137510>, term 2, file count 0
+2026-10-16T22:01:34.897989555Z 2026-10-16 22:01:34.897865 I | raftpb: going to call compact on 123759
+2026-10-16T22:01:35.101897354Z 2026-10-16 22:01:35.101787 I | dragonboat: [00007:00003] saved <00007:00003:140009>, term 2, file count 0
+2026-10-16T22:01:35.104264253Z 2026-10-16 22:01:35.104189 I | raftpb: going to call compact on 122507
+2026-10-16T22:01:35.948696489Z 2026-10-16 22:01:35.948562 I | dragonboat: [00001:00003] saved <00001:00003:190020>, term 2, file count 0
+2026-10-16T22:01:35.952408890Z 2026-10-16 22:01:35.952322 I | raftpb: going to call compact on 180019
+2026-10-16T22:01:41.856177361Z 2026-10-16 22:01:41.856045 I | dragonboat: [00006:00003] saved <00006:00003:97506>, term 2, file count 0
+2026-10-16T22:01:41.859600751Z 2026-10-16 22:01:41.859408 I | raftpb: going to call compact on 81255
+2026-10-16T22:01:42.464913699Z 2026-10-16 22:01:42.464799 I | dragonboat: [00002:00003] saved <00002:00003:191267>, term 3, file count 0
+2026-10-16T22:01:42.467453100Z 2026-10-16 22:01:42.467316 I | raftpb: going to call compact on 180016
+2026-10-16T22:01:46.035947362Z 2026-10-16 22:01:46.035792 I | dragonboat: [00008:00003] saved <00008:00003:150008>, term 2, file count 0
+2026-10-16T22:01:46.038452367Z 2026-10-16 22:01:46.038352 I | raftpb: going to call compact on 131257
+2026-10-16T22:01:47.891183588Z 2026-10-16 22:01:47.891068 I | dragonboat: [00001:00003] saved <00001:00003:200022>, term 2, file count 0
+2026-10-16T22:01:47.897117253Z 2026-10-16 22:01:47.897009 I | raftpb: going to call compact on 190020
+2026-10-16T22:01:51.169509378Z 2026-10-16 22:01:51.169378 I | dragonboat: [00005:00003] saved <00005:00003:150013>, term 2, file count 0
+2026-10-16T22:01:51.171824209Z 2026-10-16 22:01:51.171736 I | raftpb: going to call compact on 135012
+2026-10-16T22:01:56.165872059Z 2026-10-16 22:01:56.165746 I | dragonboat: [00002:00003] saved <00002:00003:202518>, term 3, file count 0
+2026-10-16T22:01:56.168677620Z 2026-10-16 22:01:56.168435 I | raftpb: going to call compact on 191267
+2026-10-16T22:01:57.812121519Z 2026-10-16 22:01:57.811985 I | dragonboat: [00004:00003] saved <00004:00003:151261>, term 2, file count 0
+2026-10-16T22:01:57.815432870Z 2026-10-16 22:01:57.815288 I | raftpb: going to call compact on 137510
+2026-10-16T22:01:58.490730819Z {"level":"WARN","time":"2026-10-16T22:01:58.490Z","component":"kafka-produce","caller":"kafka/produce.go:2501","msg":"kafka produce: answering an idempotent batch OUT_OF_ORDER_SEQUENCE_NUMBER (45)","host":"bench-2","channel":"kafka.cr-kafka-k1-1792187992~10","phase":"admission","producer_id":1005,"producer_epoch":1,"first_sequence":5490,"last_sequence":5508,"producer_known":true,"stored_last_sequence":5459,"admitted_last_sequence":5459,"stored_epoch":1}
+2026-10-16T22:01:59.969918106Z 2026-10-16 22:01:59.969773 I | dragonboat: [00001:00003] saved <00001:00003:210023>, term 2, file count 0
+2026-10-16T22:01:59.972118895Z 2026-10-16 22:01:59.972024 I | raftpb: going to call compact on 200022
+2026-10-16T22:02:01.867815274Z 2026-10-16 22:02:01.867616 I | dragonboat: [00003:00003] saved <00003:00003:112511>, term 2, file count 0
+2026-10-16T22:02:01.870446783Z 2026-10-16 22:02:01.870353 I | raftpb: going to call compact on 100010
+2026-10-16T22:02:03.924311976Z 2026-10-16 22:02:03.924158 I | dragonboat: [00007:00003] saved <00007:00003:157510>, term 2, file count 0
+2026-10-16T22:02:03.926687996Z 2026-10-16 22:02:03.926615 I | raftpb: going to call compact on 140009
+2026-10-16T22:02:09.554282161Z 2026-10-16 22:02:09.554160 I | dragonboat: [00002:00003] saved <00002:00003:213769>, term 3, file count 0
+2026-10-16T22:02:09.556703323Z 2026-10-16 22:02:09.556608 I | raftpb: going to call compact on 202518
+2026-10-16T22:02:11.701769107Z 2026-10-16 22:02:11.701664 I | dragonboat: [00001:00003] saved <00001:00003:220024>, term 2, file count 0
+2026-10-16T22:02:11.704433960Z 2026-10-16 22:02:11.704354 I | raftpb: going to call compact on 210023
+2026-10-16T22:02:15.715571262Z 2026-10-16 22:02:15.715409 I | dragonboat: [00005:00003] saved <00005:00003:165014>, term 2, file count 0
+2026-10-16T22:02:15.718787186Z 2026-10-16 22:02:15.718677 I | raftpb: going to call compact on 150013
+2026-10-16T22:02:15.746086061Z 2026-10-16 22:02:15.745964 I | dragonboat: [00008:00003] saved <00008:00003:168759>, term 2, file count 0
+2026-10-16T22:02:15.748886116Z 2026-10-16 22:02:15.748768 I | raftpb: going to call compact on 150008
+2026-10-16T22:02:21.031240066Z 2026-10-16 22:02:21.031079 I | dragonboat: [00006:00003] saved <00006:00003:113757>, term 2, file count 0
+2026-10-16T22:02:21.034329425Z 2026-10-16 22:02:21.034207 I | raftpb: going to call compact on 97506
+2026-10-16T22:02:21.377536268Z 2026-10-16 22:02:21.377410 I | dragonboat: [00004:00003] saved <00004:00003:165012>, term 2, file count 0
+2026-10-16T22:02:21.379629575Z 2026-10-16 22:02:21.379529 I | raftpb: going to call compact on 151261
+2026-10-16T22:02:23.586493515Z 2026-10-16 22:02:23.586382 I | dragonboat: [00002:00003] saved <00002:00003:225020>, term 3, file count 0
+2026-10-16T22:02:23.590241844Z 2026-10-16 22:02:23.590149 I | raftpb: going to call compact on 213769
+2026-10-16T22:02:23.808275517Z 2026-10-16 22:02:23.808175 I | dragonboat: [00001:00003] saved <00001:00003:230025>, term 2, file count 0
+2026-10-16T22:02:23.810464567Z 2026-10-16 22:02:23.810394 I | raftpb: going to call compact on 220024
+2026-10-16T22:02:30.737297532Z 2026-10-16 22:02:30.737145 I | dragonboat: [00003:00003] saved <00003:00003:125012>, term 2, file count 0
+2026-10-16T22:02:30.740539619Z 2026-10-16 22:02:30.740207 I | raftpb: going to call compact on 112511
+2026-10-16T22:02:31.715577861Z 2026-10-16 22:02:31.715423 I | dragonboat: [00007:00003] saved <00007:00003:175011>, term 2, file count 0
+2026-10-16T22:02:31.717764133Z 2026-10-16 22:02:31.717643 I | raftpb: going to call compact on 157510
+2026-10-16T22:02:35.473442040Z 2026-10-16 22:02:35.473340 I | dragonboat: [00001:00003] saved <00001:00003:240026>, term 2, file count 0
+2026-10-16T22:02:35.475777861Z 2026-10-16 22:02:35.475697 I | raftpb: going to call compact on 230025
+2026-10-16T22:02:37.621419278Z 2026-10-16 22:02:37.621287 I | dragonboat: [00002:00003] saved <00002:00003:236271>, term 3, file count 0
+2026-10-16T22:02:37.623361645Z 2026-10-16 22:02:37.623297 I | raftpb: going to call compact on 225020
+2026-10-16T22:02:40.000506680Z 2026-10-16 22:02:40.000365 I | dragonboat: [00005:00003] saved <00005:00003:180015>, term 2, file count 0
+2026-10-16T22:02:40.002887457Z 2026-10-16 22:02:40.002796 I | raftpb: going to call compact on 165014
+2026-10-16T22:02:42.822915763Z 2026-10-16 22:02:42.822782 I | dragonboat: [00004:00003] saved <00004:00003:178763>, term 2, file count 0
+2026-10-16T22:02:42.825958539Z 2026-10-16 22:02:42.825686 I | raftpb: going to call compact on 165012
+2026-10-16T22:02:46.584413668Z 2026-10-16 22:02:46.584294 I | dragonboat: [00008:00003] saved <00008:00003:187510>, term 2, file count 0
+2026-10-16T22:02:46.587703784Z 2026-10-16 22:02:46.587567 I | raftpb: going to call compact on 168759
+2026-10-16T22:02:47.689156369Z 2026-10-16 22:02:47.689027 I | dragonboat: [00001:00003] saved <00001:00003:250028>, term 2, file count 0
+2026-10-16T22:02:47.691574810Z 2026-10-16 22:02:47.691486 I | raftpb: going to call compact on 240026
+2026-10-16T22:02:50.652500247Z 2026-10-16 22:02:50.652357 I | dragonboat: [00002:00003] saved <00002:00003:247522>, term 3, file count 0
+2026-10-16T22:02:50.655164175Z 2026-10-16 22:02:50.655029 I | raftpb: going to call compact on 236271
+2026-10-16T22:02:58.920379912Z 2026-10-16 22:02:58.920261 I | dragonboat: [00003:00003] saved <00003:00003:137513>, term 2, file count 0
+2026-10-16T22:02:58.922537834Z 2026-10-16 22:02:58.922405 I | raftpb: going to call compact on 125012
+2026-10-16T22:02:59.749851449Z 2026-10-16 22:02:59.749737 I | dragonboat: [00001:00003] saved <00001:00003:260029>, term 2, file count 0
+2026-10-16T22:02:59.752154050Z 2026-10-16 22:02:59.752039 I | raftpb: going to call compact on 250028
+2026-10-16T22:03:00.641408938Z 2026-10-16 22:03:00.641267 I | dragonboat: [00007:00003] saved <00007:00003:192512>, term 2, file count 0
+2026-10-16T22:03:00.644254826Z 2026-10-16 22:03:00.644147 I | raftpb: going to call compact on 175011
+2026-10-16T22:03:01.066646831Z 2026-10-16 22:03:01.066520 I | dragonboat: [00006:00003] saved <00006:00003:130008>, term 2, file count 0
+2026-10-16T22:03:01.068405287Z 2026-10-16 22:03:01.068332 I | raftpb: going to call compact on 113757
+2026-10-16T22:03:03.940633867Z 2026-10-16 22:03:03.940488 I | dragonboat: [00002:00003] saved <00002:00003:258773>, term 3, file count 0
+2026-10-16T22:03:03.943485673Z 2026-10-16 22:03:03.943119 I | raftpb: going to call compact on 247522
+2026-10-16T22:03:04.671226296Z 2026-10-16 22:03:04.671112 I | dragonboat: [00005:00003] saved <00005:00003:195016>, term 2, file count 0
+2026-10-16T22:03:04.673982897Z 2026-10-16 22:03:04.673894 I | raftpb: going to call compact on 180015
+2026-10-16T22:03:05.856399285Z 2026-10-16 22:03:05.856269 I | dragonboat: [00004:00003] saved <00004:00003:192514>, term 2, file count 0
+2026-10-16T22:03:05.858835234Z 2026-10-16 22:03:05.858751 I | raftpb: going to call compact on 178763
+2026-10-16T22:03:11.618833712Z 2026-10-16 22:03:11.618693 I | dragonboat: [00001:00003] saved <00001:00003:270030>, term 2, file count 0
+2026-10-16T22:03:11.621427936Z 2026-10-16 22:03:11.621356 I | raftpb: going to call compact on 260029
+2026-10-16T22:03:15.664041021Z 2026-10-16 22:03:15.663920 I | dragonboat: [00008:00003] saved <00008:00003:206261>, term 2, file count 0
+2026-10-16T22:03:15.666262694Z 2026-10-16 22:03:15.666174 I | raftpb: going to call compact on 187510
+2026-10-16T22:03:17.849627600Z 2026-10-16 22:03:17.849512 I | dragonboat: [00002:00003] saved <00002:00003:270024>, term 3, file count 0
+2026-10-16T22:03:17.851857350Z 2026-10-16 22:03:17.851770 I | raftpb: going to call compact on 258773
+2026-10-16T22:03:23.521920989Z 2026-10-16 22:03:23.521790 I | dragonboat: [00001:00003] saved <00001:00003:280031>, term 2, file count 0
+2026-10-16T22:03:23.524304925Z 2026-10-16 22:03:23.524237 I | raftpb: going to call compact on 270030
+2026-10-16T22:03:26.192742143Z 2026-10-16 22:03:26.192567 I | dragonboat: [00003:00003] saved <00003:00003:150014>, term 2, file count 0
+2026-10-16T22:03:26.195033812Z 2026-10-16 22:03:26.194879 I | raftpb: going to call compact on 137513
+2026-10-16T22:03:28.195474614Z 2026-10-16 22:03:28.195354 I | dragonboat: [00005:00003] saved <00005:00003:210017>, term 2, file count 0
+2026-10-16T22:03:28.198080246Z 2026-10-16 22:03:28.197994 I | raftpb: going to call compact on 195016
+2026-10-16T22:03:28.646593145Z 2026-10-16 22:03:28.646491 I | dragonboat: [00004:00003] saved <00004:00003:206265>, term 2, file count 0
+2026-10-16T22:03:28.649291793Z 2026-10-16 22:03:28.649187 I | raftpb: going to call compact on 192514
+2026-10-16T22:03:29.685596403Z 2026-10-16 22:03:29.685486 I | dragonboat: [00007:00003] saved <00007:00003:210013>, term 2, file count 0
+2026-10-16T22:03:29.688667030Z 2026-10-16 22:03:29.688594 I | raftpb: going to call compact on 192512
+2026-10-16T22:03:31.322720545Z 2026-10-16 22:03:31.322622 I | dragonboat: [00002:00003] saved <00002:00003:281275>, term 3, file count 0
+2026-10-16T22:03:31.324544143Z 2026-10-16 22:03:31.324480 I | raftpb: going to call compact on 270024
+2026-10-16T22:03:35.368286512Z 2026-10-16 22:03:35.368200 I | dragonboat: [00001:00003] saved <00001:00003:290032>, term 2, file count 0
+2026-10-16T22:03:35.370283702Z 2026-10-16 22:03:35.370191 I | raftpb: going to call compact on 280031
+2026-10-16T22:03:38.410355791Z {"level":"WARN","time":"2026-10-16T22:03:38.410Z","component":"kafka-produce","caller":"kafka/produce.go:2501","msg":"kafka produce: answering an idempotent batch OUT_OF_ORDER_SEQUENCE_NUMBER (45)","host":"bench-2","channel":"kafka.cr-kafka-k1-1792187992~9","phase":"admission","producer_id":1005,"producer_epoch":3,"first_sequence":16420,"last_sequence":16469,"producer_known":true,"stored_last_sequence":16379,"admitted_last_sequence":16379,"stored_epoch":3}
+2026-10-16T22:03:41.926187077Z 2026-10-16 22:03:41.926078 I | dragonboat: [00006:00003] saved <00006:00003:146259>, term 2, file count 0
+2026-10-16T22:03:41.928435250Z 2026-10-16 22:03:41.928368 I | raftpb: going to call compact on 130008
+2026-10-16T22:03:44.704845761Z 2026-10-16 22:03:44.704717 I | dragonboat: [00008:00003] saved <00008:00003:225012>, term 2, file count 0
+2026-10-16T22:03:44.707070731Z 2026-10-16 22:03:44.706996 I | raftpb: going to call compact on 206261
+2026-10-16T22:03:45.010702402Z 2026-10-16 22:03:45.010601 I | dragonboat: [00002:00003] saved <00002:00003:292526>, term 3, file count 0
+2026-10-16T22:03:45.012909037Z 2026-10-16 22:03:45.012728 I | raftpb: going to call compact on 281275
+2026-10-16T22:03:47.387702285Z 2026-10-16 22:03:47.387585 I | dragonboat: [00001:00003] saved <00001:00003:300033>, term 2, file count 0
+2026-10-16T22:03:47.390105406Z 2026-10-16 22:03:47.390026 I | raftpb: going to call compact on 290032
+2026-10-16T22:03:49.334043849Z 2026-10-16 22:03:49.333949 I | dragonboat: [00004:00003] saved <00004:00003:220016>, term 2, file count 0
+2026-10-16T22:03:49.335943509Z 2026-10-16 22:03:49.335878 I | raftpb: going to call compact on 206265
+2026-10-16T22:03:52.265633111Z 2026-10-16 22:03:52.265513 I | dragonboat: [00005:00003] saved <00005:00003:225018>, term 2, file count 0
+2026-10-16T22:03:52.268412371Z 2026-10-16 22:03:52.268333 I | raftpb: going to call compact on 210017
+2026-10-16T22:03:54.405273276Z 2026-10-16 22:03:54.405104 I | dragonboat: [00003:00003] saved <00003:00003:162515>, term 2, file count 0
+2026-10-16T22:03:54.408718951Z 2026-10-16 22:03:54.408657 I | raftpb: going to call compact on 150014
+2026-10-16T22:03:56.720689030Z 2026-10-16 22:03:56.720494 I | dragonboat: [00007:00003] saved <00007:00003:227514>, term 2, file count 0
+2026-10-16T22:03:56.723570624Z 2026-10-16 22:03:56.723487 I | raftpb: going to call compact on 210013
+2026-10-16T22:03:58.059003841Z 2026-10-16 22:03:58.058903 I | dragonboat: [00002:00003] saved <00002:00003:303777>, term 3, file count 0
+2026-10-16T22:03:58.060938558Z 2026-10-16 22:03:58.060863 I | raftpb: going to call compact on 292526
+2026-10-16T22:03:58.619487091Z 2026-10-16 22:03:58.619395 I | dragonboat: [00001:00003] saved <00001:00003:310034>, term 2, file count 0
+2026-10-16T22:03:58.621886013Z 2026-10-16 22:03:58.621790 I | raftpb: going to call compact on 300033
+2026-10-16T22:04:10.323792044Z 2026-10-16 22:04:10.323688 I | dragonboat: [00001:00003] saved <00001:00003:320035>, term 2, file count 0
+2026-10-16T22:04:10.326434510Z 2026-10-16 22:04:10.326337 I | raftpb: going to call compact on 310034
+2026-10-16T22:04:11.019021923Z 2026-10-16 22:04:11.018888 I | dragonboat: [00004:00003] saved <00004:00003:233767>, term 2, file count 0
+2026-10-16T22:04:11.021425441Z 2026-10-16 22:04:11.021366 I | raftpb: going to call compact on 220016
+2026-10-16T22:04:11.933009110Z 2026-10-16 22:04:11.932859 I | dragonboat: [00008:00003] saved <00008:00003:243763>, term 2, file count 0
+2026-10-16T22:04:11.935438417Z 2026-10-16 22:04:11.935372 I | raftpb: going to call compact on 225012
+2026-10-16T22:04:11.971549327Z 2026-10-16 22:04:11.971456 I | dragonboat: [00002:00003] saved <00002:00003:315028>, term 3, file count 0
+2026-10-16T22:04:11.974257351Z 2026-10-16 22:04:11.974177 I | raftpb: going to call compact on 303777
+2026-10-16T22:04:15.404360325Z 2026-10-16 22:04:15.404252 I | dragonboat: [00005:00003] saved <00005:00003:240019>, term 2, file count 0
+2026-10-16T22:04:15.407442667Z 2026-10-16 22:04:15.407355 I | raftpb: going to call compact on 225018
+2026-10-16T22:04:17.864643296Z 2026-10-16 22:04:17.864516 I | dragonboat: [00006:00003] saved <00006:00003:162510>, term 2, file count 0
+2026-10-16T22:04:17.868359312Z 2026-10-16 22:04:17.868289 I | raftpb: going to call compact on 146259
+2026-10-16T22:04:20.875794829Z 2026-10-16 22:04:20.875691 I | dragonboat: [00003:00003] saved <00003:00003:175017>, term 2, file count 0
+2026-10-16T22:04:20.877778536Z 2026-10-16 22:04:20.877712 I | raftpb: going to call compact on 162515
+2026-10-16T22:04:22.731372249Z 2026-10-16 22:04:22.731253 I | dragonboat: [00001:00003] saved <00001:00003:330036>, term 2, file count 0
+2026-10-16T22:04:22.733737093Z 2026-10-16 22:04:22.733647 I | raftpb: going to call compact on 320035
+2026-10-16T22:04:25.039781220Z 2026-10-16 22:04:25.039680 I | dragonboat: [00007:00003] saved <00007:00003:245015>, term 2, file count 0
+2026-10-16T22:04:25.042104238Z 2026-10-16 22:04:25.042036 I | raftpb: going to call compact on 227514
+2026-10-16T22:04:25.599259248Z 2026-10-16 22:04:25.599158 I | dragonboat: [00002:00003] saved <00002:00003:326279>, term 3, file count 0
+2026-10-16T22:04:25.601285315Z 2026-10-16 22:04:25.601224 I | raftpb: going to call compact on 315028
+2026-10-16T22:04:33.079415144Z 2026-10-16 22:04:33.079295 I | dragonboat: [00004:00003] saved <00004:00003:247518>, term 2, file count 0
+2026-10-16T22:04:33.081879080Z 2026-10-16 22:04:33.081809 I | raftpb: going to call compact on 233767
+2026-10-16T22:04:34.212728899Z 2026-10-16 22:04:34.212614 I | dragonboat: [00001:00003] saved <00001:00003:340037>, term 2, file count 0
+2026-10-16T22:04:34.215086898Z 2026-10-16 22:04:34.214870 I | raftpb: going to call compact on 330036
+2026-10-16T22:04:38.206370232Z 2026-10-16 22:04:38.206229 I | dragonboat: [00002:00003] saved <00002:00003:337530>, term 3, file count 0
+2026-10-16T22:04:38.208783879Z 2026-10-16 22:04:38.208715 I | raftpb: going to call compact on 326279
+2026-10-16T22:04:39.003567310Z 2026-10-16 22:04:39.003416 I | dragonboat: [00005:00003] saved <00005:00003:255020>, term 2, file count 0
+2026-10-16T22:04:39.005826681Z 2026-10-16 22:04:39.005737 I | raftpb: going to call compact on 240019
+2026-10-16T22:04:40.286562024Z 2026-10-16 22:04:40.286447 I | dragonboat: [00008:00003] saved <00008:00003:262514>, term 2, file count 0
+2026-10-16T22:04:40.289133590Z 2026-10-16 22:04:40.289056 I | raftpb: going to call compact on 243763
+2026-10-16T22:04:46.099388551Z 2026-10-16 22:04:46.099306 I | dragonboat: [00001:00003] saved <00001:00003:350038>, term 2, file count 0
+2026-10-16T22:04:46.100910535Z 2026-10-16 22:04:46.100827 I | raftpb: going to call compact on 340037
+2026-10-16T22:04:47.712557070Z 2026-10-16 22:04:47.712451 I | dragonboat: [00003:00003] saved <00003:00003:187518>, term 2, file count 0
+2026-10-16T22:04:47.716940992Z 2026-10-16 22:04:47.716788 I | raftpb: going to call compact on 175017
+2026-10-16T22:04:51.541523399Z 2026-10-16 22:04:51.541415 I | dragonboat: [00002:00003] saved <00002:00003:348781>, term 3, file count 0
+2026-10-16T22:04:51.543925304Z 2026-10-16 22:04:51.543838 I | raftpb: going to call compact on 337530
+2026-10-16T22:04:52.203030375Z 2026-10-16 22:04:52.202912 I | dragonboat: [00007:00003] saved <00007:00003:262516>, term 2, file count 0
+2026-10-16T22:04:52.205089444Z 2026-10-16 22:04:52.205000 I | raftpb: going to call compact on 245015
+2026-10-16T22:04:55.560328900Z 2026-10-16 22:04:55.560223 I | dragonboat: [00004:00003] saved <00004:00003:261269>, term 2, file count 0
+2026-10-16T22:04:55.562302593Z 2026-10-16 22:04:55.562231 I | raftpb: going to call compact on 247518
+2026-10-16T22:04:56.092898805Z 2026-10-16 22:04:56.092746 I | dragonboat: [00006:00003] saved <00006:00003:178761>, term 2, file count 0
+2026-10-16T22:04:56.095396642Z 2026-10-16 22:04:56.095315 I | raftpb: going to call compact on 162510
+2026-10-16T22:04:57.937761872Z 2026-10-16 22:04:57.937622 I | dragonboat: [00001:00003] saved <00001:00003:360039>, term 2, file count 0
+2026-10-16T22:04:57.940176899Z 2026-10-16 22:04:57.940085 I | raftpb: going to call compact on 350038
+2026-10-16T22:05:02.314189197Z 2026-10-16 22:05:02.314046 I | dragonboat: [00005:00003] saved <00005:00003:270021>, term 2, file count 0
+2026-10-16T22:05:02.316712166Z 2026-10-16 22:05:02.316630 I | raftpb: going to call compact on 255020
+2026-10-16T22:05:04.971811075Z 2026-10-16 22:05:04.971690 I | dragonboat: [00002:00003] saved <00002:00003:360032>, term 3, file count 0
+2026-10-16T22:05:04.974346918Z 2026-10-16 22:05:04.974277 I | raftpb: going to call compact on 348781
+2026-10-16T22:05:09.036197036Z 2026-10-16 22:05:09.035921 I | dragonboat: [00001:00003] saved <00001:00003:370040>, term 2, file count 0
+2026-10-16T22:05:09.039269860Z 2026-10-16 22:05:09.039180 I | raftpb: going to call compact on 360039
+2026-10-16T22:05:09.546631712Z 2026-10-16 22:05:09.546532 I | dragonboat: [00008:00003] saved <00008:00003:281265>, term 2, file count 0
+2026-10-16T22:05:09.550035858Z 2026-10-16 22:05:09.549960 I | raftpb: going to call compact on 262514
+2026-10-16T22:05:15.120292248Z 2026-10-16 22:05:15.120172 I | dragonboat: [00003:00003] saved <00003:00003:200019>, term 2, file count 0
+2026-10-16T22:05:15.122956021Z 2026-10-16 22:05:15.122874 I | raftpb: going to call compact on 187518
+2026-10-16T22:05:16.975781620Z 2026-10-16 22:05:16.975668 I | dragonboat: [00004:00003] saved <00004:00003:275020>, term 2, file count 0
+2026-10-16T22:05:16.978646120Z 2026-10-16 22:05:16.978581 I | raftpb: going to call compact on 261269
+2026-10-16T22:05:18.133566875Z 2026-10-16 22:05:18.133436 I | dragonboat: [00002:00003] saved <00002:00003:371283>, term 3, file count 0
+2026-10-16T22:05:18.136126484Z 2026-10-16 22:05:18.136038 I | raftpb: going to call compact on 360032
+2026-10-16T22:05:19.622570668Z 2026-10-16 22:05:19.622414 I | dragonboat: [00007:00003] saved <00007:00003:280017>, term 2, file count 0
+2026-10-16T22:05:19.624991869Z 2026-10-16 22:05:19.624914 I | raftpb: going to call compact on 262516
+2026-10-16T22:05:20.621935944Z 2026-10-16 22:05:20.621819 I | dragonboat: [00001:00003] saved <00001:00003:380041>, term 2, file count 0
+2026-10-16T22:05:20.624292368Z 2026-10-16 22:05:20.624170 I | raftpb: going to call compact on 370040
+2026-10-16T22:05:25.150061806Z 2026-10-16 22:05:25.149952 E | transport: send batch failed, target bench-1.bench.kubemq.svc.cluster.local:5229 (write tcp 10.112.4.21:60290->10.112.3.21:5229: write: connection reset by peer), 1
+2026-10-16T22:05:25.150097114Z 2026-10-16 22:05:25.149988 W | transport: breaker bench-2.bench.kubemq.svc.cluster.local:5229 to bench-1.bench.kubemq.svc.cluster.local:5229 failed, connect and process failed: write tcp 10.112.4.21:60290->10.112.3.21:5229: write: connection reset by peer
+2026-10-16T22:05:25.150110150Z 2026-10-16 22:05:25.149997 W | transport: bench-1.bench.kubemq.svc.cluster.local:5229 became unreachable, affected 2 nodes
+2026-10-16T22:05:25.150441614Z {"level":"INFO","time":"2026-10-16T22:05:25.150Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:5228 - rid:6 - Router connection closed: Client Closed","host":"bench-2","source":"nats"}
+2026-10-16T22:05:25.381238511Z {"level":"WARN","time":"2026-10-16T22:05:25.381Z","component":"sharding","caller":"sharding/engine.go:2212","msg":"sharding: leader-balancer paused: member unreachable over the raft transport","unreachable":"r2","self_replica":3,"shards":8,"stack":"github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding.(*routingEngine).logBalancePause\n\t/go/github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding/engine.go:2212\ngithub.com/kubemq-io/kubemq/internal/broker/nextengine/sharding.(*routingEngine).reconcileBalance\n\t/go/github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding/engine.go:2011\ngithub.com/kubemq-io/kubemq/internal/broker/nextengine/sharding.(*routingEngine).runLeaderBalancer\n\t/go/github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding/engine.go:1804"}
+2026-10-16T22:05:25.575817040Z 2026-10-16 22:05:25.575710 E | transport: send batch failed, target bench-1.bench.kubemq.svc.cluster.local:5229 (write tcp 10.112.4.21:47566->10.112.3.21:5229: write: connection reset by peer), 1
+2026-10-16T22:05:25.575838107Z 2026-10-16 22:05:25.575742 W | transport: breaker bench-2.bench.kubemq.svc.cluster.local:5229 to bench-1.bench.kubemq.svc.cluster.local:5229 failed, connect and process failed: write tcp 10.112.4.21:47566->10.112.3.21:5229: write: connection reset by peer
+2026-10-16T22:05:25.575841066Z 2026-10-16 22:05:25.575751 W | transport: bench-1.bench.kubemq.svc.cluster.local:5229 became unreachable, affected 2 nodes
+2026-10-16T22:05:25.728919863Z 2026-10-16 22:05:25.728789 I | dragonboat: [00005:00003] saved <00005:00003:285022>, term 2, file count 0
+2026-10-16T22:05:25.730868872Z 2026-10-16 22:05:25.730808 I | raftpb: going to call compact on 270021
+2026-10-16T22:05:26.014825132Z {"level":"INFO","time":"2026-10-16T22:05:26.014Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:34194 - rid:19 - Route connection created","host":"bench-2","source":"nats"}
+2026-10-16T22:05:26.195748036Z {"level":"INFO","time":"2026-10-16T22:05:26.195Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:5228 - rid:20 - Route connection created","host":"bench-2","source":"nats"}
+2026-10-16T22:05:26.195920754Z {"level":"INFO","time":"2026-10-16T22:05:26.195Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:5228 - rid:20 - Router connection closed: Duplicate Route","host":"bench-2","source":"nats"}
+2026-10-16T22:05:26.489636850Z 2026-10-16 22:05:26.489530 E | transport: send batch failed, target bench-1.bench.kubemq.svc.cluster.local:5229 (write tcp 10.112.4.21:60276->10.112.3.21:5229: write: connection reset by peer), 1
+2026-10-16T22:05:26.489673615Z 2026-10-16 22:05:26.489566 W | transport: breaker bench-2.bench.kubemq.svc.cluster.local:5229 to bench-1.bench.kubemq.svc.cluster.local:5229 failed, connect and process failed: write tcp 10.112.4.21:60276->10.112.3.21:5229: write: connection reset by peer
+2026-10-16T22:05:26.489679557Z 2026-10-16 22:05:26.489574 W | transport: bench-1.bench.kubemq.svc.cluster.local:5229 became unreachable, affected 2 nodes
+2026-10-16T22:05:27.240957215Z 2026-10-16 22:05:27.240850 W | raft: [f:4,l:204250,t:2,c:204250,a:204250] [00003:00003] t2 cast preVote from n00001 index 204250 term 3, log term: 2
+2026-10-16T22:05:27.241729059Z 2026-10-16 22:05:27.241676 W | raft: [f:4,l:204250,t:2,c:204250,a:204250] [00003:00003] t2 received RequestVote with higher term (3) from n00001
+2026-10-16T22:05:27.241752180Z 2026-10-16 22:05:27.241690 W | raft: [f:4,l:204250,t:2,c:204250,a:204250] [00003:00003] t2 become followerKE after receiving higher term from n00001
+2026-10-16T22:05:27.241755564Z 2026-10-16 22:05:27.241703 I | raft: [f:4,l:204250,t:2,c:204250,a:204250] [00003:00003] t3 became follower
+2026-10-16T22:05:27.241758291Z 2026-10-16 22:05:27.241710 W | raft: [f:4,l:204250,t:2,c:204250,a:204250] [00003:00003] t3 cast vote from n00001 index 204250 term 3, log term: 2
+2026-10-16T22:05:27.384222436Z {"level":"INFO","time":"2026-10-16T22:05:27.384Z","component":"sharding","caller":"sharding/engine.go:2111","msg":"sharding: leader-balancer holding: a shard's leadership changed without a transfer from this node","shard":3,"lost_by":2,"restarted":false,"hold":"10s","self_replica":3}
+2026-10-16T22:05:27.384252383Z {"level":"INFO","time":"2026-10-16T22:05:27.384Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=3 r2=2 r3=3","self_replica":3,"shards":8,"members":3}
+2026-10-16T22:05:27.384255389Z {"level":"INFO","time":"2026-10-16T22:05:27.384Z","component":"sharding","caller":"sharding/engine.go:2216","msg":"sharding: leader-balancer resumed: every member reachable","previously_unreachable":"r2","self_replica":3,"shards":8}
+2026-10-16T22:05:27.384263503Z {"level":"INFO","time":"2026-10-16T22:05:27.384Z","component":"sharding","caller":"sharding/engine.go:2197","msg":"sharding: leader-balancer holding: a member that was unreachable must stay reachable before it receives leadership","settling":"r2","settle":"20s","self_replica":3}
+2026-10-16T22:05:27.411399505Z 2026-10-16 22:05:27.411301 E | transport: send batch failed, target bench-1.bench.kubemq.svc.cluster.local:5229 (write tcp 10.112.4.21:60292->10.112.3.21:5229: write: connection reset by peer), 2
+2026-10-16T22:05:27.411422720Z 2026-10-16 22:05:27.411333 W | transport: breaker bench-2.bench.kubemq.svc.cluster.local:5229 to bench-1.bench.kubemq.svc.cluster.local:5229 failed, connect and process failed: write tcp 10.112.4.21:60292->10.112.3.21:5229: write: connection reset by peer
+2026-10-16T22:05:27.411425833Z 2026-10-16 22:05:27.411343 W | transport: bench-1.bench.kubemq.svc.cluster.local:5229 became unreachable, affected 1 nodes
+2026-10-16T22:05:27.634608218Z {"level":"WARN","time":"2026-10-16T22:05:27.634Z","component":"sharding","caller":"sharding/engine.go:2212","msg":"sharding: leader-balancer paused: member unreachable over the raft transport","unreachable":"r2","self_replica":3,"shards":8,"stack":"github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding.(*routingEngine).logBalancePause\n\t/go/github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding/engine.go:2212\ngithub.com/kubemq-io/kubemq/internal/broker/nextengine/sharding.(*routingEngine).reconcileBalance\n\t/go/github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding/engine.go:2011\ngithub.com/kubemq-io/kubemq/internal/broker/nextengine/sharding.(*routingEngine).runLeaderBalancer\n\t/go/github.com/kubemq-io/kubemq/internal/broker/nextengine/sharding/engine.go:1804"}
+2026-10-16T22:05:28.000729605Z 2026-10-16 22:05:28.000639 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t2 became PreVote candidate
+2026-10-16T22:05:28.000751088Z 2026-10-16 22:05:28.000666 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t2 received RequestPreVoteResp from n00003
+2026-10-16T22:05:28.000754276Z 2026-10-16 22:05:28.000675 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t2 sent RequestPreVote to n00001
+2026-10-16T22:05:28.000756802Z 2026-10-16 22:05:28.000680 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t2 sent RequestPreVote to n00002
+2026-10-16T22:05:28.000975542Z 2026-10-16 22:05:28.000911 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t2 received RequestPreVoteResp from n00001
+2026-10-16T22:05:28.000993421Z 2026-10-16 22:05:28.000927 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t2 received 2 preVotes and 0 rejections, quorum is 2
+2026-10-16T22:05:28.000996314Z 2026-10-16 22:05:28.000937 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 became candidate
+2026-10-16T22:05:28.000998655Z 2026-10-16 22:05:28.000943 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 received RequestVoteResp from n00003
+2026-10-16T22:05:28.001000935Z 2026-10-16 22:05:28.000951 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 sent RequestVote to n00001
+2026-10-16T22:05:28.001003531Z 2026-10-16 22:05:28.000957 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 sent RequestVote to n00002
+2026-10-16T22:05:28.002074826Z 2026-10-16 22:05:28.002019 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 received RequestVoteResp from n00001
+2026-10-16T22:05:28.002090288Z 2026-10-16 22:05:28.002032 W | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 received 2 votes and 0 rejections, quorum is 2
+2026-10-16T22:05:28.002092388Z 2026-10-16 22:05:28.002046 I | raft: [f:4,l:383229,t:2,c:383229,a:383229] [00001:00003] t3 became leader
+2026-10-16T22:05:28.006133509Z {"level":"INFO","time":"2026-10-16T22:05:28.006Z","component":"transport-server","caller":"broker/enginemode.go:812","msg":"next engine promoted to control-shard leader — notifying kafka to reload coordinator/PID state","host":"bench-2","prevRole":"mixed"}
+2026-10-16T22:05:28.006152772Z {"level":"INFO","time":"2026-10-16T22:05:28.006Z","component":"kafka","caller":"kafka/connector.go:3402","msg":"kafka leadership acquired — driving coordinator/PID reload","host":"bench-2"}
+2026-10-16T22:05:28.006164629Z {"level":"INFO","time":"2026-10-16T22:05:28.006Z","component":"kafka","caller":"kafka/connector.go:3387","msg":"kafka broker state updated","host":"bench-2","accept_traffic":false}
+2026-10-16T22:05:28.006167852Z {"level":"INFO","time":"2026-10-16T22:05:28.006Z","component":"kafka","caller":"kafka/connector.go:3387","msg":"kafka broker state updated","host":"bench-2","accept_traffic":true}
+2026-10-16T22:05:28.104818282Z {"level":"WARN","time":"2026-10-16T22:05:28.104Z","component":"kafka","caller":"kafka/coordinatorproxy.go:773","msg":"kafka coordinator proxy: the control-shard view changed while a request was forwarded to the old coordinator; abandoning the forward so the client retries against the current coordinator","host":"bench-2","api_key":8,"term_was":2,"term_now":3,"leader_was":2,"leader_now":3,"this_node_is_now_coordinator":false}
+2026-10-16T22:05:28.104840284Z {"level":"WARN","time":"2026-10-16T22:05:28.104Z","component":"kafka","caller":"kafka/coordinatorproxy.go:937","msg":"kafka coordinator proxy: forwarding a consumer-group request to the cluster coordinator failed; answering a retriable coordinator error","host":"bench-2","api_key":8,"error":"context canceled"}
+2026-10-16T22:05:28.135627088Z {"level":"INFO","time":"2026-10-16T22:05:28.135Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=3 r2=1 r3=4","self_replica":3,"shards":8,"members":3}
+2026-10-16T22:05:28.203796325Z {"level":"WARN","time":"2026-10-16T22:05:28.203Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~11","topic":"test-topic-0000000-F0Aa4Kk","partition":11,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~11\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.203830365Z {"level":"WARN","time":"2026-10-16T22:05:28.203Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk","topic":"test-topic-0000000-F0Aa4Kk","partition":0,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.203841559Z {"level":"WARN","time":"2026-10-16T22:05:28.203Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~2","topic":"test-topic-0000000-F0Aa4Kk","partition":2,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~2\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.204758366Z {"level":"WARN","time":"2026-10-16T22:05:28.204Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk","topic":"test-topic-0000000-F0Aa4Kk","partition":0,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.204770282Z {"level":"WARN","time":"2026-10-16T22:05:28.204Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~2","topic":"test-topic-0000000-F0Aa4Kk","partition":2,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~2\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.204773059Z {"level":"WARN","time":"2026-10-16T22:05:28.204Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~11","topic":"test-topic-0000000-F0Aa4Kk","partition":11,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~11\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.205271285Z {"level":"WARN","time":"2026-10-16T22:05:28.205Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk","topic":"test-topic-0000000-F0Aa4Kk","partition":0,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.205286302Z {"level":"WARN","time":"2026-10-16T22:05:28.205Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~2","topic":"test-topic-0000000-F0Aa4Kk","partition":2,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~2\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.205290079Z {"level":"WARN","time":"2026-10-16T22:05:28.205Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~11","topic":"test-topic-0000000-F0Aa4Kk","partition":11,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~11\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.205585228Z {"level":"WARN","time":"2026-10-16T22:05:28.205Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~11","topic":"test-topic-0000000-F0Aa4Kk","partition":11,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~11\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.205742877Z {"level":"WARN","time":"2026-10-16T22:05:28.205Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk","topic":"test-topic-0000000-F0Aa4Kk","partition":0,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.207181926Z {"level":"WARN","time":"2026-10-16T22:05:28.207Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk","topic":"test-topic-0000000-F0Aa4Kk","partition":0,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.207201306Z {"level":"WARN","time":"2026-10-16T22:05:28.207Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~2","topic":"test-topic-0000000-F0Aa4Kk","partition":2,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~2\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.207567182Z {"level":"WARN","time":"2026-10-16T22:05:28.207Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~11","topic":"test-topic-0000000-F0Aa4Kk","partition":11,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~11\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.209427032Z {"level":"WARN","time":"2026-10-16T22:05:28.209Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk","topic":"test-topic-0000000-F0Aa4Kk","partition":0,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.209444491Z {"level":"WARN","time":"2026-10-16T22:05:28.209Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~2","topic":"test-topic-0000000-F0Aa4Kk","partition":2,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~2\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.209454468Z {"level":"WARN","time":"2026-10-16T22:05:28.209Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~11","topic":"test-topic-0000000-F0Aa4Kk","partition":11,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: leader not caught up (FSM applying prior-term entries) on \"kafka.test-topic-0000000-F0Aa4Kk~11\": not the caught-up leader of the partition's shard in a valid term (term 3, read as 3)","error_code":6}
+2026-10-16T22:05:28.446391267Z 2026-10-16 22:05:28.446291 W | raft: [f:4,l:204326,t:3,c:204326,a:204326] [00003:00003] t3 rejected preVote n00002 index 204250 term 3,logterm 2, utd false
+2026-10-16T22:05:28.601160611Z 2026-10-16 22:05:28.601059 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t2 became PreVote candidate
+2026-10-16T22:05:28.601181651Z 2026-10-16 22:05:28.601073 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t2 received RequestPreVoteResp from n00003
+2026-10-16T22:05:28.601184614Z 2026-10-16 22:05:28.601078 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t2 sent RequestPreVote to n00001
+2026-10-16T22:05:28.601186195Z 2026-10-16 22:05:28.601081 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t2 sent RequestPreVote to n00002
+2026-10-16T22:05:28.601408526Z 2026-10-16 22:05:28.601340 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t2 received RequestPreVoteResp from n00001
+2026-10-16T22:05:28.601426162Z 2026-10-16 22:05:28.601353 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t2 received 2 preVotes and 0 rejections, quorum is 2
+2026-10-16T22:05:28.601429250Z 2026-10-16 22:05:28.601362 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 became candidate
+2026-10-16T22:05:28.601431650Z 2026-10-16 22:05:28.601367 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 received RequestVoteResp from n00003
+2026-10-16T22:05:28.601433674Z 2026-10-16 22:05:28.601373 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 sent RequestVote to n00001
+2026-10-16T22:05:28.601435910Z 2026-10-16 22:05:28.601377 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 sent RequestVote to n00002
+2026-10-16T22:05:28.602435286Z 2026-10-16 22:05:28.602388 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 received RequestVoteResp from n00001
+2026-10-16T22:05:28.602446378Z 2026-10-16 22:05:28.602410 W | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 received 2 votes and 0 rejections, quorum is 2
+2026-10-16T22:05:28.602457726Z 2026-10-16 22:05:28.602420 I | raft: [f:4,l:292205,t:2,c:292204,a:292204] [00008:00003] t3 became leader
+2026-10-16T22:05:28.635872302Z {"level":"INFO","time":"2026-10-16T22:05:28.635Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=3 r2=0 r3=5","self_replica":3,"shards":8,"members":3}
+2026-10-16T22:05:29.136689670Z {"level":"INFO","time":"2026-10-16T22:05:29.136Z","component":"sharding","caller":"sharding/engine.go:2216","msg":"sharding: leader-balancer resumed: every member reachable","previously_unreachable":"r2","self_replica":3,"shards":8}
+2026-10-16T22:05:30.038703915Z {"level":"INFO","time":"2026-10-16T22:05:30.038Z","component":"kafka-groups","caller":"kafka/groupmembership.go:810","msg":"kafka groups: classic coordinator loaded; serving classic groups","host":"bench-2","term":3,"restored_groups":1,"not_restored_groups":0,"since_takeover_ms":2032,"restore_ms":0,"restore_us":20}
+2026-10-16T22:05:30.407159115Z {"level":"INFO","time":"2026-10-16T22:05:30.406Z","component":"kafka","caller":"kafka/connector.go:2768","msg":"kafka PID seed: reserved a durable PID block above stored batches","host":"bench-2","seeded_pid":1005}
+2026-10-16T22:05:30.439792744Z {"level":"WARN","time":"2026-10-16T22:05:30.439Z","component":"kafka-produce","caller":"kafka/produce.go:2501","msg":"kafka produce: answering an idempotent batch OUT_OF_ORDER_SEQUENCE_NUMBER (45)","host":"bench-2","channel":"kafka.cr-kafka-k1-1792187992~14","phase":"admission","producer_id":1005,"producer_epoch":4,"first_sequence":31320,"last_sequence":31369,"producer_known":true,"stored_last_sequence":31219,"admitted_last_sequence":31219,"stored_epoch":4}
+2026-10-16T22:05:30.440615890Z {"level":"WARN","time":"2026-10-16T22:05:30.440Z","component":"kafka","caller":"kafka/produce_wire.go:817","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.cr-kafka-k1-1792187992~2","topic":"cr-kafka-k1-1792187992","partition":2,"batch_index":0,"batch_count":1,"phase":"admission","error":"kafka produce: batch refused, the partition's log moved (stale conditional append) on \"kafka.cr-kafka-k1-1792187992~2\": producer state changed during sequence validation","error_code":6}
+2026-10-16T22:05:33.708898034Z 2026-10-16 22:05:33.708718 I | dragonboat: [00002:00003] saved <00002:00003:382534>, term 3, file count 0
+2026-10-16T22:05:33.710353237Z 2026-10-16 22:05:33.710280 I | raftpb: going to call compact on 371283
+2026-10-16T22:05:35.277023126Z {"level":"WARN","time":"2026-10-16T22:05:35.276Z","component":"kafka","caller":"kafka/coordinatorproxy.go:937","msg":"kafka coordinator proxy: forwarding a consumer-group request to the cluster coordinator failed; answering a retriable coordinator error","host":"bench-2","api_key":12,"error":"context deadline exceeded"}
+2026-10-16T22:05:35.278258067Z {"level":"WARN","time":"2026-10-16T22:05:35.278Z","component":"kafka","caller":"kafka/coordinatorproxy.go:937","msg":"kafka coordinator proxy: forwarding a consumer-group request to the cluster coordinator failed; answering a retriable coordinator error","host":"bench-2","api_key":12,"error":"context deadline exceeded"}
+2026-10-16T22:05:38.105212265Z {"level":"WARN","time":"2026-10-16T22:05:38.105Z","component":"kafka","caller":"kafka/coordinatorproxy.go:937","msg":"kafka coordinator proxy: forwarding a consumer-group request to the cluster coordinator failed; answering a retriable coordinator error","host":"bench-2","api_key":12,"error":"context deadline exceeded"}
+2026-10-16T22:05:38.382166211Z 2026-10-16 22:05:38.381938 I | dragonboat: [00001:00003] saved <00001:00003:390042>, term 3, file count 0
+2026-10-16T22:05:38.385752526Z 2026-10-16 22:05:38.385635 I | raftpb: going to call compact on 380041
+2026-10-16T22:05:39.224761847Z 2026-10-16 22:05:39.224567 I | dragonboat: [00006:00003] saved <00006:00003:195012>, term 2, file count 0
+2026-10-16T22:05:39.227537795Z 2026-10-16 22:05:39.227341 I | raftpb: going to call compact on 178761
+2026-10-16T22:05:42.265180294Z 2026-10-16 22:05:42.265062 I | dragonboat: [00004:00003] saved <00004:00003:288771>, term 2, file count 0
+2026-10-16T22:05:42.267338852Z 2026-10-16 22:05:42.267265 I | raftpb: going to call compact on 275020
+2026-10-16T22:05:43.228271176Z 2026-10-16 22:05:43.227941 I | dragonboat: [00008:00003] saved <00008:00003:300016>, term 3, file count 0
+2026-10-16T22:05:43.232532680Z 2026-10-16 22:05:43.232422 I | raftpb: going to call compact on 281265
+2026-10-16T22:05:46.887757057Z 2026-10-16 22:05:46.887027 I | dragonboat: [00002:00003] saved <00002:00003:393785>, term 3, file count 0
+2026-10-16T22:05:46.889612922Z 2026-10-16 22:05:46.889523 I | raftpb: going to call compact on 382534
+2026-10-16T22:05:49.143255818Z {"level":"INFO","time":"2026-10-16T22:05:49.143Z","component":"sharding","caller":"sharding/engine.go:2030","msg":"sharding: leader-balancer hold ended","self_replica":3}
+2026-10-16T22:05:49.143412334Z {"level":"INFO","time":"2026-10-16T22:05:49.143Z","component":"sharding","caller":"sharding/engine.go:2083","msg":"sharding: leader-balancer moving a shard's leadership to balance load","reason":"leader balance: this node leads at least two more shards than the target","shard":5,"target":2,"self_replica":3,"self_leads":5,"target_leads":0,"target_shards_ready":"all"}
+2026-10-16T22:05:49.143447365Z 2026-10-16 22:05:49.143344 W | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t2 dropped proposal, leader transferring
+2026-10-16T22:05:49.143889182Z {"level":"ERROR","time":"2026-10-16T22:05:49.143Z","component":"array","caller":"array/array.go:852","msg":"publish pub/sub event store error","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~15","error":"kafka produce: commit failed on \"kafka.test-topic-0000000-F0Aa4Kk~15\": fence resolved a definitive non-commit"}
+2026-10-16T22:05:49.143913432Z {"level":"WARN","time":"2026-10-16T22:05:49.143Z","component":"kafka-produce","caller":"kafka/produce.go:4050","msg":"kafka produce: pipeline fenced (mid-window ack failure, timeout, or staleness)","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~15","in_flight":1,"proven":0,"abandoned":0,"term_stable":true}
+2026-10-16T22:05:49.143921371Z {"level":"WARN","time":"2026-10-16T22:05:49.143Z","component":"kafka","caller":"kafka/produce_wire.go:892","msg":"kafka produce: append failed","host":"bench-2","channel":"kafka.test-topic-0000000-F0Aa4Kk~15","topic":"test-topic-0000000-F0Aa4Kk","partition":15,"batch_index":0,"batch_count":1,"phase":"completion","error":"kafka produce: commit failed on \"kafka.test-topic-0000000-F0Aa4Kk~15\": fence resolved a definitive non-commit","error_code":6}
+2026-10-16T22:05:49.144292386Z 2026-10-16 22:05:49.144228 W | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t2 received RequestVote with higher term (3) from n00002
+2026-10-16T22:05:49.144298902Z 2026-10-16 22:05:49.144243 W | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t2 become followerKE after receiving higher term from n00002
+2026-10-16T22:05:49.144301942Z 2026-10-16 22:05:49.144252 I | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t3 became follower
+2026-10-16T22:05:49.144304399Z 2026-10-16 22:05:49.144259 W | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t3 cast vote from n00002 index 297782 term 3, log term: 2
+2026-10-16T22:05:49.145297473Z 2026-10-16 22:05:49.145219 W | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t3 dropped ReadIndex, no leader
+2026-10-16T22:05:49.145311659Z 2026-10-16 22:05:49.145235 W | raft: [f:4,l:297782,t:2,c:297782,a:297782] [00005:00003] t3 dropped ReadIndex, no leader
+2026-10-16T22:05:49.393610862Z {"level":"INFO","time":"2026-10-16T22:05:49.393Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=3 r2=1 r3=4","self_replica":3,"shards":8,"members":3}
+2026-10-16T22:05:49.393667540Z {"level":"INFO","time":"2026-10-16T22:05:49.393Z","component":"sharding","caller":"sharding/engine.go:2083","msg":"sharding: leader-balancer moving a shard's leadership to balance load","reason":"leader balance: this node leads at least two more shards than the target","shard":6,"target":2,"self_replica":3,"self_leads":4,"target_leads":1,"target_shards_ready":"all"}
+2026-10-16T22:05:49.394912398Z 2026-10-16 22:05:49.394498 W | raft: [f:4,l:200096,t:2,c:200096,a:200096] [00006:00003] t2 received RequestVote with higher term (3) from n00002
+2026-10-16T22:05:49.394930433Z 2026-10-16 22:05:49.394520 W | raft: [f:4,l:200096,t:2,c:200096,a:200096] [00006:00003] t2 become followerKE after receiving higher term from n00002
+2026-10-16T22:05:49.394933460Z 2026-10-16 22:05:49.394530 I | raft: [f:4,l:200096,t:2,c:200096,a:200096] [00006:00003] t3 became follower
+2026-10-16T22:05:49.394944829Z 2026-10-16 22:05:49.394538 W | raft: [f:4,l:200096,t:2,c:200096,a:200096] [00006:00003] t3 cast vote from n00002 index 200096 term 3, log term: 2
+2026-10-16T22:05:49.643636487Z {"level":"INFO","time":"2026-10-16T22:05:49.643Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=3 r2=2 r3=3","self_replica":3,"shards":8,"members":3}
+2026-10-16T22:05:49.822665185Z 2026-10-16 22:05:49.822414 I | dragonboat: [00001:00003] saved <00001:00003:400043>, term 3, file count 0
+2026-10-16T22:05:49.825236914Z 2026-10-16 22:05:49.825062 I | raftpb: going to call compact on 390042
+2026-10-16T22:05:50.289596427Z 2026-10-16 22:05:50.289480 I | dragonboat: [00007:00003] saved <00007:00003:297518>, term 2, file count 0
+2026-10-16T22:05:50.292162567Z 2026-10-16 22:05:50.292066 I | raftpb: going to call compact on 280017
+2026-10-16T22:05:51.043866208Z 2026-10-16 22:05:51.043756 I | dragonboat: [00003:00003] saved <00003:00003:212520>, term 3, file count 0
+2026-10-16T22:05:51.046682845Z 2026-10-16 22:05:51.046579 I | raftpb: going to call compact on 200019
+2026-10-16T22:05:52.528372513Z 2026-10-16 22:05:52.528258 I | dragonboat: [00005:00003] saved <00005:00003:300023>, term 3, file count 0
+2026-10-16T22:05:52.530867876Z 2026-10-16 22:05:52.530765 I | raftpb: going to call compact on 285022
+2026-10-16T22:06:00.194335009Z 2026-10-16 22:06:00.194232 I | dragonboat: [00002:00003] saved <00002:00003:405036>, term 3, file count 0
+2026-10-16T22:06:00.196756586Z 2026-10-16 22:06:00.196382 I | raftpb: going to call compact on 393785
+2026-10-16T22:06:01.186255663Z 2026-10-16 22:06:01.186142 I | dragonboat: [00001:00003] saved <00001:00003:410044>, term 3, file count 0
+2026-10-16T22:06:01.189145382Z 2026-10-16 22:06:01.189047 I | raftpb: going to call compact on 400043
+2026-10-16T22:06:03.257248748Z 2026-10-16 22:06:03.257118 I | dragonboat: [00004:00003] saved <00004:00003:302522>, term 2, file count 0
+2026-10-16T22:06:03.259675528Z 2026-10-16 22:06:03.259560 I | raftpb: going to call compact on 288771

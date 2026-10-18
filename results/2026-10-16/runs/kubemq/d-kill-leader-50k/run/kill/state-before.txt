@@ -1,0 +1,1 @@
+0 containerd://c1d33ea11c025a30f9fee2560e63162b98390d445305506b2b8f66954e5a5e45 0bde2503-3be9-4b17-8024-c85305b016d1 2 europe-docker.pkg.dev/kubemq/images/kubemq-next@sha256:87f3e1aa3cf3e4c324893e482d8ee4e20f53e40390b41e8722b472854eb801be gke-kkshow-b-broker-35790078-lf46

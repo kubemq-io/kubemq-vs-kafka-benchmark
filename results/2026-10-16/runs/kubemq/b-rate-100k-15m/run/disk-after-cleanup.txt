@@ -1,0 +1,3 @@
+gke-kkshow-b-broker-35790078-0jnw 14% 102GB
+gke-kkshow-b-broker-35790078-lf46 14% 102GB
+gke-kkshow-b-broker-35790078-vqgs 14% 102GB

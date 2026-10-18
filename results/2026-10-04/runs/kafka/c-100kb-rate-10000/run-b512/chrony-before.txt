@@ -1,0 +1,12 @@
+== gke-kkshow-a-broker-f6b9690e-xm4c
+System time     : 0.000000251 seconds slow of NTP time
+Last offset     : -0.000000246 seconds
+RMS offset      : 0.000034497 seconds
+== gke-kkshow-a-broker-f6b9690e-ltjs
+System time     : 0.000009497 seconds slow of NTP time
+Last offset     : -0.000008280 seconds
+RMS offset      : 0.000006267 seconds
+== gke-kkshow-a-broker-f6b9690e-vg9s
+System time     : 0.000000094 seconds fast of NTP time
+Last offset     : -0.000001349 seconds
+RMS offset      : 0.000020392 seconds

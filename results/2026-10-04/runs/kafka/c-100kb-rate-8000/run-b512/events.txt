@@ -1,0 +1,8 @@
+## kubectl -n kafka get events --sort-by=.lastTimestamp -o wide
+LAST SEEN   TYPE     REASON    OBJECT                 SUBOBJECT                SOURCE                                       MESSAGE                                                                                                                                                                     FIRST SEEN   COUNT   NAME
+59m         Normal   Created   pod/bench-combined-0   spec.containers{kafka}   kubelet, gke-kkshow-a-broker-f6b9690e-xm4c   Container created                                                                                                                                                           4h9m         2       bench-combined-0.18db3d7e92169a51
+59m         Normal   Started   pod/bench-combined-0   spec.containers{kafka}   kubelet, gke-kkshow-a-broker-f6b9690e-xm4c   Container started                                                                                                                                                           4h9m         2       bench-combined-0.18db3d7e946e6909
+59m         Normal   Pulled    pod/bench-combined-0   spec.containers{kafka}   kubelet, gke-kkshow-a-broker-f6b9690e-xm4c   Container image "quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a" already present on machine and can be accessed by the pod   59m          1       bench-combined-0.18db47d9b9129446
+
+## kubectl get events -A --field-selector reason=OOMKilling
+No resources found

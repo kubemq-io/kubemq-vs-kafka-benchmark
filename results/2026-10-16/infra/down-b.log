@@ -1,0 +1,1188 @@
+
+  About to DELETE, permanently:
+    project  kubemq
+    zone     us-east1-b
+    cluster  kkshow-b   (broker: kubemq)
+    labels   {"broker":"kubemq","goog-terraform-provisioned":"true","lifecycle":"throwaway","purpose":"kubemq-kafka-benchmark","slot":"b","ttl-deadline":"20261017-0856"}
+  Everything on it goes, including broker data and any results not yet copied off.
+
+==> terraform destroy (workspace b)
+[0m[1mgoogle_container_cluster.this: Refreshing state... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b][0m
+[0m[1mgoogle_container_node_pool.driver: Refreshing state... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver][0m
+[0m[1mgoogle_container_node_pool.monitoring: Refreshing state... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring][0m
+[0m[1mgoogle_container_node_pool.broker: Refreshing state... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # google_container_cluster.this[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "google_container_cluster" "this" {
+      [31m-[0m[0m autopilot_privileged_admission           = [] [90m-> null[0m[0m
+      [31m-[0m[0m cluster_ipv4_cidr                        = "10.112.0.0/14" [90m-> null[0m[0m
+      [31m-[0m[0m default_max_pods_per_node                = 110 [90m-> null[0m[0m
+      [31m-[0m[0m deletion_policy                          = "DELETE" [90m-> null[0m[0m
+      [31m-[0m[0m deletion_protection                      = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_l4_lb_firewall_reconciliation    = false [90m-> null[0m[0m
+      [31m-[0m[0m effective_labels                         = {
+          [31m-[0m[0m "broker"                     = "kubemq"
+          [31m-[0m[0m "goog-terraform-provisioned" = "true"
+          [31m-[0m[0m "lifecycle"                  = "throwaway"
+          [31m-[0m[0m "purpose"                    = "kubemq-kafka-benchmark"
+          [31m-[0m[0m "slot"                       = "b"
+          [31m-[0m[0m "ttl-deadline"               = "20261017-0856"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m enable_autopilot                         = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_cilium_clusterwide_network_policy = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_fqdn_network_policy               = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_intranode_visibility              = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_kubernetes_alpha                  = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_l4_ilb_subsetting                 = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_legacy_abac                       = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_multi_networking                  = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_shielded_nodes                    = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_tpu                               = false [90m-> null[0m[0m
+      [31m-[0m[0m endpoint                                 = "34.26.67.231" [90m-> null[0m[0m
+      [31m-[0m[0m id                                       = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b" [90m-> null[0m[0m
+      [31m-[0m[0m initial_node_count                       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m label_fingerprint                        = "1b184871" [90m-> null[0m[0m
+      [31m-[0m[0m location                                 = "us-east1-b" [90m-> null[0m[0m
+      [31m-[0m[0m logging_service                          = "logging.googleapis.com/kubernetes" [90m-> null[0m[0m
+      [31m-[0m[0m master_version                           = "1.36.4-gke.1247000" [90m-> null[0m[0m
+      [31m-[0m[0m min_master_version                       = "1.36.4-gke.1247000" [90m-> null[0m[0m
+      [31m-[0m[0m monitoring_service                       = "monitoring.googleapis.com/kubernetes" [90m-> null[0m[0m
+      [31m-[0m[0m name                                     = "kkshow-b" [90m-> null[0m[0m
+      [31m-[0m[0m network                                  = "projects/kubemq/global/networks/default" [90m-> null[0m[0m
+      [31m-[0m[0m networking_mode                          = "VPC_NATIVE" [90m-> null[0m[0m
+      [31m-[0m[0m node_locations                           = [] [90m-> null[0m[0m
+      [31m-[0m[0m node_version                             = "1.36.4-gke.1247000" [90m-> null[0m[0m
+      [31m-[0m[0m project                                  = "kubemq" [90m-> null[0m[0m
+      [31m-[0m[0m remove_default_node_pool                 = true [90m-> null[0m[0m
+      [31m-[0m[0m resource_labels                          = {
+          [31m-[0m[0m "broker"       = "kubemq"
+          [31m-[0m[0m "lifecycle"    = "throwaway"
+          [31m-[0m[0m "purpose"      = "kubemq-kafka-benchmark"
+          [31m-[0m[0m "slot"         = "b"
+          [31m-[0m[0m "ttl-deadline" = "20261017-0856"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m self_link                                = "https://container.googleapis.com/v1/projects/kubemq/zones/us-east1-b/clusters/kkshow-b" [90m-> null[0m[0m
+      [31m-[0m[0m services_ipv4_cidr                       = "34.118.224.0/20" [90m-> null[0m[0m
+      [31m-[0m[0m subnetwork                               = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+      [31m-[0m[0m terraform_labels                         = {
+          [31m-[0m[0m "broker"                     = "kubemq"
+          [31m-[0m[0m "goog-terraform-provisioned" = "true"
+          [31m-[0m[0m "lifecycle"                  = "throwaway"
+          [31m-[0m[0m "purpose"                    = "kubemq-kafka-benchmark"
+          [31m-[0m[0m "slot"                       = "b"
+          [31m-[0m[0m "ttl-deadline"               = "20261017-0856"
+        } [90m-> null[0m[0m
+        [90m# (6 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m addons_config {
+          [31m-[0m[0m dns_cache_config {
+              [31m-[0m[0m enabled = true [90m-> null[0m[0m
+            }
+          [31m-[0m[0m gce_persistent_disk_csi_driver_config {
+              [31m-[0m[0m enabled = true [90m-> null[0m[0m
+            }
+          [31m-[0m[0m gcp_filestore_csi_driver_config {
+              [31m-[0m[0m enabled = true [90m-> null[0m[0m
+            }
+          [31m-[0m[0m network_policy_config {
+              [31m-[0m[0m disabled = true [90m-> null[0m[0m
+            }
+          [31m-[0m[0m node_readiness_config {
+              [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m anonymous_authentication_config {
+          [31m-[0m[0m mode = "LIMITED" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m binary_authorization {
+          [31m-[0m[0m enabled         = false [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m cluster_autoscaling {
+          [31m-[0m[0m auto_provisioning_locations   = [] [90m-> null[0m[0m
+          [31m-[0m[0m autoscaling_profile           = "BALANCED" [90m-> null[0m[0m
+          [31m-[0m[0m default_compute_class_enabled = false [90m-> null[0m[0m
+          [31m-[0m[0m enabled                       = false [90m-> null[0m[0m
+
+          [31m-[0m[0m auto_provisioning_defaults {
+              [31m-[0m[0m disk_size         = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_type        = "COS_CONTAINERD" [90m-> null[0m[0m
+              [31m-[0m[0m oauth_scopes      = [
+                  [31m-[0m[0m "https://www.googleapis.com/auth/devstorage.read_only",
+                  [31m-[0m[0m "https://www.googleapis.com/auth/logging.write",
+                  [31m-[0m[0m "https://www.googleapis.com/auth/monitoring",
+                  [31m-[0m[0m "https://www.googleapis.com/auth/service.management.readonly",
+                  [31m-[0m[0m "https://www.googleapis.com/auth/servicecontrol",
+                  [31m-[0m[0m "https://www.googleapis.com/auth/trace.append",
+                ] [90m-> null[0m[0m
+              [31m-[0m[0m service_account   = "default" [90m-> null[0m[0m
+                [90m# (3 unchanged attributes hidden)[0m[0m
+
+              [31m-[0m[0m management {
+                  [31m-[0m[0m auto_repair     = true [90m-> null[0m[0m
+                  [31m-[0m[0m auto_upgrade    = true [90m-> null[0m[0m
+                  [31m-[0m[0m upgrade_options = [] [90m-> null[0m[0m
+                }
+            }
+        }
+
+      [31m-[0m[0m control_plane_endpoints_config {
+          [31m-[0m[0m dns_endpoint_config {
+              [31m-[0m[0m allow_external_traffic    = false [90m-> null[0m[0m
+              [31m-[0m[0m enable_k8s_certs_via_dns  = false [90m-> null[0m[0m
+              [31m-[0m[0m enable_k8s_tokens_via_dns = false [90m-> null[0m[0m
+              [31m-[0m[0m endpoint                  = "gke-e4abe55fc52d45daa47ecb0f79be32468faa-968231549662.us-east1-b.gke.goog" [90m-> null[0m[0m
+            }
+          [31m-[0m[0m ip_endpoints_config {
+              [31m-[0m[0m enabled = true [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m database_encryption {
+          [31m-[0m[0m state    = "DECRYPTED" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m default_snat_status {
+          [31m-[0m[0m disabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m enterprise_config {
+          [31m-[0m[0m cluster_tier = "STANDARD" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m ip_allocation_policy {
+          [31m-[0m[0m cluster_ipv4_cidr_block       = "10.112.0.0/14" [90m-> null[0m[0m
+          [31m-[0m[0m cluster_secondary_range_name  = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+          [31m-[0m[0m services_ipv4_cidr_block      = "34.118.224.0/20" [90m-> null[0m[0m
+          [31m-[0m[0m stack_type                    = "IPV4" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [31m-[0m[0m network_tier_config {
+              [31m-[0m[0m network_tier = "NETWORK_TIER_DEFAULT" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m pod_cidr_overprovision_config {
+              [31m-[0m[0m disabled = false [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m logging_config {
+          [31m-[0m[0m enable_components = [
+              [31m-[0m[0m "SYSTEM_COMPONENTS",
+            ] [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m maintenance_policy {
+          [31m-[0m[0m daily_maintenance_window {
+              [31m-[0m[0m duration   = "PT4H0M0S" [90m-> null[0m[0m
+              [31m-[0m[0m start_time = "03:00" [90m-> null[0m[0m
+            }
+          [31m-[0m[0m maintenance_exclusion {
+              [31m-[0m[0m end_time       = "2026-11-15T17:56:31Z" [90m-> null[0m[0m
+              [31m-[0m[0m exclusion_name = "benchmark-no-upgrades" [90m-> null[0m[0m
+              [31m-[0m[0m start_time     = "2026-10-16T17:56:31Z" [90m-> null[0m[0m
+
+              [31m-[0m[0m exclusion_options {
+                  [31m-[0m[0m scope             = "NO_UPGRADES" [90m-> null[0m[0m
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+        }
+
+      [31m-[0m[0m master_auth {
+          [31m-[0m[0m cluster_ca_certificate = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVMVENDQXBXZ0F3SUJBZ0lSQUlGWTQvcllJZTQ4VWxqMVZrOU1xVVF3RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa01HWmhPR1l3WlRVdFlqUm1PQzAwWkRCakxXRXlORGN0TlRObVltTXpaRFF6WVRNNQpNQ0FYRFRJMk1UQXhOakUyTlRZek5sb1lEekl3TlRZeE1EQTRNVGMxTmpNMldqQXZNUzB3S3dZRFZRUURFeVF3ClptRTRaakJsTlMxaU5HWTRMVFJrTUdNdFlUSTBOeTAxTTJaaVl6TmtORE5oTXprd2dnR2lNQTBHQ1NxR1NJYjMKRFFFQkFRVUFBNElCandBd2dnR0tBb0lCZ1FDeXZwNTd5VlpGSWdZZllJdGI1NWN4NytZQUt6R2RjMVd4d2RrRgpMenBFeHJQQkowZ2RFTUdRNHJlQU02L0pwdWl6TWJhUHZDTjhnS2czOWFKZWhVODVqRzJJY3N2UFBnM1FybjNTCkF1SEMyOFRjWVloZkFsdHFLT2VMSmFFeDY2K2pOdytrUzRLa1pHQ2hZWThEeG0yZ2RaQTdSbGJjcjdCWVZINXoKcDU3N0wwS3l1L09hM0F4bjl4eFpmVklsdDJEeFpZNlZzaWZUc2lVWC82QXlicVArOGVBeHNKcXJudW53ZEpVWApEL2pYQXFyR0pmb1ZWQ1U5T0RQRERVN1VxTXZEVFdkNjc1SnVOc3NlMEJwQmxaMWhVQVkrQUNNMFB2Q0g2VVVFCjRmeVlJWFpkNXI3ek1lblFpMVp4TGVwL1FzYVgxdU9HeGdqaldSMVVVd3MrSGpEdk9NRmRDdjVUR2o1VDM0ZkcKWmhxNFhPMjZkVUJrNGxlaDlBakhhMEprT1NKVURZUHhQRkdUaUhVSGx3eVZRVk96TnV2NmdabDVFME0yWUZyaApFUFBwM0I2SlM3ZnFGQXBXajVkVlRNaENiR05wNHFPbkRRQldyYTJPQWpybjFnM3BubkozdDZMMFNDZHBVTU03CkxWYktjbWpDTTNRTlpxVzBNMzJKcjY2VWRKa0NBd0VBQWFOQ01FQXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGS1BEZzBUanFpZk1tVldReUxuRWk5VlFHRjRNTUEwRwpDU3FHU0liM0RRRUJDd1VBQTRJQmdRQjVNZXFYbFh5UUUvbkMxb0ZWQjVUa2lDV3pDWGVYeVlxSVlJU2FjVTJiCmMxNUxQWVVFak1kV2g5SThvbFdBZHF3ZkFzYkM5ejY1SEhYZkhRdW9QN0k1WjQzMWNZRVBqSkVuSlgxcDVLS1YKYXIxL1QremZFWThVajBKUitFT21WZ2NkZ0RNcjZDYTRQYzhabFpRRkI5QXJ6c0loTWFMQXpLTWxyM01vek5RdApwQ3hrTStReWhoeVNMc2N4bUU4U1VXbExGUko0N0ZMUFlqVVVtRGNzLy9aNlpzYXBKb2hlTkdydjgydkxqMVhzCmZSMWZEUGx0cm8wMVBxcXZaZXdMWGRnZllLNkxoc0RqdUF3SksyUSsxL3BkRzBiYmt5cmFjT2tVUW9nUUlWdkoKOVhCY0hBTkw4Wm0zK2xhbU5UVklsUUhjUHRmeEEvS2FDSzFuZi9zSmtoQnZPVVF3M2FVdkhDZjM2VjhwemFkRgpsbkt3REtHZWZlbk1URWlGYkliSXZ3S2VBVnErK1dwUnMzS1ZyTDczMUlna213SWh1MjZnbU13cmdiOUhXSDBTCkhKV1R0SDVHMmVxRGFFU0Y3QURIa1hJUDlnd3ZTV0t6U3Z2ZkRxNDRCVXp4OWFDTDJJbEFYcTNOcE9LOGhTUHYKUCtNWWcza2NYTzZXd0dCUnF6cytDUW89Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K" [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m client_certificate_config {
+              [31m-[0m[0m issue_client_certificate = false [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m monitoring_config {
+          [31m-[0m[0m enable_components = [
+              [31m-[0m[0m "SYSTEM_COMPONENTS",
+            ] [90m-> null[0m[0m
+
+          [31m-[0m[0m advanced_datapath_observability_config {
+              [31m-[0m[0m enable_metrics = false [90m-> null[0m[0m
+              [31m-[0m[0m enable_relay   = false [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m managed_prometheus {
+              [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m network_policy {
+          [31m-[0m[0m enabled  = false [90m-> null[0m[0m
+          [31m-[0m[0m provider = "PROVIDER_UNSPECIFIED" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m node_config {
+          [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+          [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+          [31m-[0m[0m effective_taints            = [] [90m-> null[0m[0m
+          [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+          [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+          [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+          [31m-[0m[0m labels                      = {
+              [31m-[0m[0m "kkbench/pool" = "broker"
+              [31m-[0m[0m "kkbench/slot" = "b"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+          [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+          [31m-[0m[0m machine_type                = "n2-standard-8" [90m-> null[0m[0m
+          [31m-[0m[0m metadata                    = {
+              [31m-[0m[0m "disable-legacy-endpoints" = "true"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m min_cpu_platform            = "Intel Ice Lake" [90m-> null[0m[0m
+          [31m-[0m[0m oauth_scopes                = [
+              [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+          [31m-[0m[0m resource_labels             = {
+              [31m-[0m[0m "broker"                                = "kubemq"
+              [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+              [31m-[0m[0m "lifecycle"                             = "throwaway"
+              [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+              [31m-[0m[0m "slot"                                  = "b"
+              [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+          [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+          [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+          [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+          [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+            [90m# (5 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m boot_disk {
+              [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+              [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m kubelet_config {
+              [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+              [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+              [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+              [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+              [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+              [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+              [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                [90m# (5 unchanged attributes hidden)[0m[0m
+            }
+
+          [31m-[0m[0m local_nvme_ssd_block_config {
+              [31m-[0m[0m local_ssd_count = 2 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m node_image_config {
+              [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+              [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m shielded_instance_config {
+              [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+              [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m windows_node_config {
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+
+      [31m-[0m[0m node_creation_config {
+          [31m-[0m[0m node_creation_mode = "VIA_KUBELET" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m node_pool {
+          [31m-[0m[0m ignore_node_count_changes   = false [90m-> null[0m[0m
+          [31m-[0m[0m initial_node_count          = 3 [90m-> null[0m[0m
+          [31m-[0m[0m instance_group_urls         = [
+              [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroupManagers/gke-kkshow-b-broker-35790078-grp",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m managed_instance_group_urls = [
+              [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroups/gke-kkshow-b-broker-35790078-grp",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m max_pods_per_node           = 110 [90m-> null[0m[0m
+          [31m-[0m[0m name                        = "broker" [90m-> null[0m[0m
+          [31m-[0m[0m node_count                  = 3 [90m-> null[0m[0m
+          [31m-[0m[0m node_locations              = [
+              [31m-[0m[0m "us-east1-b",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m version                     = "1.36.4-gke.1247000" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [31m-[0m[0m management {
+              [31m-[0m[0m auto_repair  = false [90m-> null[0m[0m
+              [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m network_config {
+              [31m-[0m[0m create_pod_range            = false [90m-> null[0m[0m
+              [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+              [31m-[0m[0m pod_ipv4_cidr_block         = "10.112.0.0/14" [90m-> null[0m[0m
+              [31m-[0m[0m pod_range                   = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+              [31m-[0m[0m subnetwork                  = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+
+          [31m-[0m[0m node_config {
+              [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+              [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m effective_taints            = [] [90m-> null[0m[0m
+              [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+              [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+              [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+              [31m-[0m[0m labels                      = {
+                  [31m-[0m[0m "kkbench/pool" = "broker"
+                  [31m-[0m[0m "kkbench/slot" = "b"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+              [31m-[0m[0m machine_type                = "n2-standard-8" [90m-> null[0m[0m
+              [31m-[0m[0m metadata                    = {
+                  [31m-[0m[0m "disable-legacy-endpoints" = "true"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m min_cpu_platform            = "Intel Ice Lake" [90m-> null[0m[0m
+              [31m-[0m[0m oauth_scopes                = [
+                  [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+                ] [90m-> null[0m[0m
+              [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+              [31m-[0m[0m resource_labels             = {
+                  [31m-[0m[0m "broker"                                = "kubemq"
+                  [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+                  [31m-[0m[0m "lifecycle"                             = "throwaway"
+                  [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+                  [31m-[0m[0m "slot"                                  = "b"
+                  [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+              [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+              [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+              [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+              [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+                [90m# (5 unchanged attributes hidden)[0m[0m
+
+              [31m-[0m[0m boot_disk {
+                  [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+                  [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m kubelet_config {
+                  [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+                  [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+                  [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+                  [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+                  [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                    [90m# (5 unchanged attributes hidden)[0m[0m
+                }
+
+              [31m-[0m[0m local_nvme_ssd_block_config {
+                  [31m-[0m[0m local_ssd_count = 2 [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m node_image_config {
+                  [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+                  [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m shielded_instance_config {
+                  [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+                  [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m windows_node_config {
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+
+          [31m-[0m[0m upgrade_settings {
+              [31m-[0m[0m max_surge       = 1 [90m-> null[0m[0m
+              [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+              [31m-[0m[0m strategy        = "SURGE" [90m-> null[0m[0m
+            }
+        }
+      [31m-[0m[0m node_pool {
+          [31m-[0m[0m ignore_node_count_changes   = false [90m-> null[0m[0m
+          [31m-[0m[0m initial_node_count          = 2 [90m-> null[0m[0m
+          [31m-[0m[0m instance_group_urls         = [
+              [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroupManagers/gke-kkshow-b-driver-4991f61c-grp",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m managed_instance_group_urls = [
+              [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroups/gke-kkshow-b-driver-4991f61c-grp",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m max_pods_per_node           = 110 [90m-> null[0m[0m
+          [31m-[0m[0m name                        = "driver" [90m-> null[0m[0m
+          [31m-[0m[0m node_count                  = 2 [90m-> null[0m[0m
+          [31m-[0m[0m node_locations              = [
+              [31m-[0m[0m "us-east1-b",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m version                     = "1.36.4-gke.1247000" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [31m-[0m[0m management {
+              [31m-[0m[0m auto_repair  = false [90m-> null[0m[0m
+              [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m network_config {
+              [31m-[0m[0m create_pod_range            = false [90m-> null[0m[0m
+              [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+              [31m-[0m[0m pod_ipv4_cidr_block         = "10.112.0.0/14" [90m-> null[0m[0m
+              [31m-[0m[0m pod_range                   = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+              [31m-[0m[0m subnetwork                  = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+
+          [31m-[0m[0m node_config {
+              [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+              [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m effective_taints            = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m effect = "NO_SCHEDULE"
+                      [31m-[0m[0m key    = "kkbench/pool"
+                      [31m-[0m[0m value  = "driver"
+                    },
+                ] [90m-> null[0m[0m
+              [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+              [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+              [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+              [31m-[0m[0m labels                      = {
+                  [31m-[0m[0m "kkbench/pool" = "driver"
+                  [31m-[0m[0m "kkbench/slot" = "b"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+              [31m-[0m[0m machine_type                = "n2-standard-8" [90m-> null[0m[0m
+              [31m-[0m[0m metadata                    = {
+                  [31m-[0m[0m "disable-legacy-endpoints" = "true"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m min_cpu_platform            = "Intel Ice Lake" [90m-> null[0m[0m
+              [31m-[0m[0m oauth_scopes                = [
+                  [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+                ] [90m-> null[0m[0m
+              [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+              [31m-[0m[0m resource_labels             = {
+                  [31m-[0m[0m "broker"                                = "kubemq"
+                  [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+                  [31m-[0m[0m "lifecycle"                             = "throwaway"
+                  [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+                  [31m-[0m[0m "slot"                                  = "b"
+                  [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+              [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+              [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+              [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+              [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+                [90m# (5 unchanged attributes hidden)[0m[0m
+
+              [31m-[0m[0m boot_disk {
+                  [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+                  [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m kubelet_config {
+                  [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+                  [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+                  [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+                  [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+                  [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                    [90m# (5 unchanged attributes hidden)[0m[0m
+                }
+
+              [31m-[0m[0m node_image_config {
+                  [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+                  [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m shielded_instance_config {
+                  [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+                  [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m windows_node_config {
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+
+          [31m-[0m[0m upgrade_settings {
+              [31m-[0m[0m max_surge       = 1 [90m-> null[0m[0m
+              [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+              [31m-[0m[0m strategy        = "SURGE" [90m-> null[0m[0m
+            }
+        }
+      [31m-[0m[0m node_pool {
+          [31m-[0m[0m ignore_node_count_changes   = false [90m-> null[0m[0m
+          [31m-[0m[0m initial_node_count          = 1 [90m-> null[0m[0m
+          [31m-[0m[0m instance_group_urls         = [
+              [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroupManagers/gke-kkshow-b-monitoring-14e612e7-grp",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m managed_instance_group_urls = [
+              [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroups/gke-kkshow-b-monitoring-14e612e7-grp",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m max_pods_per_node           = 110 [90m-> null[0m[0m
+          [31m-[0m[0m name                        = "monitoring" [90m-> null[0m[0m
+          [31m-[0m[0m node_count                  = 1 [90m-> null[0m[0m
+          [31m-[0m[0m node_locations              = [
+              [31m-[0m[0m "us-east1-b",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m version                     = "1.36.4-gke.1247000" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [31m-[0m[0m management {
+              [31m-[0m[0m auto_repair  = false [90m-> null[0m[0m
+              [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m network_config {
+              [31m-[0m[0m create_pod_range            = false [90m-> null[0m[0m
+              [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+              [31m-[0m[0m pod_ipv4_cidr_block         = "10.112.0.0/14" [90m-> null[0m[0m
+              [31m-[0m[0m pod_range                   = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+              [31m-[0m[0m subnetwork                  = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+
+          [31m-[0m[0m node_config {
+              [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+              [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m effective_taints            = [] [90m-> null[0m[0m
+              [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+              [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+              [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+              [31m-[0m[0m labels                      = {
+                  [31m-[0m[0m "kkbench/pool" = "monitoring"
+                  [31m-[0m[0m "kkbench/slot" = "b"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+              [31m-[0m[0m machine_type                = "e2-standard-4" [90m-> null[0m[0m
+              [31m-[0m[0m metadata                    = {
+                  [31m-[0m[0m "disable-legacy-endpoints" = "true"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m oauth_scopes                = [
+                  [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+                ] [90m-> null[0m[0m
+              [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+              [31m-[0m[0m resource_labels             = {
+                  [31m-[0m[0m "broker"                                = "kubemq"
+                  [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+                  [31m-[0m[0m "lifecycle"                             = "throwaway"
+                  [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+                  [31m-[0m[0m "slot"                                  = "b"
+                  [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+                } [90m-> null[0m[0m
+              [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+              [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+              [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+              [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+              [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+                [90m# (6 unchanged attributes hidden)[0m[0m
+
+              [31m-[0m[0m boot_disk {
+                  [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+                  [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m kubelet_config {
+                  [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+                  [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+                  [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+                  [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+                  [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+                  [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                    [90m# (5 unchanged attributes hidden)[0m[0m
+                }
+
+              [31m-[0m[0m node_image_config {
+                  [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+                  [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m shielded_instance_config {
+                  [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+                  [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+                }
+
+              [31m-[0m[0m windows_node_config {
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+
+          [31m-[0m[0m upgrade_settings {
+              [31m-[0m[0m max_surge       = 1 [90m-> null[0m[0m
+              [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+              [31m-[0m[0m strategy        = "SURGE" [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m node_pool_auto_config {
+          [31m-[0m[0m resource_manager_tags = {} [90m-> null[0m[0m
+
+          [31m-[0m[0m node_kubelet_config {
+              [31m-[0m[0m insecure_kubelet_readonly_port_enabled = "FALSE" [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m node_pool_defaults {
+          [31m-[0m[0m node_config_defaults {
+              [31m-[0m[0m insecure_kubelet_readonly_port_enabled = "FALSE" [90m-> null[0m[0m
+              [31m-[0m[0m logging_variant                        = "DEFAULT" [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m notification_config {
+          [31m-[0m[0m pubsub {
+              [31m-[0m[0m enabled = false [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+
+      [31m-[0m[0m pod_autoscaling {
+          [31m-[0m[0m hpa_profile = "PERFORMANCE" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m private_cluster_config {
+          [31m-[0m[0m enable_private_endpoint     = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+          [31m-[0m[0m private_endpoint            = "10.142.0.8" [90m-> null[0m[0m
+          [31m-[0m[0m public_endpoint             = "34.26.67.231" [90m-> null[0m[0m
+            [90m# (3 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m master_global_access_config {
+              [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m rbac_binding_config {
+          [31m-[0m[0m enable_insecure_binding_system_authenticated   = true [90m-> null[0m[0m
+          [31m-[0m[0m enable_insecure_binding_system_unauthenticated = true [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m release_channel {
+          [31m-[0m[0m channel = "REGULAR" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m secret_manager_config {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m secret_sync_config {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m security_posture_config {
+          [31m-[0m[0m mode               = "BASIC" [90m-> null[0m[0m
+          [31m-[0m[0m vulnerability_mode = "VULNERABILITY_MODE_UNSPECIFIED" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m service_external_ips_config {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+    }
+
+[1m  # google_container_node_pool.broker[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "google_container_node_pool" "broker" {
+      [31m-[0m[0m cluster                     = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b" [90m-> null[0m[0m
+      [31m-[0m[0m deletion_policy             = "DELETE" [90m-> null[0m[0m
+      [31m-[0m[0m id                          = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker" [90m-> null[0m[0m
+      [31m-[0m[0m ignore_node_count_changes   = false [90m-> null[0m[0m
+      [31m-[0m[0m initial_node_count          = 3 [90m-> null[0m[0m
+      [31m-[0m[0m instance_group_urls         = [
+          [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroupManagers/gke-kkshow-b-broker-35790078-grp",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m location                    = "us-east1-b" [90m-> null[0m[0m
+      [31m-[0m[0m managed_instance_group_urls = [
+          [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroups/gke-kkshow-b-broker-35790078-grp",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m max_pods_per_node           = 110 [90m-> null[0m[0m
+      [31m-[0m[0m name                        = "broker" [90m-> null[0m[0m
+      [31m-[0m[0m node_count                  = 3 [90m-> null[0m[0m
+      [31m-[0m[0m node_locations              = [
+          [31m-[0m[0m "us-east1-b",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m project                     = "kubemq" [90m-> null[0m[0m
+      [31m-[0m[0m version                     = "1.36.4-gke.1247000" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+
+      [31m-[0m[0m management {
+          [31m-[0m[0m auto_repair  = false [90m-> null[0m[0m
+          [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m network_config {
+          [31m-[0m[0m create_pod_range            = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+          [31m-[0m[0m pod_ipv4_cidr_block         = "10.112.0.0/14" [90m-> null[0m[0m
+          [31m-[0m[0m pod_range                   = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+          [31m-[0m[0m subnetwork                  = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m node_config {
+          [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+          [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+          [31m-[0m[0m effective_taints            = [] [90m-> null[0m[0m
+          [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+          [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+          [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+          [31m-[0m[0m labels                      = {
+              [31m-[0m[0m "kkbench/pool" = "broker"
+              [31m-[0m[0m "kkbench/slot" = "b"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+          [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+          [31m-[0m[0m machine_type                = "n2-standard-8" [90m-> null[0m[0m
+          [31m-[0m[0m metadata                    = {
+              [31m-[0m[0m "disable-legacy-endpoints" = "true"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m min_cpu_platform            = "Intel Ice Lake" [90m-> null[0m[0m
+          [31m-[0m[0m oauth_scopes                = [
+              [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+          [31m-[0m[0m resource_labels             = {
+              [31m-[0m[0m "broker"                                = "kubemq"
+              [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+              [31m-[0m[0m "lifecycle"                             = "throwaway"
+              [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+              [31m-[0m[0m "slot"                                  = "b"
+              [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+          [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+          [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+          [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+          [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+            [90m# (5 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m boot_disk {
+              [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+              [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m kubelet_config {
+              [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+              [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+              [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+              [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+              [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+              [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+              [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                [90m# (5 unchanged attributes hidden)[0m[0m
+            }
+
+          [31m-[0m[0m local_nvme_ssd_block_config {
+              [31m-[0m[0m local_ssd_count = 2 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m node_image_config {
+              [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+              [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m shielded_instance_config {
+              [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+              [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m windows_node_config {
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+
+      [31m-[0m[0m upgrade_settings {
+          [31m-[0m[0m max_surge       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+          [31m-[0m[0m strategy        = "SURGE" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # google_container_node_pool.driver[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "google_container_node_pool" "driver" {
+      [31m-[0m[0m cluster                     = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b" [90m-> null[0m[0m
+      [31m-[0m[0m deletion_policy             = "DELETE" [90m-> null[0m[0m
+      [31m-[0m[0m id                          = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver" [90m-> null[0m[0m
+      [31m-[0m[0m ignore_node_count_changes   = false [90m-> null[0m[0m
+      [31m-[0m[0m initial_node_count          = 2 [90m-> null[0m[0m
+      [31m-[0m[0m instance_group_urls         = [
+          [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroupManagers/gke-kkshow-b-driver-4991f61c-grp",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m location                    = "us-east1-b" [90m-> null[0m[0m
+      [31m-[0m[0m managed_instance_group_urls = [
+          [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroups/gke-kkshow-b-driver-4991f61c-grp",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m max_pods_per_node           = 110 [90m-> null[0m[0m
+      [31m-[0m[0m name                        = "driver" [90m-> null[0m[0m
+      [31m-[0m[0m node_count                  = 2 [90m-> null[0m[0m
+      [31m-[0m[0m node_locations              = [
+          [31m-[0m[0m "us-east1-b",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m project                     = "kubemq" [90m-> null[0m[0m
+      [31m-[0m[0m version                     = "1.36.4-gke.1247000" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+
+      [31m-[0m[0m management {
+          [31m-[0m[0m auto_repair  = false [90m-> null[0m[0m
+          [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m network_config {
+          [31m-[0m[0m create_pod_range            = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+          [31m-[0m[0m pod_ipv4_cidr_block         = "10.112.0.0/14" [90m-> null[0m[0m
+          [31m-[0m[0m pod_range                   = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+          [31m-[0m[0m subnetwork                  = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m node_config {
+          [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+          [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+          [31m-[0m[0m effective_taints            = [
+              [31m-[0m[0m {
+                  [31m-[0m[0m effect = "NO_SCHEDULE"
+                  [31m-[0m[0m key    = "kkbench/pool"
+                  [31m-[0m[0m value  = "driver"
+                },
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+          [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+          [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+          [31m-[0m[0m labels                      = {
+              [31m-[0m[0m "kkbench/pool" = "driver"
+              [31m-[0m[0m "kkbench/slot" = "b"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+          [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+          [31m-[0m[0m machine_type                = "n2-standard-8" [90m-> null[0m[0m
+          [31m-[0m[0m metadata                    = {
+              [31m-[0m[0m "disable-legacy-endpoints" = "true"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m min_cpu_platform            = "Intel Ice Lake" [90m-> null[0m[0m
+          [31m-[0m[0m oauth_scopes                = [
+              [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+          [31m-[0m[0m resource_labels             = {
+              [31m-[0m[0m "broker"                                = "kubemq"
+              [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+              [31m-[0m[0m "lifecycle"                             = "throwaway"
+              [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+              [31m-[0m[0m "slot"                                  = "b"
+              [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+          [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+          [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+          [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+          [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+            [90m# (5 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m boot_disk {
+              [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+              [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m kubelet_config {
+              [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+              [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+              [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+              [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+              [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+              [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+              [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                [90m# (5 unchanged attributes hidden)[0m[0m
+            }
+
+          [31m-[0m[0m node_image_config {
+              [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+              [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m shielded_instance_config {
+              [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+              [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m taint {
+              [31m-[0m[0m effect = "NO_SCHEDULE" [90m-> null[0m[0m
+              [31m-[0m[0m key    = "kkbench/pool" [90m-> null[0m[0m
+              [31m-[0m[0m value  = "driver" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m windows_node_config {
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+
+      [31m-[0m[0m upgrade_settings {
+          [31m-[0m[0m max_surge       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+          [31m-[0m[0m strategy        = "SURGE" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # google_container_node_pool.monitoring[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "google_container_node_pool" "monitoring" {
+      [31m-[0m[0m cluster                     = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b" [90m-> null[0m[0m
+      [31m-[0m[0m deletion_policy             = "DELETE" [90m-> null[0m[0m
+      [31m-[0m[0m id                          = "projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring" [90m-> null[0m[0m
+      [31m-[0m[0m ignore_node_count_changes   = false [90m-> null[0m[0m
+      [31m-[0m[0m initial_node_count          = 1 [90m-> null[0m[0m
+      [31m-[0m[0m instance_group_urls         = [
+          [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroupManagers/gke-kkshow-b-monitoring-14e612e7-grp",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m location                    = "us-east1-b" [90m-> null[0m[0m
+      [31m-[0m[0m managed_instance_group_urls = [
+          [31m-[0m[0m "https://www.googleapis.com/compute/v1/projects/kubemq/zones/us-east1-b/instanceGroups/gke-kkshow-b-monitoring-14e612e7-grp",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m max_pods_per_node           = 110 [90m-> null[0m[0m
+      [31m-[0m[0m name                        = "monitoring" [90m-> null[0m[0m
+      [31m-[0m[0m node_count                  = 1 [90m-> null[0m[0m
+      [31m-[0m[0m node_locations              = [
+          [31m-[0m[0m "us-east1-b",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m project                     = "kubemq" [90m-> null[0m[0m
+      [31m-[0m[0m version                     = "1.36.4-gke.1247000" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+
+      [31m-[0m[0m management {
+          [31m-[0m[0m auto_repair  = false [90m-> null[0m[0m
+          [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m network_config {
+          [31m-[0m[0m create_pod_range            = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_private_nodes        = false [90m-> null[0m[0m
+          [31m-[0m[0m pod_ipv4_cidr_block         = "10.112.0.0/14" [90m-> null[0m[0m
+          [31m-[0m[0m pod_range                   = "gke-kkshow-b-pods-e4abe55f" [90m-> null[0m[0m
+          [31m-[0m[0m subnetwork                  = "projects/kubemq/regions/us-east1/subnetworks/default" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m node_config {
+          [31m-[0m[0m disk_size_gb                = 100 [90m-> null[0m[0m
+          [31m-[0m[0m disk_type                   = "pd-balanced" [90m-> null[0m[0m
+          [31m-[0m[0m effective_taints            = [] [90m-> null[0m[0m
+          [31m-[0m[0m enable_confidential_storage = false [90m-> null[0m[0m
+          [31m-[0m[0m flex_start                  = false [90m-> null[0m[0m
+          [31m-[0m[0m image_type                  = "COS_CONTAINERD" [90m-> null[0m[0m
+          [31m-[0m[0m labels                      = {
+              [31m-[0m[0m "kkbench/pool" = "monitoring"
+              [31m-[0m[0m "kkbench/slot" = "b"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m local_ssd_count             = 0 [90m-> null[0m[0m
+          [31m-[0m[0m logging_variant             = "DEFAULT" [90m-> null[0m[0m
+          [31m-[0m[0m machine_type                = "e2-standard-4" [90m-> null[0m[0m
+          [31m-[0m[0m metadata                    = {
+              [31m-[0m[0m "disable-legacy-endpoints" = "true"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m oauth_scopes                = [
+              [31m-[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m preemptible                 = false [90m-> null[0m[0m
+          [31m-[0m[0m resource_labels             = {
+              [31m-[0m[0m "broker"                                = "kubemq"
+              [31m-[0m[0m "goog-gke-node-pool-provisioning-model" = "on-demand"
+              [31m-[0m[0m "lifecycle"                             = "throwaway"
+              [31m-[0m[0m "purpose"                               = "kubemq-kafka-benchmark"
+              [31m-[0m[0m "slot"                                  = "b"
+              [31m-[0m[0m "ttl-deadline"                          = "20261017-0856"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m resource_manager_tags       = {} [90m-> null[0m[0m
+          [31m-[0m[0m service_account             = "default" [90m-> null[0m[0m
+          [31m-[0m[0m spot                        = false [90m-> null[0m[0m
+          [31m-[0m[0m storage_pools               = [] [90m-> null[0m[0m
+          [31m-[0m[0m tags                        = [] [90m-> null[0m[0m
+            [90m# (6 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m boot_disk {
+              [31m-[0m[0m disk_type              = "pd-balanced" [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_iops       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m provisioned_throughput = 0 [90m-> null[0m[0m
+              [31m-[0m[0m size_gb                = 100 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m kubelet_config {
+              [31m-[0m[0m allowed_unsafe_sysctls                      = [] [90m-> null[0m[0m
+              [31m-[0m[0m container_log_max_files                     = 0 [90m-> null[0m[0m
+              [31m-[0m[0m cpu_cfs_quota                               = false [90m-> null[0m[0m
+              [31m-[0m[0m eviction_max_pod_grace_period_seconds       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_high_threshold_percent             = 0 [90m-> null[0m[0m
+              [31m-[0m[0m image_gc_low_threshold_percent              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m insecure_kubelet_readonly_port_enabled      = "FALSE" [90m-> null[0m[0m
+              [31m-[0m[0m max_parallel_image_pulls                    = 3 [90m-> null[0m[0m
+              [31m-[0m[0m pod_pids_limit                              = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_critical_pods_seconds = 0 [90m-> null[0m[0m
+              [31m-[0m[0m shutdown_grace_period_seconds               = 0 [90m-> null[0m[0m
+              [31m-[0m[0m single_process_oom_kill                     = false [90m-> null[0m[0m
+                [90m# (5 unchanged attributes hidden)[0m[0m
+            }
+
+          [31m-[0m[0m node_image_config {
+              [31m-[0m[0m image         = "gke-1364-gke1247000-cos-129-19506-448-8-c-pre" [90m-> null[0m[0m
+              [31m-[0m[0m image_project = "gke-node-images" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m shielded_instance_config {
+              [31m-[0m[0m enable_integrity_monitoring = true [90m-> null[0m[0m
+              [31m-[0m[0m enable_secure_boot          = false [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m windows_node_config {
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+
+      [31m-[0m[0m upgrade_settings {
+          [31m-[0m[0m max_surge       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+          [31m-[0m[0m strategy        = "SURGE" [90m-> null[0m[0m
+        }
+    }
+
+[1mPlan:[0m [0m0 to add, 0 to change, 4 to destroy.
+
+Changes to Outputs:
+  [31m-[0m[0m cluster_name = "kkshow-b" [90m-> null[0m[0m
+  [31m-[0m[0m context      = "gke_kubemq_us-east1-b_kkshow-b" [90m-> null[0m[0m
+  [31m-[0m[0m zone         = "us-east1-b" [90m-> null[0m[0m
+[0m[1mgoogle_container_node_pool.broker: Destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 00m10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver, 00m10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 00m10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 00m20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 00m20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver, 00m20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 00m30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver, 00m30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 00m30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 00m40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 00m40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver, 00m40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 00m50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/driver, 00m50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 00m50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Destruction complete after 56s[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 01m00s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 01m00s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 01m10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 01m10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/monitoring, 01m20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 01m20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Destruction complete after 1m23s[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 01m30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 01m40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 01m50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 02m00s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 02m10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 02m20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 02m30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 02m40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 02m50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b/nodePools/broker, 03m00s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Destruction complete after 3m6s[0m
+[0m[1mgoogle_container_cluster.this: Destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 00m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 00m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 00m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 00m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 00m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 01m00s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 01m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 01m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 01m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 01m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 01m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 02m00s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 02m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 02m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 02m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 02m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 02m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 03m00s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 03m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 03m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 03m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 03m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 03m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 04m00s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 04m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 04m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 04m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 04m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 04m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 05m00s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 05m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 05m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still destroying... [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-b, 05m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Destruction complete after 5m40s[0m
+[0m[1m[32m
+Destroy complete! Resources: 4 destroyed.[0m
+  cluster:  gone (re-queried 2026-10-16T22:31:53Z).
+  disks:    none left carrying goog-k8s-cluster-name=kkshow-b.
+  firewall: no rules naming kkshow-b.
+TTL for slot b cancelled (was due 20261017-0856).
+TORN DOWN and verified: kkshow-b.

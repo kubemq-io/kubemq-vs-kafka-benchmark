@@ -1,0 +1,1 @@
+bench-combined-0: restartCount 0 -> 1; 0 boot-phase samples; 506 boot log lines

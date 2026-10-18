@@ -1,0 +1,1 @@
+prom export: 425 metric names, 11382402 samples, 7 families missing

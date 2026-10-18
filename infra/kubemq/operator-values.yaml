@@ -1,0 +1,9 @@
+# Release 1 of 2: the namespace operator only. The chart has no nodeSelector for the
+# operator Deployment; up.sh patches one in so it lands on the monitoring pool, the
+# same place the Strimzi operator runs.
+cluster:
+  enabled: false
+operator:
+  enabled: true
+  image: europe-docker.pkg.dev/kubemq/images/kubemq-operator-next:v3.5.0@sha256:5afaaf3b137daf82f1c15b7cd3378b78ae309e1f415e533d2d211d863999ff4d
+  serverImage: europe-docker.pkg.dev/kubemq/images/kubemq-next:v3.6.22@sha256:87f3e1aa3cf3e4c324893e482d8ee4e20f53e40390b41e8722b472854eb801be

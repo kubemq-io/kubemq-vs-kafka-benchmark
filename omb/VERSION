@@ -1,0 +1,5 @@
+# OpenMessaging Benchmark, pinned. The stock Kafka driver (driver-kafka) is used unmodified
+# against both brokers. It bundles org.apache.kafka:kafka-clients 3.6.1.
+OMB_REPO=https://github.com/openmessaging/benchmark
+OMB_COMMIT=5b1fa70951a323da26bd587174b58bb2c65b0b5c
+OMB_KAFKA_CLIENTS=3.6.1

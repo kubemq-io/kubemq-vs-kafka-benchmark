@@ -1,0 +1,9 @@
+  MISMATCH p06-000 partition 6: sent 1577934251001, got 1577934251000 (type 0; 0=CreateTime)
+  MISMATCH p06-001 partition 6: sent 1577934251002, got 1577934251001 (type 0; 0=CreateTime)
+  MISMATCH p06-002 partition 6: sent 1577934251003, got 1577934251002 (type 0; 0=CreateTime)
+  MISMATCH p06-003 partition 6: sent 1577934251004, got 1577934251003 (type 0; 0=CreateTime)
+  MISMATCH p06-004 partition 6: sent 1577934251005, got 1577934251004 (type 0; 0=CreateTime)
+kafka-compat: topic=cr-kafka-compat-1792174729429992690 partitions=16 records sent=160 read=160 partitions-read=16
+  RED GATE ACTIVE: expecting timestamps shifted by 1 ms
+FAIL: 160 of 160 records came back with a different timestamp or type
+command terminated with exit code 1

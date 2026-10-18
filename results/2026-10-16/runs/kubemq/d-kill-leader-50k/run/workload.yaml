@@ -1,0 +1,13 @@
+# Showcase cell D: leader kill at 50k msg/s, 16 partitions, 1 KB, 2 min warm-up + 15 min measured; chaos-kill.sh kills the leader at measured minute 5 (docs/PLAN.md section 6).
+name: D kill the partition leader at minute 5, 50k msg/s
+topics: 1
+partitionsPerTopic: 16
+messageSize: 1024
+payloadFile: "payload/payload-1Kb.data"
+subscriptionsPerTopic: 1
+consumerPerSubscription: 4
+producersPerTopic: 4
+producerRate: 50000
+consumerBacklogSizeGB: 0
+warmupDurationMinutes: 2
+testDurationMinutes: 15

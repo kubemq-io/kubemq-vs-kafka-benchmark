@@ -1,0 +1,1 @@
+no — derived: restarted node rejoined as KRaft follower, epoch 1 unchanged, leader node 2 (kill/boot/bench-combined-0.log.txt 08:58:02)

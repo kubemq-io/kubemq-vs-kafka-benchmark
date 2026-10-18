@@ -1,0 +1,5 @@
+# heap profiles from <store>/diag/*.pprof on each broker's data volume, 2026-10-16T21:17:59Z
+# pod	file	size_bytes	mtime	sha256 (local copy)
+bench-0	-	-	no profiles (host gke-kkshow-b-broker-35790078-0jnw:/mnt/disks/raid0 via raid0-269j9)
+bench-1	-	-	no profiles (host gke-kkshow-b-broker-35790078-vqgs:/mnt/disks/raid0 via raid0-n7dq2)
+bench-2	-	-	no profiles (host gke-kkshow-b-broker-35790078-lf46:/mnt/disks/raid0 via raid0-kcrq6)

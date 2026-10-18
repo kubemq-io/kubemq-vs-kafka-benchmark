@@ -1,0 +1,1 @@
+reclaim: 73 s after topic delete: gke-kkshow-a-broker-f6b9690e-xm4c 1% 1GB;gke-kkshow-a-broker-f6b9690e-ltjs 1% 1GB;gke-kkshow-a-broker-f6b9690e-vg9s 1% 1GB;

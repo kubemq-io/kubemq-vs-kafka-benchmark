@@ -1,0 +1,22 @@
+2026-10-16T22:05:26.003678359Z {"level":"INFO","time":"2026-10-16T22:05:26.003Z","component":"license","caller":"license/service.go:431","msg":"license verified","host":"bench-1","license_id":"8441bd6a-aaaa-4824-b612-7be7b5cfc0c2","plan":"trial","mode":"online","source":"key","kid":"license-signing-v2","fingerprint":"7f359f33-5958-4f75-b024-9219ed2fc40e","fingerprint_source":"kube-system","lease_expires_at":"2026-10-17T21:56:21Z","license_expires_at":"2027-10-20T08:07:00Z","max_instances":0}
+2026-10-16T22:05:26.003700113Z {"level":"INFO","time":"2026-10-16T22:05:26.003Z","component":"daemon","caller":"server/server.go:182","msg":"starting kubemq server","host":"bench-1","version":"v3.6.22","cores":7}
+2026-10-16T22:05:26.213108031Z 2026-10-16 22:05:26.213066 I | dragonboat: [00001:00002] logdb first entry 380042 size 3188 commit 383229 term 2
+2026-10-16T22:05:26.213110319Z 2026-10-16 22:05:26.213078 I | dragonboat: [00001:00002] replayed raft logs in 223.825µs, snapshot index 380041, entries 3188
+2026-10-16T22:05:26.346991179Z 2026-10-16 22:05:26.346941 I | dragonboat: [00002:00002] logdb first entry 371287 size 5855 commit 377141 term 3
+2026-10-16T22:05:26.346995585Z 2026-10-16 22:05:26.346952 I | dragonboat: [00002:00002] replayed raft logs in 269.9µs, snapshot index 371286, entries 5855
+2026-10-16T22:05:26.410132733Z 2026-10-16 22:05:26.410086 I | dragonboat: [00003:00002] logdb first entry 200020 size 4231 commit 204250 term 2
+2026-10-16T22:05:26.410136159Z 2026-10-16 22:05:26.410097 I | dragonboat: [00003:00002] replayed raft logs in 240.534µs, snapshot index 200019, entries 4231
+2026-10-16T22:05:26.526299129Z 2026-10-16 22:05:26.526244 I | dragonboat: [00004:00002] logdb first entry 275021 size 4762 commit 279782 term 2
+2026-10-16T22:05:26.526304790Z 2026-10-16 22:05:26.526254 I | dragonboat: [00004:00002] replayed raft logs in 249.475µs, snapshot index 275020, entries 4762
+2026-10-16T22:05:26.629848562Z 2026-10-16 22:05:26.629790 I | dragonboat: [00005:00002] logdb first entry 270021 size 14884 commit 284903 term 2
+2026-10-16T22:05:26.629858997Z 2026-10-16 22:05:26.629802 I | dragonboat: [00005:00002] replayed raft logs in 565.744µs, snapshot index 270020, entries 14884
+2026-10-16T22:05:26.714015193Z 2026-10-16 22:05:26.713955 I | dragonboat: [00006:00002] logdb first entry 178762 size 11692 commit 190453 term 2
+2026-10-16T22:05:26.714023534Z 2026-10-16 22:05:26.713967 I | dragonboat: [00006:00002] replayed raft logs in 519.034µs, snapshot index 178761, entries 11692
+2026-10-16T22:05:26.831781003Z 2026-10-16 22:05:26.831711 I | dragonboat: [00007:00002] logdb first entry 280018 size 3717 commit 283734 term 2
+2026-10-16T22:05:26.831790811Z 2026-10-16 22:05:26.831725 I | dragonboat: [00007:00002] replayed raft logs in 501.917µs, snapshot index 280017, entries 3717
+2026-10-16T22:05:26.955296015Z 2026-10-16 22:05:26.955204 I | dragonboat: [00008:00002] logdb first entry 281266 size 10940 commit 292204 term 2
+2026-10-16T22:05:26.955308962Z 2026-10-16 22:05:26.955225 I | dragonboat: [00008:00002] replayed raft logs in 2.855908ms, snapshot index 281265, entries 10940
+2026-10-16T22:05:30.224188240Z {"level":"INFO","time":"2026-10-16T22:05:30.224Z","component":"cluster-comm-internal","caller":"cluster_comm_internal/service.go:110","msg":"subscribed to events channel","host":"bench-1","channel":"kubemq.cluster.internal.events.snapshots"}
+2026-10-16T22:05:30.235315753Z {"level":"INFO","time":"2026-10-16T22:05:30.235Z","component":"api","caller":"api/service.go:1016","msg":"starting api snapshot service","host":"bench-1"}
+2026-10-16T22:05:30.235739343Z {"level":"INFO","time":"2026-10-16T22:05:30.235Z","component":"services","caller":"services/services.go:483","msg":"server ready","host":"bench-1","duration_ms":4231}
+2026-10-16T22:05:35.227160098Z {"level":"INFO","time":"2026-10-16T22:05:35.226Z","component":"array","caller":"array/storage_guard.go:263","msg":"disk guard thresholds: new data is refused first, then Kafka control records; the rest is kept for the engine","host":"bench-1","volume_bytes":791251738624,"data_refused_below_free_bytes":39562586931,"data_refused_above_used_pct":95.00000000002528,"control_refused_below_free_bytes":23737552158,"control_refused_above_used_pct":97.00000000009099,"snapshot_floor_free_bytes":15825034772,"snapshot_floor_used_pct":98.00000000006067,"snapshot_floor_note":"the snapshot disk budget's floor, max(volume/50, 8 MiB), computed here","engine":"next","shards":8,"segment_bytes":67108864,"engine_reserve_bytes":1610612736}

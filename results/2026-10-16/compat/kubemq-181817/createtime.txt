@@ -1,0 +1,2 @@
+kafka-compat: topic=cr-kafka-compat-1792174727848210806 partitions=16 records sent=160 read=160 partitions-read=16
+PASS: every record came back with its exact CreateTime timestamp, from every partition

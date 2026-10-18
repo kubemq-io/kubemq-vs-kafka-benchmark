@@ -1,0 +1,6 @@
+gke-kkshow-a-broker-f6b9690e-ltjs	broker	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074460Ki
+gke-kkshow-a-broker-f6b9690e-xm4c	broker	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074468Ki
+gke-kkshow-a-broker-f6b9690e-vg9s	broker	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074476Ki
+gke-kkshow-a-driver-7dfd3d7c-9z42	driver	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074472Ki
+gke-kkshow-a-driver-7dfd3d7c-hn9z	driver	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074480Ki
+gke-kkshow-a-monitoring-e7587829-3lck	monitoring	e2-standard-4	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	3920m	13591652Ki

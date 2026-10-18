@@ -1,0 +1,13 @@
+# Showcase cell: fixed rate 300000 msg/s, 16 partitions, 1 KB, 2 min warm-up, 5 min measured (docs/METHOD.md).
+name: fixed rate 300000 msg/s, 16 partitions, 1 KB, 5 min
+topics: 1
+partitionsPerTopic: 16
+messageSize: 1024
+payloadFile: "payload/payload-1Kb.data"
+subscriptionsPerTopic: 1
+consumerPerSubscription: 4
+producersPerTopic: 4
+producerRate: 300000
+consumerBacklogSizeGB: 0
+warmupDurationMinutes: 2
+testDurationMinutes: 5

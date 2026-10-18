@@ -1,0 +1,15 @@
+{
+  "connector": "kafka",
+  "scenario": "k1-kafka",
+  "acked": 3786100,
+  "observed": 3786100,
+  "missing": 0,
+  "duplicates": 0,
+  "verdict": "PASS",
+  "ordering": "reordered",
+  "inversions": 46,
+  "publish_start": "0001-01-01T00:00:00Z",
+  "publish_end": "0001-01-01T00:00:00Z",
+  "publish_gaps": 6,
+  "publish_unavailable_ms": 8000
+}

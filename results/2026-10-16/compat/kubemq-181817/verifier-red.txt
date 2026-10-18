@@ -1,0 +1,6 @@
+kafka-verifier: bench-kafka.kubemq.svc.cluster.local:9092 topic=cr-kafka-1792174737878124795 count=2000
+  RED GATE ACTIVE: dropping every 40th message on the read side
+  produced: 2000 acked, 0 not acked
+  RED GATE: swallowed 50 message(s) on the read side
+FAIL [kafka/compat-red] acked=2000 observed=1950 missing=50 duplicates=0 — 50 acked message(s) absent from the read
+command terminated with exit code 1

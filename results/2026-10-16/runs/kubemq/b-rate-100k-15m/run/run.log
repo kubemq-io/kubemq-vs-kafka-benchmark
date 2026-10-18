@@ -1,0 +1,13 @@
+==> kubemq / b-rate-100k-15m / run on kkshow-b
+topics: no benchmark topics present
+==> disk before: gke-kkshow-b-broker-35790078-0jnw 1% 1GB;gke-kkshow-b-broker-35790078-lf46 1% 1GB;gke-kkshow-b-broker-35790078-vqgs 1% 1GB;
+==> OMB start 2026-10-16T18:35:59Z — workers: http://omb-worker-0.omb-worker.omb.svc.cluster.local:8080,http://omb-worker-1.omb-worker.omb.svc.cluster.local:8080
+tcpstat before: 5 snapshots in results/2026-10-16/runs/kubemq/b-rate-100k-15m/run/tcp
+tcpstat after: 5 snapshots in results/2026-10-16/runs/kubemq/b-rate-100k-15m/run/tcp
+==> OMB end 2026-10-16T18:54:00Z, exit 0
+prom export: 425 metric names, 23186627 samples, 7 families missing
+prom export: families missing, see results/2026-10-16/runs/kubemq/b-rate-100k-15m/run/prom/MISSING.txt
+partitions: test-topic-0000000-NVk0zAg has 16 partitions (want 16), 0 with no records
+reclaim: not waited (next run wipes KubeMQ): gke-kkshow-b-broker-35790078-0jnw 14% 102GB;gke-kkshow-b-broker-35790078-lf46 14% 102GB;gke-kkshow-b-broker-35790078-vqgs 14% 102GB;
+publish rate avg: 100027 msg/s   consume rate avg: 100028 msg/s   publish latency p99 (aggregated): 3.157 ms
+==> recorded results/2026-10-16/runs/kubemq/b-rate-100k-15m/run

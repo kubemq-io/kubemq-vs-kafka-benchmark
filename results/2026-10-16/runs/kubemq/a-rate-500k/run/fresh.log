@@ -1,0 +1,3 @@
+==> fresh KubeMQ on kkshow-b (2026-10-16T19:32:37Z)
+==> volumes wiped (51 s)
+==> fresh KubeMQ ready: 3/3 on europe-docker.pkg.dev/kubemq/images/kubemq-next:v3.6.22 (sha256:87f3e1aa3cf3…), "feature_level":4, 89 s total

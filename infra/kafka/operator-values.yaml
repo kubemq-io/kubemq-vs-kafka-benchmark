@@ -1,0 +1,7 @@
+# Strimzi cluster operator: on the monitoring pool, never on broker nodes.
+watchNamespaces: []
+image:
+  digest: sha256:77f8fa8121a67561c3418de985783d197f51b8931e9a47f793dc0437dc6bb21f
+nodeSelector:
+  kkbench/pool: monitoring
+generateNetworkPolicy: false

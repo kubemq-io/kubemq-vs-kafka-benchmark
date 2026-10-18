@@ -1,0 +1,115 @@
+# OpenMessaging Benchmark on the driver pool. __OMB_IMAGE__, __KAFKA_TOOLS_IMAGE__ and
+# __VERIFIER_IMAGE__ are replaced by scripts/omb-deploy.sh with the pinned references.
+#   omb-worker       StatefulSet, one per driver node, Guaranteed 7 CPU / 24 GiB.
+#   omb-coordinator  the process that runs a workload against the workers; light, so it lives
+#                    on the monitoring node, never on a driver or broker node.
+#   kafka-tools      Apache Kafka's own CLI (same image as the Kafka brokers) used against BOTH
+#                    sides for topic listing and deletion, metadata and config audits.
+#   verifier         the acked-loss verifier binary, run on demand.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: omb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: omb-worker
+  namespace: omb
+spec:
+  clusterIP: None
+  selector: {app: omb-worker}
+  ports:
+    - {name: http, port: 8080}
+    - {name: stats, port: 8081}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: omb-worker
+  namespace: omb
+spec:
+  serviceName: omb-worker
+  replicas: __WORKERS__
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels: {app: omb-worker}
+  template:
+    metadata:
+      labels: {app: omb-worker}
+    spec:
+      nodeSelector: {kkbench/pool: driver}
+      tolerations:
+        - {key: kkbench/pool, operator: Equal, value: driver, effect: NoSchedule}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector: {matchLabels: {app: omb-worker}}
+              topologyKey: kubernetes.io/hostname
+      containers:
+        - name: worker
+          image: __OMB_IMAGE__
+          command: ["bin/benchmark-worker"]
+          env:
+            - {name: HEAP_OPTS, value: "-Xms16g -Xmx16g"}
+          ports:
+            - {containerPort: 8080}
+            - {containerPort: 8081}
+          readinessProbe:
+            tcpSocket: {port: 8080}
+            periodSeconds: 5
+          resources:
+            requests: {cpu: "7", memory: 24Gi}
+            limits: {cpu: "7", memory: 24Gi}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omb-coordinator
+  namespace: omb
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: omb-coordinator}
+  template:
+    metadata:
+      labels: {app: omb-coordinator}
+    spec:
+      nodeSelector: {kkbench/pool: monitoring}
+      containers:
+        - name: coordinator
+          image: __OMB_IMAGE__
+          command: ["sleep", "infinity"]
+          env:
+            - {name: HEAP_OPTS, value: "-Xms1g -Xmx1g"}
+          resources:
+            requests: {cpu: 200m, memory: 1536Mi}
+            limits: {memory: 2Gi}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-tools
+  namespace: omb
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: kafka-tools}
+  template:
+    metadata:
+      labels: {app: kafka-tools}
+    spec:
+      nodeSelector: {kkbench/pool: monitoring}
+      containers:
+        - name: tools
+          image: __KAFKA_TOOLS_IMAGE__
+          command: ["sleep", "infinity"]
+          resources:
+            requests: {cpu: 100m, memory: 512Mi}
+            limits: {memory: 1Gi}
+        - name: verifier
+          image: __VERIFIER_IMAGE__
+          command: ["sleep", "infinity"]
+          resources:
+            requests: {cpu: 100m, memory: 512Mi}
+            limits: {memory: 4Gi}

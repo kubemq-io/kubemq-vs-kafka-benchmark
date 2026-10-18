@@ -1,0 +1,2 @@
+cr-kafka-k1-1792187992
+test-topic-0000000-F0Aa4Kk

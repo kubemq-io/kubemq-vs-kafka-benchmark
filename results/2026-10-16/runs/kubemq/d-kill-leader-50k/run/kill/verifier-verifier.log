@@ -1,0 +1,6 @@
+kafka-verifier: bench-kafka.kubemq.svc.cluster.local:9092 topic=cr-kafka-k1-1792187992 count=200
+  steady-rate mode: 5000 msg/s for 13m0s
+  sent 3891500 records in 13m0s
+  produced: 3891500 acked, 0 not acked
+  publish availability: 1 gap(s) with zero acked seconds, longest 2 s
+PASS [kafka/k1-kubemq] acked=3891500 observed=3891500 missing=0 duplicates=0

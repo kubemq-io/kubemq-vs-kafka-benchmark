@@ -1,0 +1,3 @@
+bench-combined-2.bench-kafka-brokers.kafka.svc:9092 (id: 2 rack: null isFenced: false) -> (
+bench-combined-0.bench-kafka-brokers.kafka.svc:9092 (id: 0 rack: null isFenced: false) -> (
+bench-combined-1.bench-kafka-brokers.kafka.svc:9092 (id: 1 rack: null isFenced: false) -> (

@@ -1,0 +1,15 @@
+# Showcase cell C: fixed rate 4000 msg/s x 100 KB (400 MB/s payload), 16 partitions, 2 min warm-up, 5 min measured (docs/METHOD.md).
+name: fixed rate 4000 msg/s, 16 partitions, 100 KB, 5 min
+topics: 1
+partitionsPerTopic: 16
+messageSize: 102400
+useRandomizedPayloads: true
+randomBytesRatio: 0.5
+randomizedPayloadPoolSize: 1000
+subscriptionsPerTopic: 1
+consumerPerSubscription: 4
+producersPerTopic: 4
+producerRate: 4000
+consumerBacklogSizeGB: 0
+warmupDurationMinutes: 2
+testDurationMinutes: 5

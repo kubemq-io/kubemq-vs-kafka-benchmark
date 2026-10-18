@@ -1,0 +1,6 @@
+kafka-verifier: bench-kafka-bootstrap.kafka.svc.cluster.local:9092 topic=cr-kafka-k1-1791103929 count=200
+  steady-rate mode: 5000 msg/s for 13m0s
+  sent 3786100 records in 13m0s
+  produced: 3786100 acked, 0 not acked
+  publish availability: 6 gap(s) with zero acked seconds, longest 8 s
+PASS [kafka/k1-kafka] acked=3786100 observed=3786100 missing=0 duplicates=0

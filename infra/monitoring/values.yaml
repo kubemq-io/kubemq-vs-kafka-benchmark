@@ -1,0 +1,53 @@
+# kube-prometheus-stack on the monitoring pool only. node-exporter runs on every node
+# (it tolerates the driver taint). Storage is the monitoring node's boot disk
+# (emptyDir), not a persistent disk: run.sh exports the run window's raw series into
+# results/<...>/prom/ after each cell (lib.sh prom_export), and nothing is left behind to
+# bill after down.sh. The KubeMQ brokers' own metrics are scraped through
+# kubemq-podmonitor.yaml, applied by up.sh.
+alertmanager:
+  enabled: false
+defaultRules:
+  create: false
+kubeControllerManager: {enabled: false}
+kubeScheduler: {enabled: false}
+kubeEtcd: {enabled: false}
+kubeProxy: {enabled: false}
+
+prometheusOperator:
+  nodeSelector: {kkbench/pool: monitoring}
+  admissionWebhooks:
+    patch:
+      nodeSelector: {kkbench/pool: monitoring}
+
+kube-state-metrics:
+  nodeSelector: {kkbench/pool: monitoring}
+
+prometheus-node-exporter:
+  tolerations:
+    - operator: Exists
+  # netstat is on by default but keeps a few fields; keep every TCP counter (zero-window, receive-queue drops,
+  # pruning, loss probes, RTO) so the export shows consumer-socket trouble at scrape resolution.
+  extraArgs:
+    - --collector.netstat.fields=^(Tcp|TcpExt)_.*$
+  resources:
+    requests: {cpu: 10m, memory: 32Mi}
+    limits: {memory: 128Mi}
+
+grafana:
+  nodeSelector: {kkbench/pool: monitoring}
+  adminPassword: kkbench-local-only   # ClusterIP only; reached through port-forward
+  service: {type: ClusterIP}
+
+prometheus:
+  service: {type: ClusterIP}
+  prometheusSpec:
+    nodeSelector: {kkbench/pool: monitoring}
+    scrapeInterval: 5s
+    evaluationInterval: 30s
+    retention: 3d
+    enableAdminAPI: true           # snapshots for results/
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    resources:
+      requests: {cpu: 500m, memory: 4Gi}
+      limits: {memory: 8Gi}

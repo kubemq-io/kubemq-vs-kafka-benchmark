@@ -1,0 +1,5 @@
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE                                    NOMINATED NODE   READINESS GATES
+bench-combined-0                           1/1     Running   0          38s   10.84.3.9    gke-kkshow-a-broker-f6b9690e-xm4c       <none>           <none>
+bench-combined-1                           1/1     Running   0          38s   10.84.5.14   gke-kkshow-a-broker-f6b9690e-ltjs       <none>           <none>
+bench-combined-2                           1/1     Running   0          37s   10.84.4.7    gke-kkshow-a-broker-f6b9690e-vg9s       <none>           <none>
+strimzi-cluster-operator-c98cb8ddc-8w9pz   1/1     Running   0          90s   10.84.2.9    gke-kkshow-a-monitoring-e7587829-3lck   <none>           <none>

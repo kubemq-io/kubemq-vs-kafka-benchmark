@@ -1,0 +1,65 @@
+{
+  "name": "kkshow-a",
+  "currentMasterVersion": "1.36.4-gke.1247000",
+  "currentNodeVersion": "1.36.4-gke.1247000",
+  "releaseChannel": {
+    "channel": "REGULAR"
+  },
+  "resourceLabels": {
+    "broker": "kafka",
+    "goog-terraform-provisioned": "true",
+    "lifecycle": "throwaway",
+    "purpose": "kubemq-kafka-benchmark",
+    "slot": "a",
+    "ttl-deadline": "20261004-1726"
+  },
+  "nodePools": [
+    {
+      "name": "broker",
+      "version": "1.36.4-gke.1247000",
+      "initialNodeCount": 3,
+      "management": {
+        "autoUpgrade": true
+      },
+      "config": {
+        "machineType": "n2-standard-8",
+        "minCpuPlatform": "Intel Ice Lake",
+        "imageType": "COS_CONTAINERD",
+        "spot": null,
+        "localNvmeSsdBlockConfig": {
+          "localSsdCount": 2
+        }
+      }
+    },
+    {
+      "name": "driver",
+      "version": "1.36.4-gke.1247000",
+      "initialNodeCount": 2,
+      "management": {
+        "autoUpgrade": true
+      },
+      "config": {
+        "machineType": "n2-standard-8",
+        "minCpuPlatform": "Intel Ice Lake",
+        "imageType": "COS_CONTAINERD",
+        "spot": null,
+        "localNvmeSsdBlockConfig": null
+      }
+    },
+    {
+      "name": "monitoring",
+      "version": "1.36.4-gke.1247000",
+      "initialNodeCount": 1,
+      "management": {
+        "autoUpgrade": true
+      },
+      "config": {
+        "machineType": "e2-standard-4",
+        "minCpuPlatform": null,
+        "imageType": "COS_CONTAINERD",
+        "spot": null,
+        "localNvmeSsdBlockConfig": null
+      }
+    }
+  ]
+}

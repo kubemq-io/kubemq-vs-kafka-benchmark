@@ -1,0 +1,2 @@
+Dynamic configs for topic cr-kafka-audit-1792174703 are:
+  min.insync.replicas=2 sensitive=false synonyms={DYNAMIC_TOPIC_CONFIG:min.insync.replicas=2, DEFAULT_CONFIG:min.insync.replicas=2}

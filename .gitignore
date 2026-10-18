@@ -1,0 +1,22 @@
+.idea/
+.rig/
+*.tfstate
+*.tfstate.*
+.terraform/
+verifier/bin/
+**/bootstrap.env
+**/*.key
+
+# terraform workspaces and plans (the lock file IS committed)
+infra/terraform/terraform.tfstate.d/
+*.tfplan
+# local run state: private kubeconfigs, TTL pids and logs
+.state/
+*.license
+__pycache__/
+.license.txt
+.idea/
+report/preview.html
+
+.idea/
+.junie/

@@ -1,0 +1,586 @@
+==> recording to results/2026-10-04/infra/a-kafka-20261004T052654Z
+==> TTL scheduled: down.sh --slot a at 20261004-1726 UTC
+==> terraform apply (workspace a)
+
+OpenTofu used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+OpenTofu will perform the following actions:
+
+[1m  # google_container_cluster.this[0m will be created
+[0m  [32m+[0m[0m resource "google_container_cluster" "this" {
+      [32m+[0m[0m autopilot_privileged_admission           = (known after apply)
+      [32m+[0m[0m cluster_ipv4_cidr                        = (known after apply)
+      [32m+[0m[0m datapath_provider                        = (known after apply)
+      [32m+[0m[0m default_max_pods_per_node                = (known after apply)
+      [32m+[0m[0m deletion_policy                          = "DELETE"
+      [32m+[0m[0m deletion_protection                      = false
+      [32m+[0m[0m disable_l4_lb_firewall_reconciliation    = false
+      [32m+[0m[0m effective_labels                         = {
+          [32m+[0m[0m "broker"                     = "kafka"
+          [32m+[0m[0m "goog-terraform-provisioned" = "true"
+          [32m+[0m[0m "lifecycle"                  = "throwaway"
+          [32m+[0m[0m "purpose"                    = "kubemq-kafka-benchmark"
+          [32m+[0m[0m "slot"                       = "a"
+          [32m+[0m[0m "ttl-deadline"               = "20261004-1726"
+        }
+      [32m+[0m[0m emulated_version                         = (known after apply)
+      [32m+[0m[0m enable_cilium_clusterwide_network_policy = false
+      [32m+[0m[0m enable_fqdn_network_policy               = false
+      [32m+[0m[0m enable_intranode_visibility              = (known after apply)
+      [32m+[0m[0m enable_kubernetes_alpha                  = false
+      [32m+[0m[0m enable_l4_ilb_subsetting                 = (known after apply)
+      [32m+[0m[0m enable_legacy_abac                       = false
+      [32m+[0m[0m enable_multi_networking                  = false
+      [32m+[0m[0m enable_shielded_nodes                    = true
+      [32m+[0m[0m endpoint                                 = (known after apply)
+      [32m+[0m[0m id                                       = (known after apply)
+      [32m+[0m[0m initial_node_count                       = 1
+      [32m+[0m[0m label_fingerprint                        = (known after apply)
+      [32m+[0m[0m location                                 = "us-east1-b"
+      [32m+[0m[0m logging_service                          = (known after apply)
+      [32m+[0m[0m master_version                           = (known after apply)
+      [32m+[0m[0m min_master_version                       = "1.36.4-gke.1247000"
+      [32m+[0m[0m monitoring_service                       = (known after apply)
+      [32m+[0m[0m name                                     = "kkshow-a"
+      [32m+[0m[0m network                                  = "default"
+      [32m+[0m[0m networking_mode                          = "VPC_NATIVE"
+      [32m+[0m[0m node_locations                           = (known after apply)
+      [32m+[0m[0m node_version                             = (known after apply)
+      [32m+[0m[0m operation                                = (known after apply)
+      [32m+[0m[0m private_ipv6_google_access               = (known after apply)
+      [32m+[0m[0m project                                  = (known after apply)
+      [32m+[0m[0m remove_default_node_pool                 = true
+      [32m+[0m[0m resource_labels                          = {
+          [32m+[0m[0m "broker"       = "kafka"
+          [32m+[0m[0m "lifecycle"    = "throwaway"
+          [32m+[0m[0m "purpose"      = "kubemq-kafka-benchmark"
+          [32m+[0m[0m "slot"         = "a"
+          [32m+[0m[0m "ttl-deadline" = "20261004-1726"
+        }
+      [32m+[0m[0m self_link                                = (known after apply)
+      [32m+[0m[0m services_ipv4_cidr                       = (known after apply)
+      [32m+[0m[0m subnetwork                               = (known after apply)
+      [32m+[0m[0m terraform_labels                         = {
+          [32m+[0m[0m "broker"                     = "kafka"
+          [32m+[0m[0m "goog-terraform-provisioned" = "true"
+          [32m+[0m[0m "lifecycle"                  = "throwaway"
+          [32m+[0m[0m "purpose"                    = "kubemq-kafka-benchmark"
+          [32m+[0m[0m "slot"                       = "a"
+          [32m+[0m[0m "ttl-deadline"               = "20261004-1726"
+        }
+      [32m+[0m[0m tpu_ipv4_cidr_block                      = (known after apply)
+
+      [32m+[0m[0m addons_config (known after apply)
+
+      [32m+[0m[0m anonymous_authentication_config (known after apply)
+
+      [32m+[0m[0m authenticator_groups_config (known after apply)
+
+      [32m+[0m[0m autopilot_cluster_policy_config (known after apply)
+
+      [32m+[0m[0m cluster_autoscaling (known after apply)
+
+      [32m+[0m[0m confidential_nodes (known after apply)
+
+      [32m+[0m[0m control_plane_endpoints_config (known after apply)
+
+      [32m+[0m[0m cost_management_config (known after apply)
+
+      [32m+[0m[0m database_encryption (known after apply)
+
+      [32m+[0m[0m default_snat_status (known after apply)
+
+      [32m+[0m[0m enterprise_config (known after apply)
+
+      [32m+[0m[0m gateway_api_config (known after apply)
+
+      [32m+[0m[0m gke_auto_upgrade_config (known after apply)
+
+      [32m+[0m[0m identity_service_config (known after apply)
+
+      [32m+[0m[0m ip_allocation_policy {
+          [32m+[0m[0m cluster_ipv4_cidr_block       = (known after apply)
+          [32m+[0m[0m cluster_secondary_range_name  = (known after apply)
+          [32m+[0m[0m services_ipv4_cidr_block      = (known after apply)
+          [32m+[0m[0m services_secondary_range_name = (known after apply)
+          [32m+[0m[0m stack_type                    = "IPV4"
+
+          [32m+[0m[0m auto_ipam_config (known after apply)
+
+          [32m+[0m[0m network_tier_config (known after apply)
+
+          [32m+[0m[0m pod_cidr_overprovision_config (known after apply)
+        }
+
+      [32m+[0m[0m logging_config {
+          [32m+[0m[0m enable_components = [
+              [32m+[0m[0m "SYSTEM_COMPONENTS",
+            ]
+        }
+
+      [32m+[0m[0m maintenance_policy {
+          [32m+[0m[0m daily_maintenance_window {
+              [32m+[0m[0m duration   = (known after apply)
+              [32m+[0m[0m start_time = "03:00"
+            }
+          [32m+[0m[0m maintenance_exclusion {
+              [32m+[0m[0m end_time       = "2026-11-03T05:26:56Z"
+              [32m+[0m[0m exclusion_name = "benchmark-no-upgrades"
+              [32m+[0m[0m start_time     = "2026-10-04T05:26:56Z"
+
+              [32m+[0m[0m exclusion_options {
+                  [32m+[0m[0m scope = "NO_UPGRADES"
+                }
+            }
+        }
+
+      [32m+[0m[0m master_auth (known after apply)
+
+      [32m+[0m[0m master_authorized_networks_config (known after apply)
+
+      [32m+[0m[0m mesh_certificates (known after apply)
+
+      [32m+[0m[0m monitoring_config {
+          [32m+[0m[0m enable_components = [
+              [32m+[0m[0m "SYSTEM_COMPONENTS",
+            ]
+
+          [32m+[0m[0m advanced_datapath_observability_config (known after apply)
+
+          [32m+[0m[0m managed_prometheus {
+              [32m+[0m[0m enabled = false
+
+              [32m+[0m[0m auto_monitoring_config (known after apply)
+            }
+        }
+
+      [32m+[0m[0m node_config (known after apply)
+
+      [32m+[0m[0m node_creation_config (known after apply)
+
+      [32m+[0m[0m node_pool (known after apply)
+
+      [32m+[0m[0m node_pool_auto_config (known after apply)
+
+      [32m+[0m[0m node_pool_defaults (known after apply)
+
+      [32m+[0m[0m notification_config (known after apply)
+
+      [32m+[0m[0m pod_autoscaling (known after apply)
+
+      [32m+[0m[0m rbac_binding_config (known after apply)
+
+      [32m+[0m[0m release_channel {
+          [32m+[0m[0m channel = "REGULAR"
+        }
+
+      [32m+[0m[0m security_posture_config (known after apply)
+
+      [32m+[0m[0m service_external_ips_config (known after apply)
+
+      [32m+[0m[0m vertical_pod_autoscaling (known after apply)
+
+      [32m+[0m[0m workload_identity_config (known after apply)
+    }
+
+[1m  # google_container_node_pool.broker[0m will be created
+[0m  [32m+[0m[0m resource "google_container_node_pool" "broker" {
+      [32m+[0m[0m cluster                     = (known after apply)
+      [32m+[0m[0m deletion_policy             = "DELETE"
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m initial_node_count          = (known after apply)
+      [32m+[0m[0m instance_group_urls         = (known after apply)
+      [32m+[0m[0m location                    = "us-east1-b"
+      [32m+[0m[0m managed_instance_group_urls = (known after apply)
+      [32m+[0m[0m max_pods_per_node           = (known after apply)
+      [32m+[0m[0m name                        = "broker"
+      [32m+[0m[0m name_prefix                 = (known after apply)
+      [32m+[0m[0m node_count                  = 3
+      [32m+[0m[0m node_locations              = (known after apply)
+      [32m+[0m[0m operation                   = (known after apply)
+      [32m+[0m[0m project                     = "kubemq"
+      [32m+[0m[0m version                     = "1.36.4-gke.1247000"
+
+      [32m+[0m[0m management {
+          [32m+[0m[0m auto_repair  = false
+          [32m+[0m[0m auto_upgrade = true
+        }
+
+      [32m+[0m[0m network_config (known after apply)
+
+      [32m+[0m[0m node_config {
+          [32m+[0m[0m disk_size_gb       = 100
+          [32m+[0m[0m disk_type          = "pd-balanced"
+          [32m+[0m[0m effective_taints   = (known after apply)
+          [32m+[0m[0m gpudirect_strategy = (known after apply)
+          [32m+[0m[0m image_type         = "COS_CONTAINERD"
+          [32m+[0m[0m labels             = {
+              [32m+[0m[0m "kkbench/pool" = "broker"
+              [32m+[0m[0m "kkbench/slot" = "a"
+            }
+          [32m+[0m[0m local_ssd_count    = (known after apply)
+          [32m+[0m[0m logging_variant    = (known after apply)
+          [32m+[0m[0m machine_type       = "n2-standard-8"
+          [32m+[0m[0m metadata           = (known after apply)
+          [32m+[0m[0m min_cpu_platform   = "Intel Ice Lake"
+          [32m+[0m[0m oauth_scopes       = [
+              [32m+[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ]
+          [32m+[0m[0m preemptible        = false
+          [32m+[0m[0m resource_labels    = {
+              [32m+[0m[0m "broker"       = "kafka"
+              [32m+[0m[0m "lifecycle"    = "throwaway"
+              [32m+[0m[0m "purpose"      = "kubemq-kafka-benchmark"
+              [32m+[0m[0m "slot"         = "a"
+              [32m+[0m[0m "ttl-deadline" = "20261004-1726"
+            }
+          [32m+[0m[0m service_account    = (known after apply)
+          [32m+[0m[0m spot               = false
+
+          [32m+[0m[0m boot_disk (known after apply)
+
+          [32m+[0m[0m confidential_nodes (known after apply)
+
+          [32m+[0m[0m containerd_config (known after apply)
+
+          [32m+[0m[0m gcfs_config (known after apply)
+
+          [32m+[0m[0m guest_accelerator (known after apply)
+
+          [32m+[0m[0m kubelet_config (known after apply)
+
+          [32m+[0m[0m linux_node_config (known after apply)
+
+          [32m+[0m[0m local_nvme_ssd_block_config {
+              [32m+[0m[0m local_ssd_count = 2
+            }
+
+          [32m+[0m[0m node_image_config (known after apply)
+
+          [32m+[0m[0m shielded_instance_config (known after apply)
+
+          [32m+[0m[0m windows_node_config (known after apply)
+
+          [32m+[0m[0m workload_metadata_config (known after apply)
+        }
+
+      [32m+[0m[0m node_drain_config (known after apply)
+
+      [32m+[0m[0m upgrade_settings (known after apply)
+    }
+
+[1m  # google_container_node_pool.driver[0m will be created
+[0m  [32m+[0m[0m resource "google_container_node_pool" "driver" {
+      [32m+[0m[0m cluster                     = (known after apply)
+      [32m+[0m[0m deletion_policy             = "DELETE"
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m initial_node_count          = (known after apply)
+      [32m+[0m[0m instance_group_urls         = (known after apply)
+      [32m+[0m[0m location                    = "us-east1-b"
+      [32m+[0m[0m managed_instance_group_urls = (known after apply)
+      [32m+[0m[0m max_pods_per_node           = (known after apply)
+      [32m+[0m[0m name                        = "driver"
+      [32m+[0m[0m name_prefix                 = (known after apply)
+      [32m+[0m[0m node_count                  = 2
+      [32m+[0m[0m node_locations              = (known after apply)
+      [32m+[0m[0m operation                   = (known after apply)
+      [32m+[0m[0m project                     = "kubemq"
+      [32m+[0m[0m version                     = "1.36.4-gke.1247000"
+
+      [32m+[0m[0m management {
+          [32m+[0m[0m auto_repair  = false
+          [32m+[0m[0m auto_upgrade = true
+        }
+
+      [32m+[0m[0m network_config (known after apply)
+
+      [32m+[0m[0m node_config {
+          [32m+[0m[0m disk_size_gb       = 100
+          [32m+[0m[0m disk_type          = "pd-balanced"
+          [32m+[0m[0m effective_taints   = (known after apply)
+          [32m+[0m[0m gpudirect_strategy = (known after apply)
+          [32m+[0m[0m image_type         = "COS_CONTAINERD"
+          [32m+[0m[0m labels             = {
+              [32m+[0m[0m "kkbench/pool" = "driver"
+              [32m+[0m[0m "kkbench/slot" = "a"
+            }
+          [32m+[0m[0m local_ssd_count    = (known after apply)
+          [32m+[0m[0m logging_variant    = (known after apply)
+          [32m+[0m[0m machine_type       = "n2-standard-8"
+          [32m+[0m[0m metadata           = (known after apply)
+          [32m+[0m[0m min_cpu_platform   = "Intel Ice Lake"
+          [32m+[0m[0m oauth_scopes       = [
+              [32m+[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ]
+          [32m+[0m[0m preemptible        = false
+          [32m+[0m[0m resource_labels    = {
+              [32m+[0m[0m "broker"       = "kafka"
+              [32m+[0m[0m "lifecycle"    = "throwaway"
+              [32m+[0m[0m "purpose"      = "kubemq-kafka-benchmark"
+              [32m+[0m[0m "slot"         = "a"
+              [32m+[0m[0m "ttl-deadline" = "20261004-1726"
+            }
+          [32m+[0m[0m service_account    = (known after apply)
+          [32m+[0m[0m spot               = false
+
+          [32m+[0m[0m boot_disk (known after apply)
+
+          [32m+[0m[0m confidential_nodes (known after apply)
+
+          [32m+[0m[0m containerd_config (known after apply)
+
+          [32m+[0m[0m gcfs_config (known after apply)
+
+          [32m+[0m[0m guest_accelerator (known after apply)
+
+          [32m+[0m[0m kubelet_config (known after apply)
+
+          [32m+[0m[0m linux_node_config (known after apply)
+
+          [32m+[0m[0m node_image_config (known after apply)
+
+          [32m+[0m[0m shielded_instance_config (known after apply)
+
+          [32m+[0m[0m taint {
+              [32m+[0m[0m effect = "NO_SCHEDULE"
+              [32m+[0m[0m key    = "kkbench/pool"
+              [32m+[0m[0m value  = "driver"
+            }
+
+          [32m+[0m[0m windows_node_config (known after apply)
+
+          [32m+[0m[0m workload_metadata_config (known after apply)
+        }
+
+      [32m+[0m[0m node_drain_config (known after apply)
+
+      [32m+[0m[0m upgrade_settings (known after apply)
+    }
+
+[1m  # google_container_node_pool.monitoring[0m will be created
+[0m  [32m+[0m[0m resource "google_container_node_pool" "monitoring" {
+      [32m+[0m[0m cluster                     = (known after apply)
+      [32m+[0m[0m deletion_policy             = "DELETE"
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m initial_node_count          = (known after apply)
+      [32m+[0m[0m instance_group_urls         = (known after apply)
+      [32m+[0m[0m location                    = "us-east1-b"
+      [32m+[0m[0m managed_instance_group_urls = (known after apply)
+      [32m+[0m[0m max_pods_per_node           = (known after apply)
+      [32m+[0m[0m name                        = "monitoring"
+      [32m+[0m[0m name_prefix                 = (known after apply)
+      [32m+[0m[0m node_count                  = 1
+      [32m+[0m[0m node_locations              = (known after apply)
+      [32m+[0m[0m operation                   = (known after apply)
+      [32m+[0m[0m project                     = "kubemq"
+      [32m+[0m[0m version                     = "1.36.4-gke.1247000"
+
+      [32m+[0m[0m management {
+          [32m+[0m[0m auto_repair  = false
+          [32m+[0m[0m auto_upgrade = true
+        }
+
+      [32m+[0m[0m network_config (known after apply)
+
+      [32m+[0m[0m node_config {
+          [32m+[0m[0m disk_size_gb       = 100
+          [32m+[0m[0m disk_type          = "pd-balanced"
+          [32m+[0m[0m effective_taints   = (known after apply)
+          [32m+[0m[0m gpudirect_strategy = (known after apply)
+          [32m+[0m[0m image_type         = "COS_CONTAINERD"
+          [32m+[0m[0m labels             = {
+              [32m+[0m[0m "kkbench/pool" = "monitoring"
+              [32m+[0m[0m "kkbench/slot" = "a"
+            }
+          [32m+[0m[0m local_ssd_count    = (known after apply)
+          [32m+[0m[0m logging_variant    = (known after apply)
+          [32m+[0m[0m machine_type       = "e2-standard-4"
+          [32m+[0m[0m metadata           = (known after apply)
+          [32m+[0m[0m min_cpu_platform   = (known after apply)
+          [32m+[0m[0m oauth_scopes       = [
+              [32m+[0m[0m "https://www.googleapis.com/auth/cloud-platform",
+            ]
+          [32m+[0m[0m preemptible        = false
+          [32m+[0m[0m resource_labels    = {
+              [32m+[0m[0m "broker"       = "kafka"
+              [32m+[0m[0m "lifecycle"    = "throwaway"
+              [32m+[0m[0m "purpose"      = "kubemq-kafka-benchmark"
+              [32m+[0m[0m "slot"         = "a"
+              [32m+[0m[0m "ttl-deadline" = "20261004-1726"
+            }
+          [32m+[0m[0m service_account    = (known after apply)
+          [32m+[0m[0m spot               = false
+
+          [32m+[0m[0m boot_disk (known after apply)
+
+          [32m+[0m[0m confidential_nodes (known after apply)
+
+          [32m+[0m[0m containerd_config (known after apply)
+
+          [32m+[0m[0m gcfs_config (known after apply)
+
+          [32m+[0m[0m guest_accelerator (known after apply)
+
+          [32m+[0m[0m kubelet_config (known after apply)
+
+          [32m+[0m[0m linux_node_config (known after apply)
+
+          [32m+[0m[0m node_image_config (known after apply)
+
+          [32m+[0m[0m shielded_instance_config (known after apply)
+
+          [32m+[0m[0m windows_node_config (known after apply)
+
+          [32m+[0m[0m workload_metadata_config (known after apply)
+        }
+
+      [32m+[0m[0m node_drain_config (known after apply)
+
+      [32m+[0m[0m upgrade_settings (known after apply)
+    }
+
+[1mPlan:[0m 4 to add, 0 to change, 0 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m cluster_name = "kkshow-a"
+  [32m+[0m[0m context      = "gke_kubemq_us-east1-b_kkshow-a"
+  [32m+[0m[0m zone         = "us-east1-b"
+[0m[1mgoogle_container_cluster.this: Creating...[0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [1m0s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [1m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [1m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [1m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [1m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [1m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [2m0s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [2m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [2m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [2m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [2m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [2m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [3m0s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [3m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [3m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [3m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [3m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [3m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [4m0s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [4m10s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [4m20s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [4m30s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [4m40s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Still creating... [4m50s elapsed][0m[0m
+[0m[1mgoogle_container_cluster.this: Creation complete after 4m58s [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-a][0m
+[0m[1mgoogle_container_node_pool.driver: Creating...[0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Creating...[0m[0m
+[0m[1mgoogle_container_node_pool.broker: Creating...[0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still creating... [10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still creating... [10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still creating... [10s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still creating... [20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still creating... [20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still creating... [20s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still creating... [30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still creating... [30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still creating... [30s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Still creating... [40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still creating... [40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Still creating... [40s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.driver: Creation complete after 46s [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-a/nodePools/driver][0m
+[0m[1mgoogle_container_node_pool.broker: Still creating... [50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Still creating... [50s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.broker: Creation complete after 55s [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-a/nodePools/broker][0m
+[0m[1mgoogle_container_node_pool.monitoring: Still creating... [1m0s elapsed][0m[0m
+[0m[1mgoogle_container_node_pool.monitoring: Creation complete after 1m5s [id=projects/kubemq/locations/us-east1-b/clusters/kkshow-a/nodePools/monitoring][0m
+[0m[1m[32m
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mcluster_name = "kkshow-a"
+context = "gke_kubemq_us-east1-b_kkshow-a"
+zone = "us-east1-b"
+==> 6/6 nodes Ready
+==> RAID-0 local SSD and local PV provisioner
+Waiting for daemon set "raid0" rollout to finish: 0 of 3 updated pods are available...
+Waiting for daemon set "raid0" rollout to finish: 1 of 3 updated pods are available...
+Waiting for daemon set "raid0" rollout to finish: 2 of 3 updated pods are available...
+daemon set "raid0" successfully rolled out
+Waiting for daemon set "local-volume-provisioner" rollout to finish: 0 of 3 updated pods are available...
+Waiting for daemon set "local-volume-provisioner" rollout to finish: 1 of 3 updated pods are available...
+Waiting for daemon set "local-volume-provisioner" rollout to finish: 2 of 3 updated pods are available...
+daemon set "local-volume-provisioner" successfully rolled out
+==> local PVs: 736Gi, 736Gi, 736Gi
+==> platform: 5 n2 nodes on Intel Ice Lake
+==> deploying measurement pods
+==> cpuinfo and chrony on every n2 node
+==> fio on each broker node (about 2 min per node)
+==> iperf3 ring between broker nodes
+E1004 08:42:20.851468   91564 websocket.go:297] Unknown stream id 1, discarding message
+{
+  "cpu_models": [
+    "40 model name : Intel(R) Xeon(R) CPU @ 2.60GHz"
+  ],
+  "fio_seqwrite_MBps": [
+    819.616995,
+    819.622636,
+    819.625232
+  ],
+  "fio_syncwrite_iops": [
+    12139.914335,
+    11511.941468,
+    12559.890668
+  ],
+  "iperf_Gbps": [
+    15.514861990163658,
+    15.530474000530756,
+    15.539061751524773
+  ]
+}
+==> removing measurement pods
+==> monitoring stack (prometheus-community/kube-prometheus-stack 91.8.1)
+==> Strimzi 1.2.0 operator
+==> Kafka 4.3.1 (KRaft combined, 3 nodes)
+kafka.kafka.strimzi.io/bench condition met
+NAME                                       READY   STATUS    RESTARTS   AGE   IP           NODE                                    NOMINATED NODE   READINESS GATES
+bench-combined-0                           1/1     Running   0          38s   10.84.3.9    gke-kkshow-a-broker-f6b9690e-xm4c       <none>           <none>
+bench-combined-1                           1/1     Running   0          38s   10.84.5.14   gke-kkshow-a-broker-f6b9690e-ltjs       <none>           <none>
+bench-combined-2                           1/1     Running   0          37s   10.84.4.7    gke-kkshow-a-broker-f6b9690e-vg9s       <none>           <none>
+strimzi-cluster-operator-c98cb8ddc-8w9pz   1/1     Running   0          90s   10.84.2.9    gke-kkshow-a-monitoring-e7587829-3lck   <none>           <none>
+kafka  bench-combined-0                          kafka                     quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a     quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a     gke-kkshow-a-broker-f6b9690e-xm4c
+kafka  bench-combined-1                          kafka                     quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a     quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a     gke-kkshow-a-broker-f6b9690e-ltjs
+kafka  bench-combined-2                          kafka                     quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a     quay.io/strimzi/kafka@sha256:e90a1a74af4226f3ca4d1ebef3ab13bdb09754ae17ca4c1444f7fcbb0ca8ea9a     gke-kkshow-a-broker-f6b9690e-vg9s
+kafka  strimzi-cluster-operator-c98cb8ddc-8w9pz  strimzi-cluster-operator  quay.io/strimzi/operator@sha256:77f8fa8121a67561c3418de985783d197f51b8931e9a47f793dc0437dc6bb21f  quay.io/strimzi/operator@sha256:77f8fa8121a67561c3418de985783d197f51b8931e9a47f793dc0437dc6bb21f  gke-kkshow-a-monitoring-e7587829-3lck
+recorded ./results/2026-10-04/infra/a-kafka-20261004T052654Z/digests.tsv (uniform per image repository; pinned digests confirmed)
+==> pods on broker nodes (non-DaemonSet):
+gke-kkshow-a-broker-f6b9690e-xm4c  kafka        bench-combined-0                                    7
+gke-kkshow-a-broker-f6b9690e-ltjs  kafka        bench-combined-1                                    7
+gke-kkshow-a-broker-f6b9690e-vg9s  kafka        bench-combined-2                                    7
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  event-exporter-gke-749dcfbf5b-28vlw                 3m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  filestore-lock-release-controller-7c49f79c89-snv4t  5m+5m
+gke-kkshow-a-broker-f6b9690e-xm4c  kube-system  konnectivity-agent-787f8c9b67-4j4f2                 10m+5m
+gke-kkshow-a-broker-f6b9690e-vg9s  kube-system  konnectivity-agent-787f8c9b67-65mr4                 10m+5m
+gke-kkshow-a-broker-f6b9690e-vg9s  kube-system  konnectivity-agent-787f8c9b67-hp5rb                 10m+5m
+gke-kkshow-a-broker-f6b9690e-xm4c  kube-system  konnectivity-agent-787f8c9b67-mlpjz                 10m+5m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  konnectivity-agent-787f8c9b67-pcpjr                 10m+5m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  konnectivity-agent-autoscaler-549bc88d9b-8tpzz      10m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  kube-dns-autoscaler-7d7fbbb556-68r7f                20m
+gke-kkshow-a-broker-f6b9690e-xm4c  kube-system  kube-dns-df6c5c6db-9dmvp                            100m+10m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  kube-dns-df6c5c6db-npkls                            100m+10m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  kube-proxy-gke-kkshow-a-broker-f6b9690e-ltjs        100m
+gke-kkshow-a-broker-f6b9690e-vg9s  kube-system  kube-proxy-gke-kkshow-a-broker-f6b9690e-vg9s        100m
+gke-kkshow-a-broker-f6b9690e-xm4c  kube-system  kube-proxy-gke-kkshow-a-broker-f6b9690e-xm4c        100m
+gke-kkshow-a-broker-f6b9690e-ltjs  kube-system  l7-default-backend-6db9cf6ffd-lvkbt                 10m
+gke-kkshow-a-broker-f6b9690e-xm4c  kube-system  metrics-server-v1.36.0-848475d4bf-kqt5p             44m
+
+  UP: kkshow-a (kafka), recorded in results/2026-10-04/infra/a-kafka-20261004T052654Z
+    kubeconfig   export KUBECONFIG=./.state/kubeconfig-a
+    TTL          down.sh --slot a fires at 20261004-1726 UTC (cancel: scripts/ttl.sh cancel a)
+    tear down    scripts/down.sh --slot a

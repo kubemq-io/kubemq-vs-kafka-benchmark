@@ -1,0 +1,1 @@
+# no previous container: Error from server (BadRequest): previous terminated container "kafka" in pod "bench-combined-1" not found

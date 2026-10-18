@@ -1,0 +1,1 @@
+2026-10-04T06:48:01Z delete test-topic-0000000-fjMTpsQ: done (6 s after the first attempt)

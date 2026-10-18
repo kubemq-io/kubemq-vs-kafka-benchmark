@@ -1,0 +1,2 @@
+bench-combined-1: identity banner no longer in the current log (rotated); container and restart count unchanged
+bench-combined-2: identity banner no longer in the current log (rotated); container and restart count unchanged

@@ -1,0 +1,2 @@
+2026-10-16T22:22:35Z delete cr-kafka-k1-1792187992: done (4 s after the first attempt)
+2026-10-16T22:22:40Z delete test-topic-0000000-F0Aa4Kk: done (9 s after the first attempt)

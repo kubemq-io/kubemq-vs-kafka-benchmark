@@ -1,0 +1,107 @@
+# sig-storage local static provisioner v2.9.0 (image pinned by digest). Discovers the
+# RAID-0 mount under /mnt/disks on broker nodes and publishes it as a local PV of
+# StorageClass local-ssd. Reclaim policy Delete: the provisioner wipes the directory
+# and re-publishes the PV when its claim is deleted.
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-ssd
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Delete
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: local-volume-provisioner
+  namespace: local-ssd
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: local-volume-provisioner
+rules:
+  - apiGroups: [""]
+    resources: [persistentvolumes]
+    verbs: [get, list, watch, create, delete]
+  - apiGroups: [""]
+    resources: [persistentvolumeclaims]
+    verbs: [get, list, watch]
+  - apiGroups: [""]
+    resources: [nodes]
+    verbs: [get]
+  - apiGroups: [""]
+    resources: [events]
+    verbs: [create, patch, update, watch]
+  - apiGroups: [storage.k8s.io]
+    resources: [storageclasses]
+    verbs: [get, list, watch]
+  - apiGroups: [""]
+    resources: [endpoints, configmaps]
+    verbs: [get, list, watch]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: local-volume-provisioner
+subjects:
+  - kind: ServiceAccount
+    name: local-volume-provisioner
+    namespace: local-ssd
+roleRef:
+  kind: ClusterRole
+  name: local-volume-provisioner
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: local-provisioner-config
+  namespace: local-ssd
+data:
+  storageClassMap: |
+    local-ssd:
+      hostDir: /mnt/disks
+      mountDir: /mnt/disks
+      volumeMode: Filesystem
+      blockCleanerCommand: ["/scripts/shred.sh", "2"]
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: local-volume-provisioner
+  namespace: local-ssd
+spec:
+  selector:
+    matchLabels: {app: local-volume-provisioner}
+  template:
+    metadata:
+      labels: {app: local-volume-provisioner}
+    spec:
+      serviceAccountName: local-volume-provisioner
+      nodeSelector:
+        kkbench/pool: broker
+      containers:
+        - name: provisioner
+          image: registry.k8s.io/sig-storage/local-volume-provisioner@sha256:f9d65db8bda21847d0e281ee219068845c44a3790d439d2e1f60a84e15d4db76
+          securityContext:
+            privileged: true
+          resources:
+            requests: {cpu: 5m, memory: 32Mi}
+            limits: {memory: 128Mi}
+          env:
+            - name: MY_NODE_NAME
+              valueFrom: {fieldRef: {fieldPath: spec.nodeName}}
+            - name: MY_NAMESPACE
+              valueFrom: {fieldRef: {fieldPath: metadata.namespace}}
+          volumeMounts:
+            - {name: provisioner-config, mountPath: /etc/provisioner/config, readOnly: true}
+            - {name: provisioner-dev, mountPath: /dev}
+            - {name: local-disks, mountPath: /mnt/disks, mountPropagation: HostToContainer}
+      volumes:
+        - name: provisioner-config
+          configMap: {name: local-provisioner-config}
+        - name: provisioner-dev
+          hostPath: {path: /dev}
+        - name: local-disks
+          hostPath: {path: /mnt/disks}

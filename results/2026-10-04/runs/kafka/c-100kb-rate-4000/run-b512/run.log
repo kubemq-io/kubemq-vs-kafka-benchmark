@@ -1,0 +1,11 @@
+==> kafka / c-100kb-rate-4000 / run-b512 on kkshow-a
+topics: no benchmark topics present
+==> disk before: gke-kkshow-a-broker-f6b9690e-xm4c 1% 1GB;gke-kkshow-a-broker-f6b9690e-ltjs 1% 1GB;gke-kkshow-a-broker-f6b9690e-vg9s 1% 1GB;
+==> OMB start 2026-10-04T07:57:55Z — workers: http://omb-worker-0.omb-worker.omb.svc.cluster.local:8080,http://omb-worker-1.omb-worker.omb.svc.cluster.local:8080
+==> OMB end 2026-10-04T08:05:47Z, exit 0
+prom export: 85 metric names, 1298876 samples, 4 families missing
+prom export: families missing, see results/2026-10-04/runs/kafka/c-100kb-rate-4000/run-b512/prom/MISSING.txt
+partitions: test-topic-0000000-5GvdjJk has 16 partitions (want 16), 0 with no records
+reclaim: 78 s after topic delete: gke-kkshow-a-broker-f6b9690e-xm4c 1% 1GB;gke-kkshow-a-broker-f6b9690e-ltjs 1% 1GB;gke-kkshow-a-broker-f6b9690e-vg9s 1% 1GB;
+publish rate avg: 4007 msg/s   consume rate avg: 4007 msg/s   publish latency p99 (aggregated): 1230.503 ms
+==> recorded results/2026-10-04/runs/kafka/c-100kb-rate-4000/run-b512

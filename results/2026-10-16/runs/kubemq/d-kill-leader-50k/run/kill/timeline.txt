@@ -1,0 +1,13 @@
+2026-10-16T21:57:02Z run.sh started (pid 35869)
+2026-10-16T21:59:52Z OMB measured window started
+2026-10-16T21:59:58Z verifier started on cr-kafka-k1-1792187992 at 5000 msg/s for 13 min
+2026-10-16T22:05:07Z locator: broker id 2 (bench-1) leads 6 partitions of test-topic-0000000-F0Aa4Kk; counts [   6 2    5 3    5 1 ]
+2026-10-16T22:05:25Z KILL: SIGKILL host pid 88546 (/kubemq/kubemq-run ) of bench-1 on gke-kkshow-b-broker-35790078-lf46, measured minute 5
+2026-10-16T22:05:39Z bench-1 Ready again after 13 s
+2026-10-16T22:05:49Z kill proof: PASS (restartCount 0 -> 1, container changed, PV and data-dir inode and image identical; 2 survivors checked on restartCount/uid/containerID/incarnation)
+2026-10-16T22:05:54Z no under-replicated partition of test-topic-0000000-F0Aa4Kk 31 s after the kill
+2026-10-16T22:06:37Z boot evidence: bench-1: restartCount 0 -> 1; 19 boot-phase samples; 22 boot log lines;
+2026-10-16T22:06:37Z evidence: 3 pods captured (pods/ logs/ identity/ events.txt operator.log nodes/ diag/); heap profiles copied: 0
+0
+2026-10-16T22:22:55Z verifier exit 0: PASS acked=3891500 observed=3891500 missing=0 longest zero-ack run=2 s
+2026-10-16T22:22:55Z run.sh exit 0

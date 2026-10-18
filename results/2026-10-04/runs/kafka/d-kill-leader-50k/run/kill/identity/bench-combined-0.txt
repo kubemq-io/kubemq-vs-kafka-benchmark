@@ -1,0 +1,4 @@
+== current
+== previous
+== terminated
+{"restartCount":1,"containerID":"containerd://bd7c3741df95f450f8a1a9f997ef643df796580d8928d562d1055e06b518693d","lastState":{"terminated":{"containerID":"containerd://197be5dad052d2b9093ad89f685904830ff32cea44a9dc4824c237ab53417024","exitCode":137,"finishedAt":"2026-10-04T08:57:57Z","reason":"Error","startedAt":"2026-10-04T05:48:10Z"}},"state":{"running":{"startedAt":"2026-10-04T08:57:57Z"}}}

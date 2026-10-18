@@ -1,0 +1,27 @@
+{
+  "target": 100000,
+  "carried": 100027,
+  "carried_pct": 100,
+  "carried_last60_pct": 100,
+  "backlog_first_min": 493,
+  "backlog_last_min": 244,
+  "backlog_delta": -250,
+  "publish_delay_p99_ms": 0.07,
+  "publish_p99_ms": 3.157,
+  "e2e_p99_ms": 4.0,
+  "publish_p50_ms": 1.599,
+  "publish_p999_ms": 11.544,
+  "e2e_p50_ms": 2.0,
+  "e2e_p999_ms": 19.0,
+  "criteria": {
+    "rate": true,
+    "backlog": true,
+    "schedule": true,
+    "publish_p99": true,
+    "e2e_p99": true
+  },
+  "stop_ok": true,
+  "gate_ok": true,
+  "status": "pass",
+  "failed": []
+}

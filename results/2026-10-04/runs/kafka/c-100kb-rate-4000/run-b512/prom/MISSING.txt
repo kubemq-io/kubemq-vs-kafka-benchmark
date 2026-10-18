@@ -1,0 +1,4 @@
+kubemq_.*
+dragonboat_.*
+kube_pod_container_status_last_terminated_reason
+kube_pod_container_status_last_terminated_exitcode

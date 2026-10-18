@@ -1,0 +1,1 @@
+# capture ok (gke-kkshow-a-broker-f6b9690e-ltjs, last 1121s): 0 matching kernel lines

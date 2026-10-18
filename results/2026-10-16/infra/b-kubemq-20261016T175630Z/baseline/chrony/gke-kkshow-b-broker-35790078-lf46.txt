@@ -1,0 +1,13 @@
+Reference ID    : A9FEA9FE (metadata.google.internal)
+Stratum         : 3
+Ref time (UTC)  : Fri Oct 16 18:05:27 2026
+System time     : 0.000025764 seconds fast of NTP time
+Last offset     : +0.000045044 seconds
+RMS offset      : 0.000022065 seconds
+Frequency       : 10.853 ppm slow
+Residual freq   : +0.006 ppm
+Skew            : 2.363 ppm
+Root delay      : 0.000205769 seconds
+Root dispersion : 0.000187721 seconds
+Update interval : 64.7 seconds
+Leap status     : Normal

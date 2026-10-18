@@ -1,0 +1,7 @@
+kafka_server_.*
+kafka_network_.*
+kafka_log_.*
+jvm_gc_.*
+jvm_memory_.*
+kube_pod_container_status_last_terminated_reason
+kube_pod_container_status_last_terminated_exitcode

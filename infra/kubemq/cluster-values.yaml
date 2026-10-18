@@ -1,0 +1,54 @@
+# Release 2 of 2: the KubemqCluster. Shipped defaults for the store (8 shards,
+# leadership balanced across servers) are left alone: nextShards and nextBalanceLeaders
+# are deliberately NOT set. The licence comes from a Secret that up.sh creates from
+# $KUBEMQ_LICENSE_KEY; it never appears in this file or in Helm's saved values.
+#
+# Broker tuning (docs/METHOD.md) is added here, inline, with a comment per knob.
+fullnameOverride: bench      # the KubemqCluster (and its pods) are named "bench"
+cluster:
+  enabled: true
+operator:
+  enabled: false
+licenseKeySecretRef:
+  name: kubemq-license
+  key: licenseKey
+
+replicas: 3
+image:
+  image: europe-docker.pkg.dev/kubemq/images/kubemq-next:v3.6.22@sha256:87f3e1aa3cf3e4c324893e482d8ee4e20f53e40390b41e8722b472854eb801be
+  pullPolicy: IfNotPresent
+
+volume:
+  size: 600Gi
+  storageClass: local-ssd
+
+resources:
+  requestsCpu: "7"
+  limitsCpu: "7"
+  requestsMemory: 26Gi
+  limitsMemory: 26Gi
+
+nodeSelectors:
+  keys:
+    kkbench/pool: broker
+podAntiAffinity:
+  enabled: true
+  required: true
+
+env:
+  GOMEMLIMIT: 20GiB
+  # v3.6.11+: the append-only raft log store is the default for a new data directory and runs under the
+  # default (fast) acknowledgement policy; no switch, no policy override. Shipped defaults.
+
+kafka:
+  enabled: true
+
+# Every non-Kafka connector off (docs/METHOD.md). gRPC, REST and the dashboard
+# stay on and the report says so.
+amqp: {enabled: false}
+amqp10: {enabled: false}
+mqtt: {enabled: false}
+stomp: {enabled: false}
+aws: {enabled: false}
+gcp: {enabled: false}
+ce: {disabled: true}

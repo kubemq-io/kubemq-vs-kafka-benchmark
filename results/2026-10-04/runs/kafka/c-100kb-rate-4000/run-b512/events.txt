@@ -1,0 +1,5 @@
+## kubectl -n kafka get events --sort-by=.lastTimestamp -o wide
+No resources found in kafka namespace.
+
+## kubectl get events -A --field-selector reason=OOMKilling
+No resources found

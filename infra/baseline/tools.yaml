@@ -1,0 +1,82 @@
+# Short-lived measurement pods, one per n2 node, used by scripts/baseline.sh and then
+# deleted (the namespace goes away before any broker is deployed).
+#   tools-broker: on each broker node, with the RAID-0 local SSD mount at /data.
+#   tools-driver: on each driver node, for /proc/cpuinfo only.
+# Privileged + hostPID only so `chronyc tracking` can be read from the host.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kkbench-baseline
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: tools-broker
+  namespace: kkbench-baseline
+spec:
+  selector:
+    matchLabels: {app: tools-broker}
+  template:
+    metadata:
+      labels: {app: tools-broker}
+    spec:
+      nodeSelector: {kkbench/pool: broker}
+      hostPID: true
+      containers:
+        - name: tools
+          image: debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251
+          securityContext: {privileged: true}
+          resources:
+            requests: {cpu: 100m, memory: 256Mi}
+            limits: {memory: 2Gi}
+          command: ["/bin/bash", "-c"]
+          args:
+            - |
+              set -e
+              apt-get update -qq >/dev/null
+              DEBIAN_FRONTEND=noninteractive apt-get install -y -qq fio iperf3 procps >/dev/null
+              touch /tmp/ready
+              exec sleep infinity
+          readinessProbe:
+            exec: {command: ["test", "-f", "/tmp/ready"]}
+            periodSeconds: 5
+          volumeMounts:
+            - {name: data, mountPath: /data}
+      volumes:
+        - name: data
+          hostPath: {path: /mnt/disks/raid0, type: Directory}
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: tools-driver
+  namespace: kkbench-baseline
+spec:
+  selector:
+    matchLabels: {app: tools-driver}
+  template:
+    metadata:
+      labels: {app: tools-driver}
+    spec:
+      nodeSelector: {kkbench/pool: driver}
+      tolerations:
+        - {key: kkbench/pool, operator: Equal, value: driver, effect: NoSchedule}
+      hostPID: true
+      containers:
+        - name: tools
+          image: debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251
+          securityContext: {privileged: true}
+          resources:
+            requests: {cpu: 100m, memory: 256Mi}
+            limits: {memory: 2Gi}
+          command: ["/bin/bash", "-c"]
+          args:
+            - |
+              set -e
+              apt-get update -qq >/dev/null
+              DEBIAN_FRONTEND=noninteractive apt-get install -y -qq fio iperf3 procps >/dev/null
+              touch /tmp/ready
+              exec sleep infinity
+          readinessProbe:
+            exec: {command: ["test", "-f", "/tmp/ready"]}
+            periodSeconds: 5

@@ -1,0 +1,5 @@
+== current
+2026-10-16T20:52:41.719944214Z {"level":"INFO","time":"2026-10-16T20:52:41.719Z","component":"services","caller":"services/services.go:114","msg":"process identity","host":"bench-0","node":"bench-0","incarnation":"422648ac8ac804db","pod":"bench-0","pod_uid":"","container_id":"","pid":1,"start_time":"2026-10-16T20:52:41.46050963Z","version":"v3.6.22"}
+== previous
+== terminated
+{"restartCount":0,"containerID":"containerd://ef82f33d6385c85a58cc9b4d7cbe711d4979eba7d86c57a142d8f5b6d7095b91","lastState":{},"state":{"running":{"startedAt":"2026-10-16T20:52:41Z"}}}

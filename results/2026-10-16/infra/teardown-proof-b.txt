@@ -1,0 +1,11 @@
+# 2026-10-16T22:31:57Z teardown proof for kkshow-b
+## clusters
+(end)
+## instances gke-kkshow-b-*
+WARNING: The following filter keys were not present in any resource : name
+(end)
+## disks kkshow-b
+WARNING: The following filter keys were not present in any resource : labels.goog-k8s-cluster-name
+(end)
+## ttl
+slot b: no TTL running

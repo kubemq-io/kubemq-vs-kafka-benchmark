@@ -1,0 +1,1150 @@
+2026-10-16T21:56:21.808116255Z no config file found — using defaults and environment variables
+2026-10-16T21:56:21.808884637Z WARN: management API/dashboard binds 0.0.0.0 (off-host) with Api.Auth disabled — the API is UNAUTHENTICATED; enable Api.Auth or set API_BIND_ADDRESS=127.0.0.1
+2026-10-16T21:56:21.808890492Z NOTICE: store limits left at 0 (unlimited): MaxQueues, MaxSubscribers, MaxMessages, MaxQueueSize — set them to bound resource use in production
+2026-10-16T21:56:21.808892314Z WARNING: the Kafka connector is enabled with NO authentication: port 9092 (and TLS port 9093 once TLS is configured) accepts unauthenticated clients from any host that can reach it, on every network interface, and they can read and write every channel. To require a login set CONNECTORS_KAFKA_DEFAULT_USER and CONNECTORS_KAFKA_DEFAULT_PASS (or Connectors.Kafka.Credentials, CONNECTORS_KAFKA_USERS_FILE, or CONNECTORS_KAFKA_CLIENT_USERS with CONNECTORS_KAFKA_CLIENT_PASSWORDS), or turn on KubeMQ authentication (Authentication.Enable=true, AUTHENTICATION_ENABLE=true), which protects this connector too; set Connectors.Kafka.Enable=false (CONNECTORS_KAFKA_ENABLE=false) to close the port
+2026-10-16T21:56:21.809021206Z {"level":"INFO","time":"2026-10-16T21:56:21.808Z","component":"daemon","caller":"server/server.go:123","msg":"storage engine selected","host":"bench-1","configured":"next","resolved":"next","signal":"explicitly configured (detection did not run)","store_path":"./store"}
+2026-10-16T21:56:21.809026178Z {"level":"INFO","time":"2026-10-16T21:56:21.808Z","component":"daemon","caller":"server/server.go:163","msg":"tuning applied","host":"bench-1","profile":"GOMAXPROCS=7 GOGC=300 GOMEMLIMIT=20480MB memory_limit_source=environment stream_workers=7 pipe_init=8KB pipe_max=512KB"}
+2026-10-16T21:56:21.809029177Z {"level":"INFO","time":"2026-10-16T21:56:21.808Z","component":"daemon","caller":"server/server.go:168","msg":"kubemq server running in kubernetes mode","host":"bench-1"}
+2026-10-16T21:56:22.021027639Z {"level":"INFO","time":"2026-10-16T21:56:22.020Z","component":"license","caller":"license/service.go:1064","msg":"lease adopted","host":"bench-1","via":"activate","license_id":"8441bd6a-aaaa-4824-b612-7be7b5cfc0c2","plan":"trial","lease_expires_at":"2026-10-17T21:56:21Z","token_version":4,"over_cap":true,"silent":false,"skew_seconds":1}
+2026-10-16T21:56:22.022499784Z {"level":"INFO","time":"2026-10-16T21:56:22.022Z","component":"license","caller":"license/service.go:431","msg":"license verified","host":"bench-1","license_id":"8441bd6a-aaaa-4824-b612-7be7b5cfc0c2","plan":"trial","mode":"online","source":"key","kid":"license-signing-v2","fingerprint":"7f359f33-5958-4f75-b024-9219ed2fc40e","fingerprint_source":"kube-system","lease_expires_at":"2026-10-17T21:56:21Z","license_expires_at":"2027-10-20T08:07:00Z","max_instances":0}
+2026-10-16T21:56:22.022512749Z {"level":"INFO","time":"2026-10-16T21:56:22.022Z","component":"daemon","caller":"server/server.go:182","msg":"starting kubemq server","host":"bench-1","version":"v3.6.22","cores":7}
+2026-10-16T21:56:22.022520211Z {"level":"INFO","time":"2026-10-16T21:56:22.022Z","component":"metrics","caller":"metrics/exporter.go:635","msg":"idle-prune cutoff configured","host":"bench-1","hours":24}
+2026-10-16T21:56:22.022764639Z {"level":"INFO","time":"2026-10-16T21:56:22.022Z","component":"services","caller":"services/services.go:114","msg":"process identity","host":"bench-1","node":"bench-1","incarnation":"86f9938884ee6e4a","pod":"bench-1","pod_uid":"","container_id":"","pid":1,"start_time":"2026-10-16T21:56:21.796021145Z","version":"v3.6.22"}
+2026-10-16T21:56:22.023075441Z {"level":"INFO","time":"2026-10-16T21:56:22.023Z","component":"services","caller":"services/services.go:195","msg":"component started","host":"bench-1","component":"api","duration_ms":0}
+2026-10-16T21:56:22.023089975Z {"level":"INFO","time":"2026-10-16T21:56:22.023Z","component":"transport-server","caller":"broker/service.go:249","msg":"no last_status file yet, starting with an empty status","host":"bench-1","file":"store/bench-1/bench/last_status.json"}
+2026-10-16T21:56:22.023103543Z {"level":"INFO","time":"2026-10-16T21:56:22.023Z","component":"transport-server","caller":"broker/service.go:318","msg":"server mode set to broker","host":"bench-1"}
+2026-10-16T21:56:22.023166688Z {"level":"INFO","time":"2026-10-16T21:56:22.023Z","component":"transport-server","caller":"broker/broker.go:392","msg":"no truncate lock files found","host":"bench-1"}
+2026-10-16T21:56:22.023172476Z {"level":"INFO","time":"2026-10-16T21:56:22.023Z","component":"transport-server","caller":"broker/broker.go:298","msg":"kubemq server cluster enabled","host":"bench-1","cluster_name":"bench"}
+2026-10-16T21:56:22.025327278Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"Starting nats-server version 2.1.9","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.025337973Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"Git commit [not set]","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.025380815Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"Listening for client connections on 0.0.0.0:36607","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.025384729Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"Server id is NCVIBWHXFL46A7SBUPDSZX4TYLZWQ6VSJYWV5BFKEGSVWVFBK6OP3WRL","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.025387238Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"Server is ready","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.025592637Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"In-Memory client server connection pipe: mDhD1aqF7AFGVhmhlJbILe started","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.025655052Z {"level":"INFO","time":"2026-10-16T21:56:22.025Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"Listening for route connections on 0.0.0.0:5228","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.026230265Z {"level":"INFO","time":"2026-10-16T21:56:22.026Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:5228 - rid:1 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.026340311Z {"level":"INFO","time":"2026-10-16T21:56:22.026Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:42200 - rid:2 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.026475241Z {"level":"INFO","time":"2026-10-16T21:56:22.026Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:42200 - rid:2 - Router connection closed: Duplicate Route","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.026607817Z {"level":"INFO","time":"2026-10-16T21:56:22.026Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.3.21:5228 - rid:1 - Router connection closed: Duplicate Route","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.027322406Z {"level":"INFO","time":"2026-10-16T21:56:22.027Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.5.28:5228 - rid:3 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.028603938Z {"level":"INFO","time":"2026-10-16T21:56:22.028Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.4.21:5228 - rid:4 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.028684657Z {"level":"INFO","time":"2026-10-16T21:56:22.028Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.4.21:51598 - rid:5 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:22.029062770Z {"level":"INFO","time":"2026-10-16T21:56:22.029Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.4.21:5228 - rid:4 - Router connection closed: Duplicate Route","host":"bench-1","source":"nats"}
+2026-10-16T21:56:24.052383257Z {"level":"INFO","time":"2026-10-16T21:56:24.052Z","component":"transport-server","caller":"broker/identity_claim.go:857","msg":"next engine identity claim resolved","host":"bench-1","outcome":"configured","replica_id":2,"configured_replica_id":2,"non_voting":false,"join":false,"address":"bench-1.bench.kubemq.svc.cluster.local:5229","raft_state_on_disk":false,"initial_member":true,"peers_queried":"bench-0.bench.kubemq.svc.cluster.local:5229,bench-2.bench.kubemq.svc.cluster.local:5229","attempts":1,"elapsed":"2s","evidence":"every configured peer (2) answered that it holds no cluster — brand-new cluster"}
+2026-10-16T21:56:24.052724989Z 2026-10-16 21:56:24.052686 I | dragonboat: go version: go1.27.2, linux/amd64
+2026-10-16T21:56:24.052731116Z 2026-10-16 21:56:24.052695 I | dragonboat: dragonboat version: 4.0.0 (Dev)
+2026-10-16T21:56:24.052730106Z {"level":"INFO","time":"2026-10-16T21:56:24.052Z","component":"nextengine","caller":"nextengine/engine_next.go:473","msg":"raft replication window set from the transport queue limits; it assumes every member runs under the same memory limit, a member with a smaller receive queue drops messages in flight and recovers through a reject or a release","host":"bench-1","window_bytes":33554432,"receive_queue_bytes":134217728,"send_queue_bytes":134217728,"shards":8,"memory_limit_bytes":21474836480}
+2026-10-16T21:56:24.052733376Z 2026-10-16 21:56:24.052698 W | config: mutual TLS disabled, communication is insecure
+2026-10-16T21:56:24.052772274Z 2026-10-16 21:56:24.052723 I | config: using default EngineConfig
+2026-10-16T21:56:24.052779604Z 2026-10-16 21:56:24.052735 I | config: using default LogDBConfig
+2026-10-16T21:56:24.052789628Z 2026-10-16 21:56:24.052776 I | dragonboat: DeploymentID set to 1
+2026-10-16T21:56:24.058726375Z 2026-10-16 21:56:24.058622 I | dragonboat: logdb memory limit: 8192 MBytes
+2026-10-16T21:56:24.059136265Z 2026-10-16 21:56:24.059082 I | dragonboat: NodeHost ID: 872781e3-866e-4cde-8208-82f91a4ad86a
+2026-10-16T21:56:24.059138776Z 2026-10-16 21:56:24.059093 I | dragonboat: using regular node registry
+2026-10-16T21:56:24.059139986Z 2026-10-16 21:56:24.059097 I | dragonboat: filesystem error injection mode enabled: false
+2026-10-16T21:56:24.059398541Z 2026-10-16 21:56:24.059347 I | transport: transport type: go-tcp-transport
+2026-10-16T21:56:24.059637788Z 2026-10-16 21:56:24.059496 I | dragonboat: transport type: go-tcp-transport
+2026-10-16T21:56:24.059646369Z 2026-10-16 21:56:24.059505 I | dragonboat: logdb type: Tan
+2026-10-16T21:56:24.059648641Z 2026-10-16 21:56:24.059508 I | dragonboat: nodehost address: bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:24.061104587Z 2026-10-16 21:56:24.061033 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-1-2 creating a new tan db
+2026-10-16T21:56:24.062103622Z 2026-10-16 21:56:24.062042 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-1-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:24.062117820Z 2026-10-16 21:56:24.062057 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-1-2 logFiles to rebuild: map[]
+2026-10-16T21:56:24.062121404Z 2026-10-16 21:56:24.062059 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-1-2 indexFiles: []
+2026-10-16T21:56:24.062749844Z 2026-10-16 21:56:24.062711 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-1-2 opened in 1.698109ms: 0 index files loaded in 1.054495ms, 0 log files rebuilt
+2026-10-16T21:56:24.063237709Z 2026-10-16 21:56:24.063182 I | dragonboat: [00001:00002] replaying raft logs
+2026-10-16T21:56:24.063242248Z 2026-10-16 21:56:24.063201 I | raft: [00001:00002] created, initial: true, new: true
+2026-10-16T21:56:24.063243858Z 2026-10-16 21:56:24.063213 I | raft: [00001:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:24.063245657Z 2026-10-16 21:56:24.063221 I | raft: [f:1,l:0,t:0,c:0,a:0] [00001:00002] t0 became follower
+2026-10-16T21:56:24.063260151Z 2026-10-16 21:56:24.063240 I | raft: [f:1,l:0,t:0,c:0,a:0] [00001:00002] t1 became follower
+2026-10-16T21:56:24.063262321Z 2026-10-16 21:56:24.063248 I | raft: [f:1,l:0,t:0,c:0,a:0] [00001:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:24.063263970Z 2026-10-16 21:56:24.063253 I | raft: [f:1,l:0,t:0,c:0,a:0] [00001:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:24.063268150Z 2026-10-16 21:56:24.063257 I | raft: [f:1,l:0,t:0,c:0,a:0] [00001:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:24.063722197Z {"level":"INFO","time":"2026-10-16T21:56:24.063Z","component":"transport-server","caller":"broker/enginemode.go:578","msg":"next engine booted — Events-Store + Queues live through the array↔engine seam (DE-22)","host":"bench-1","nodeHostID":"872781e3-866e-4cde-8208-82f91a4ad86a","raftAddress":"bench-1.bench.kubemq.svc.cluster.local:5229","clustered":true,"raftSecurity":"plaintext","replicaID":2,"peerCount":3,"ackPolicy":"fast"}
+2026-10-16T21:56:24.063979331Z {"level":"INFO","time":"2026-10-16T21:56:24.063Z","component":"transport-server","caller":"broker/broker.go:392","msg":"no truncate lock files found","host":"bench-1"}
+2026-10-16T21:56:24.064069336Z {"level":"INFO","time":"2026-10-16T21:56:24.064Z","component":"services","caller":"services/services.go:204","msg":"component started","host":"bench-1","component":"broker","duration_ms":2040}
+2026-10-16T21:56:24.064080247Z 2026-10-16 21:56:24.064052 I | rsm: [00001:00002] opened disk SM, index 0
+2026-10-16T21:56:24.064083311Z 2026-10-16 21:56:24.064064 I | dragonboat: [00001:00002] opened on disk SM at index 0 in 651.63µs
+2026-10-16T21:56:24.064085473Z 2026-10-16 21:56:24.064069 I | rsm: [00001:00002] no snapshot available during launch
+2026-10-16T21:56:24.064193206Z 2026-10-16 21:56:24.064137 I | dragonboat: [00001:00002] initialized using <00001:00002:0>
+2026-10-16T21:56:24.064200667Z 2026-10-16 21:56:24.064149 I | dragonboat: [00001:00002] initial index set to 0
+2026-10-16T21:56:24.113985844Z 2026-10-16 21:56:24.113843 W | raft: [f:1,l:3,t:1,c:3,a:0] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.114633603Z 2026-10-16 21:56:24.114558 I | rsm: [00001:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:24.114655924Z 2026-10-16 21:56:24.114607 I | rsm: [00001:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:24.114660979Z 2026-10-16 21:56:24.114621 I | rsm: [00001:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:24.164412354Z 2026-10-16 21:56:24.164266 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.215093428Z 2026-10-16 21:56:24.214950 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.265980683Z 2026-10-16 21:56:24.265829 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.316400925Z 2026-10-16 21:56:24.316275 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.366869851Z 2026-10-16 21:56:24.366749 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.417441964Z 2026-10-16 21:56:24.417315 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.468211364Z 2026-10-16 21:56:24.468092 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.518729886Z 2026-10-16 21:56:24.518584 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.569445837Z 2026-10-16 21:56:24.569357 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.620003125Z 2026-10-16 21:56:24.619894 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.670948177Z 2026-10-16 21:56:24.670805 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.721431807Z 2026-10-16 21:56:24.721311 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.772013101Z 2026-10-16 21:56:24.771878 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.822812131Z 2026-10-16 21:56:24.822686 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.873665383Z 2026-10-16 21:56:24.873525 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.924237953Z 2026-10-16 21:56:24.924091 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:24.974752210Z 2026-10-16 21:56:24.974607 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.025550928Z 2026-10-16 21:56:25.025441 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.075942278Z 2026-10-16 21:56:25.075837 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.126486425Z 2026-10-16 21:56:25.126345 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.177119275Z 2026-10-16 21:56:25.177013 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.227705852Z 2026-10-16 21:56:25.227554 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.278669626Z 2026-10-16 21:56:25.278517 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.329402715Z 2026-10-16 21:56:25.329267 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.380015370Z 2026-10-16 21:56:25.379872 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.430547876Z 2026-10-16 21:56:25.430422 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.481353526Z 2026-10-16 21:56:25.481203 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.531859724Z 2026-10-16 21:56:25.531741 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.582839897Z 2026-10-16 21:56:25.582711 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.633516104Z 2026-10-16 21:56:25.633363 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.684315216Z 2026-10-16 21:56:25.684185 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.734878928Z 2026-10-16 21:56:25.734739 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.785355390Z 2026-10-16 21:56:25.785215 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.836339205Z 2026-10-16 21:56:25.836229 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.886938691Z 2026-10-16 21:56:25.886805 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.937540166Z 2026-10-16 21:56:25.937388 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:25.988190397Z 2026-10-16 21:56:25.988044 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.038392223Z 2026-10-16 21:56:26.038230 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.064396448Z 2026-10-16 21:56:26.064249 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:26.089509287Z 2026-10-16 21:56:26.089353 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.140017153Z 2026-10-16 21:56:26.139855 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.190621352Z 2026-10-16 21:56:26.190481 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.241276583Z 2026-10-16 21:56:26.241133 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.292450289Z 2026-10-16 21:56:26.292308 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.343211988Z 2026-10-16 21:56:26.343073 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.393890811Z 2026-10-16 21:56:26.393736 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.444523622Z 2026-10-16 21:56:26.444383 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.495382767Z 2026-10-16 21:56:26.495251 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.546090608Z 2026-10-16 21:56:26.545946 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.577457794Z {"level":"INFO","time":"2026-10-16T21:56:26.577Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.5.28:38100 - rid:10 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:26.577521547Z {"level":"INFO","time":"2026-10-16T21:56:26.577Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.5.28:38100 - rid:10 - Router connection closed: Duplicate Route","host":"bench-1","source":"nats"}
+2026-10-16T21:56:26.596552754Z 2026-10-16 21:56:26.596453 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.647365581Z 2026-10-16 21:56:26.647215 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.698513354Z 2026-10-16 21:56:26.698382 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.743070671Z {"level":"INFO","time":"2026-10-16T21:56:26.742Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.4.21:51612 - rid:11 - Route connection created","host":"bench-1","source":"nats"}
+2026-10-16T21:56:26.743102453Z {"level":"INFO","time":"2026-10-16T21:56:26.743Z","component":"broker-server","caller":"logging/nats_logger.go:31","msg":"10.112.4.21:51612 - rid:11 - Router connection closed: Duplicate Route","host":"bench-1","source":"nats"}
+2026-10-16T21:56:26.749179089Z 2026-10-16 21:56:26.749084 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.800204917Z 2026-10-16 21:56:26.800087 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.851262835Z 2026-10-16 21:56:26.851116 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.902157540Z 2026-10-16 21:56:26.902023 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:26.952939331Z 2026-10-16 21:56:26.952815 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.003846235Z 2026-10-16 21:56:27.003740 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.055012130Z 2026-10-16 21:56:27.054874 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.105448690Z 2026-10-16 21:56:27.105325 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.156293047Z 2026-10-16 21:56:27.156184 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.207285920Z 2026-10-16 21:56:27.207165 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.258110673Z 2026-10-16 21:56:27.257997 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.309274735Z 2026-10-16 21:56:27.309167 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.360296184Z 2026-10-16 21:56:27.360161 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.411063916Z 2026-10-16 21:56:27.410925 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.459784068Z 2026-10-16 21:56:27.459658 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 became PreVote candidate
+2026-10-16T21:56:27.459806005Z 2026-10-16 21:56:27.459680 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 received RequestPreVoteResp from n00002
+2026-10-16T21:56:27.459807393Z 2026-10-16 21:56:27.459688 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 sent RequestPreVote to n00003
+2026-10-16T21:56:27.459808824Z 2026-10-16 21:56:27.459694 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 sent RequestPreVote to n00001
+2026-10-16T21:56:27.461615876Z 2026-10-16 21:56:27.461498 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.461703926Z 2026-10-16 21:56:27.461660 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 received RequestPreVoteResp from n00001
+2026-10-16T21:56:27.461706843Z 2026-10-16 21:56:27.461681 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t1 received 2 preVotes and 0 rejections, quorum is 2
+2026-10-16T21:56:27.461741734Z 2026-10-16 21:56:27.461696 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 became candidate
+2026-10-16T21:56:27.461750080Z 2026-10-16 21:56:27.461704 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 received RequestVoteResp from n00002
+2026-10-16T21:56:27.461751612Z 2026-10-16 21:56:27.461711 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 sent RequestVote to n00001
+2026-10-16T21:56:27.461752815Z 2026-10-16 21:56:27.461717 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 sent RequestVote to n00003
+2026-10-16T21:56:27.463084058Z 2026-10-16 21:56:27.463005 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 received RequestVoteResp from n00001
+2026-10-16T21:56:27.463096673Z 2026-10-16 21:56:27.463018 W | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 received 2 votes and 0 rejections, quorum is 2
+2026-10-16T21:56:27.463098400Z 2026-10-16 21:56:27.463029 I | raft: [f:1,l:3,t:1,c:3,a:3] [00001:00002] t2 became leader
+2026-10-16T21:56:27.513163782Z {"level":"INFO","time":"2026-10-16T21:56:27.513Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":1,"replica":2,"leader":true,"probe_wait_ms":3449,"probe_attempts":69,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":1}
+2026-10-16T21:56:27.518607648Z 2026-10-16 21:56:27.518522 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-2-2 creating a new tan db
+2026-10-16T21:56:27.519564921Z 2026-10-16 21:56:27.519503 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-2-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.519584749Z 2026-10-16 21:56:27.519517 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-2-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.519587498Z 2026-10-16 21:56:27.519520 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-2-2 indexFiles: []
+2026-10-16T21:56:27.520161697Z 2026-10-16 21:56:27.520110 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-2-2 opened in 1.60667ms: 0 index files loaded in 1.023514ms, 0 log files rebuilt
+2026-10-16T21:56:27.520565694Z 2026-10-16 21:56:27.520513 I | dragonboat: [00002:00002] replaying raft logs
+2026-10-16T21:56:27.520588970Z 2026-10-16 21:56:27.520528 I | raft: [00002:00002] created, initial: true, new: true
+2026-10-16T21:56:27.520591088Z 2026-10-16 21:56:27.520532 I | raft: [00002:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.520592899Z 2026-10-16 21:56:27.520537 I | raft: [f:1,l:0,t:0,c:0,a:0] [00002:00002] t0 became follower
+2026-10-16T21:56:27.520603211Z 2026-10-16 21:56:27.520550 I | raft: [f:1,l:0,t:0,c:0,a:0] [00002:00002] t1 became follower
+2026-10-16T21:56:27.520607315Z 2026-10-16 21:56:27.520559 I | raft: [f:1,l:0,t:0,c:0,a:0] [00002:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.520609133Z 2026-10-16 21:56:27.520562 I | raft: [f:1,l:0,t:0,c:0,a:0] [00002:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.520611063Z 2026-10-16 21:56:27.520565 I | raft: [f:1,l:0,t:0,c:0,a:0] [00002:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.522179923Z 2026-10-16 21:56:27.522116 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-3-2 creating a new tan db
+2026-10-16T21:56:27.523043338Z 2026-10-16 21:56:27.522988 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-3-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.523048948Z 2026-10-16 21:56:27.522999 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-3-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.523051208Z 2026-10-16 21:56:27.523001 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-3-2 indexFiles: []
+2026-10-16T21:56:27.523580441Z 2026-10-16 21:56:27.523520 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-3-2 opened in 1.420667ms: 0 index files loaded in 907.829µs, 0 log files rebuilt
+2026-10-16T21:56:27.523992613Z 2026-10-16 21:56:27.523942 I | dragonboat: [00003:00002] replaying raft logs
+2026-10-16T21:56:27.523996873Z 2026-10-16 21:56:27.523955 I | raft: [00003:00002] created, initial: true, new: true
+2026-10-16T21:56:27.523998797Z 2026-10-16 21:56:27.523959 I | raft: [00003:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.524000775Z 2026-10-16 21:56:27.523964 I | raft: [f:1,l:0,t:0,c:0,a:0] [00003:00002] t0 became follower
+2026-10-16T21:56:27.524016185Z 2026-10-16 21:56:27.523975 I | raft: [f:1,l:0,t:0,c:0,a:0] [00003:00002] t1 became follower
+2026-10-16T21:56:27.524022413Z 2026-10-16 21:56:27.523984 I | raft: [f:1,l:0,t:0,c:0,a:0] [00003:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.524024212Z 2026-10-16 21:56:27.523993 I | raft: [f:1,l:0,t:0,c:0,a:0] [00003:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.524037027Z 2026-10-16 21:56:27.523998 I | raft: [f:1,l:0,t:0,c:0,a:0] [00003:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.525629772Z 2026-10-16 21:56:27.525566 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-4-2 creating a new tan db
+2026-10-16T21:56:27.526632997Z 2026-10-16 21:56:27.526533 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-4-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.526647026Z 2026-10-16 21:56:27.526545 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-4-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.526649009Z 2026-10-16 21:56:27.526548 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-4-2 indexFiles: []
+2026-10-16T21:56:27.527230803Z 2026-10-16 21:56:27.527170 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-4-2 opened in 1.615663ms: 0 index files loaded in 1.004039ms, 0 log files rebuilt
+2026-10-16T21:56:27.527705191Z 2026-10-16 21:56:27.527661 I | dragonboat: [00004:00002] replaying raft logs
+2026-10-16T21:56:27.527712528Z 2026-10-16 21:56:27.527675 I | raft: [00004:00002] created, initial: true, new: true
+2026-10-16T21:56:27.527714386Z 2026-10-16 21:56:27.527681 I | raft: [00004:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.527716051Z 2026-10-16 21:56:27.527686 I | raft: [f:1,l:0,t:0,c:0,a:0] [00004:00002] t0 became follower
+2026-10-16T21:56:27.527731826Z 2026-10-16 21:56:27.527699 I | raft: [f:1,l:0,t:0,c:0,a:0] [00004:00002] t1 became follower
+2026-10-16T21:56:27.527739552Z 2026-10-16 21:56:27.527706 I | raft: [f:1,l:0,t:0,c:0,a:0] [00004:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.527741569Z 2026-10-16 21:56:27.527709 I | raft: [f:1,l:0,t:0,c:0,a:0] [00004:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.527750406Z 2026-10-16 21:56:27.527712 I | raft: [f:1,l:0,t:0,c:0,a:0] [00004:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.527874894Z 2026-10-16 21:56:27.527837 I | rsm: [00002:00002] opened disk SM, index 0
+2026-10-16T21:56:27.527877953Z 2026-10-16 21:56:27.527847 I | dragonboat: [00002:00002] opened on disk SM at index 0 in 7.189741ms
+2026-10-16T21:56:27.527880039Z 2026-10-16 21:56:27.527850 I | rsm: [00002:00002] no snapshot available during launch
+2026-10-16T21:56:27.527926315Z 2026-10-16 21:56:27.527864 I | dragonboat: [00002:00002] initialized using <00002:00002:0>
+2026-10-16T21:56:27.527931532Z 2026-10-16 21:56:27.527890 I | dragonboat: [00002:00002] initial index set to 0
+2026-10-16T21:56:27.529563446Z 2026-10-16 21:56:27.529468 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-5-2 creating a new tan db
+2026-10-16T21:56:27.530539285Z 2026-10-16 21:56:27.530448 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-5-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.530547068Z 2026-10-16 21:56:27.530461 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-5-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.530549669Z 2026-10-16 21:56:27.530464 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-5-2 indexFiles: []
+2026-10-16T21:56:27.531032411Z 2026-10-16 21:56:27.530972 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-5-2 opened in 1.52197ms: 0 index files loaded in 1.019814ms, 0 log files rebuilt
+2026-10-16T21:56:27.531410932Z 2026-10-16 21:56:27.531330 I | dragonboat: [00005:00002] replaying raft logs
+2026-10-16T21:56:27.531415954Z 2026-10-16 21:56:27.531343 I | raft: [00005:00002] created, initial: true, new: true
+2026-10-16T21:56:27.531417812Z 2026-10-16 21:56:27.531348 I | raft: [00005:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.531419587Z 2026-10-16 21:56:27.531358 I | raft: [f:1,l:0,t:0,c:0,a:0] [00005:00002] t0 became follower
+2026-10-16T21:56:27.531421429Z 2026-10-16 21:56:27.531369 I | raft: [f:1,l:0,t:0,c:0,a:0] [00005:00002] t1 became follower
+2026-10-16T21:56:27.531423526Z 2026-10-16 21:56:27.531373 I | raft: [f:1,l:0,t:0,c:0,a:0] [00005:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.531425585Z 2026-10-16 21:56:27.531377 I | raft: [f:1,l:0,t:0,c:0,a:0] [00005:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.531427530Z 2026-10-16 21:56:27.531381 I | raft: [f:1,l:0,t:0,c:0,a:0] [00005:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.533085304Z 2026-10-16 21:56:27.533010 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-6-2 creating a new tan db
+2026-10-16T21:56:27.534659164Z 2026-10-16 21:56:27.534606 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-6-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.534665137Z 2026-10-16 21:56:27.534618 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-6-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.534666927Z 2026-10-16 21:56:27.534621 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-6-2 indexFiles: []
+2026-10-16T21:56:27.535328074Z 2026-10-16 21:56:27.535278 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-6-2 opened in 2.283693ms: 0 index files loaded in 1.639065ms, 0 log files rebuilt
+2026-10-16T21:56:27.535789994Z 2026-10-16 21:56:27.535742 I | dragonboat: [00006:00002] replaying raft logs
+2026-10-16T21:56:27.535797631Z 2026-10-16 21:56:27.535761 I | raft: [00006:00002] created, initial: true, new: true
+2026-10-16T21:56:27.535799567Z 2026-10-16 21:56:27.535767 I | raft: [00006:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.535808712Z 2026-10-16 21:56:27.535774 I | raft: [f:1,l:0,t:0,c:0,a:0] [00006:00002] t0 became follower
+2026-10-16T21:56:27.535839105Z 2026-10-16 21:56:27.535792 I | raft: [f:1,l:0,t:0,c:0,a:0] [00006:00002] t1 became follower
+2026-10-16T21:56:27.535847337Z 2026-10-16 21:56:27.535802 I | raft: [f:1,l:0,t:0,c:0,a:0] [00006:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.535849458Z 2026-10-16 21:56:27.535806 I | raft: [f:1,l:0,t:0,c:0,a:0] [00006:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.535855980Z 2026-10-16 21:56:27.535816 I | raft: [f:1,l:0,t:0,c:0,a:0] [00006:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.535962804Z 2026-10-16 21:56:27.535914 I | rsm: [00004:00002] opened disk SM, index 0
+2026-10-16T21:56:27.535966244Z 2026-10-16 21:56:27.535929 I | dragonboat: [00004:00002] opened on disk SM at index 0 in 4.44016ms
+2026-10-16T21:56:27.535968202Z 2026-10-16 21:56:27.535934 I | rsm: [00004:00002] no snapshot available during launch
+2026-10-16T21:56:27.535995477Z 2026-10-16 21:56:27.535946 I | dragonboat: [00004:00002] initialized using <00004:00002:0>
+2026-10-16T21:56:27.535998091Z 2026-10-16 21:56:27.535969 I | dragonboat: [00004:00002] initial index set to 0
+2026-10-16T21:56:27.537793964Z 2026-10-16 21:56:27.537728 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-7-2 creating a new tan db
+2026-10-16T21:56:27.538662250Z 2026-10-16 21:56:27.538610 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-7-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.538666620Z 2026-10-16 21:56:27.538624 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-7-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.538668536Z 2026-10-16 21:56:27.538627 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-7-2 indexFiles: []
+2026-10-16T21:56:27.539244963Z 2026-10-16 21:56:27.539209 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-7-2 opened in 1.501263ms: 0 index files loaded in 923.954µs, 0 log files rebuilt
+2026-10-16T21:56:27.539710573Z 2026-10-16 21:56:27.539667 I | dragonboat: [00007:00002] replaying raft logs
+2026-10-16T21:56:27.539723262Z 2026-10-16 21:56:27.539680 I | raft: [00007:00002] created, initial: true, new: true
+2026-10-16T21:56:27.539725382Z 2026-10-16 21:56:27.539684 I | raft: [00007:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.539727033Z 2026-10-16 21:56:27.539689 I | raft: [f:1,l:0,t:0,c:0,a:0] [00007:00002] t0 became follower
+2026-10-16T21:56:27.539750560Z 2026-10-16 21:56:27.539699 I | raft: [f:1,l:0,t:0,c:0,a:0] [00007:00002] t1 became follower
+2026-10-16T21:56:27.539758319Z 2026-10-16 21:56:27.539706 I | raft: [f:1,l:0,t:0,c:0,a:0] [00007:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.539760379Z 2026-10-16 21:56:27.539710 I | raft: [f:1,l:0,t:0,c:0,a:0] [00007:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.539762236Z 2026-10-16 21:56:27.539717 I | raft: [f:1,l:0,t:0,c:0,a:0] [00007:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.539920725Z 2026-10-16 21:56:27.539865 I | rsm: [00003:00002] opened disk SM, index 0
+2026-10-16T21:56:27.539925832Z 2026-10-16 21:56:27.539882 I | dragonboat: [00003:00002] opened on disk SM at index 0 in 3.904546ms
+2026-10-16T21:56:27.539928386Z 2026-10-16 21:56:27.539887 I | rsm: [00003:00002] no snapshot available during launch
+2026-10-16T21:56:27.539962939Z 2026-10-16 21:56:27.539906 I | dragonboat: [00003:00002] initialized using <00003:00002:0>
+2026-10-16T21:56:27.539965697Z 2026-10-16 21:56:27.539936 I | dragonboat: [00003:00002] initial index set to 0
+2026-10-16T21:56:27.541533102Z 2026-10-16 21:56:27.541469 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-8-2 creating a new tan db
+2026-10-16T21:56:27.542408592Z 2026-10-16 21:56:27.542353 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-8-2 on disk files [MANIFEST-000001 CURRENT]
+2026-10-16T21:56:27.542415121Z 2026-10-16 21:56:27.542365 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-8-2 logFiles to rebuild: map[]
+2026-10-16T21:56:27.542417254Z 2026-10-16 21:56:27.542368 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-8-2 indexFiles: []
+2026-10-16T21:56:27.543021582Z 2026-10-16 21:56:27.542972 I | tan: /kubemq/store/bench-1/next/raft/bench-1/00000000000000000001/tandb/node-8-2 opened in 1.524367ms: 0 index files loaded in 931.599µs, 0 log files rebuilt
+2026-10-16T21:56:27.543459667Z 2026-10-16 21:56:27.543411 I | dragonboat: [00008:00002] replaying raft logs
+2026-10-16T21:56:27.543463311Z 2026-10-16 21:56:27.543425 I | raft: [00008:00002] created, initial: true, new: true
+2026-10-16T21:56:27.543465354Z 2026-10-16 21:56:27.543430 I | raft: [00008:00002] raft log rate limit enabled: false, 0
+2026-10-16T21:56:27.543476327Z 2026-10-16 21:56:27.543435 I | raft: [f:1,l:0,t:0,c:0,a:0] [00008:00002] t0 became follower
+2026-10-16T21:56:27.543499492Z 2026-10-16 21:56:27.543447 I | raft: [f:1,l:0,t:0,c:0,a:0] [00008:00002] t1 became follower
+2026-10-16T21:56:27.543507964Z 2026-10-16 21:56:27.543458 I | raft: [f:1,l:0,t:0,c:0,a:0] [00008:00002] t1 added bootstrap ConfigChangeAddNode, 1, bench-0.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.543509496Z 2026-10-16 21:56:27.543463 I | raft: [f:1,l:0,t:0,c:0,a:0] [00008:00002] t1 added bootstrap ConfigChangeAddNode, 2, bench-1.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.543510836Z 2026-10-16 21:56:27.543471 I | raft: [f:1,l:0,t:0,c:0,a:0] [00008:00002] t1 added bootstrap ConfigChangeAddNode, 3, bench-2.bench.kubemq.svc.cluster.local:5229
+2026-10-16T21:56:27.543682823Z 2026-10-16 21:56:27.543617 I | rsm: [00006:00002] opened disk SM, index 0
+2026-10-16T21:56:27.543688824Z 2026-10-16 21:56:27.543640 I | dragonboat: [00006:00002] opened on disk SM at index 0 in 7.7222ms
+2026-10-16T21:56:27.543690702Z 2026-10-16 21:56:27.543647 I | rsm: [00006:00002] no snapshot available during launch
+2026-10-16T21:56:27.543711217Z 2026-10-16 21:56:27.543679 I | rsm: [00005:00002] opened disk SM, index 0
+2026-10-16T21:56:27.543713714Z 2026-10-16 21:56:27.543688 I | dragonboat: [00005:00002] opened on disk SM at index 0 in 7.755417ms
+2026-10-16T21:56:27.543734380Z 2026-10-16 21:56:27.543692 I | dragonboat: [00006:00002] initialized using <00006:00002:0>
+2026-10-16T21:56:27.543736676Z 2026-10-16 21:56:27.543723 I | dragonboat: [00006:00002] initial index set to 0
+2026-10-16T21:56:27.543763898Z 2026-10-16 21:56:27.543733 I | rsm: [00005:00002] no snapshot available during launch
+2026-10-16T21:56:27.543806087Z 2026-10-16 21:56:27.543778 I | dragonboat: [00005:00002] initialized using <00005:00002:0>
+2026-10-16T21:56:27.543808826Z 2026-10-16 21:56:27.543792 I | dragonboat: [00005:00002] initial index set to 0
+2026-10-16T21:56:27.544231756Z 2026-10-16 21:56:27.544169 I | rsm: [00007:00002] opened disk SM, index 0
+2026-10-16T21:56:27.544234382Z 2026-10-16 21:56:27.544177 I | rsm: [00008:00002] opened disk SM, index 0
+2026-10-16T21:56:27.544235524Z 2026-10-16 21:56:27.544190 I | dragonboat: [00008:00002] opened on disk SM at index 0 in 577.239µs
+2026-10-16T21:56:27.544236804Z 2026-10-16 21:56:27.544194 I | rsm: [00008:00002] no snapshot available during launch
+2026-10-16T21:56:27.544240174Z 2026-10-16 21:56:27.544219 I | dragonboat: [00007:00002] opened on disk SM at index 0 in 518.347µs
+2026-10-16T21:56:27.544241464Z 2026-10-16 21:56:27.544225 I | rsm: [00007:00002] no snapshot available during launch
+2026-10-16T21:56:27.544311412Z 2026-10-16 21:56:27.544258 I | dragonboat: [00008:00002] initialized using <00008:00002:0>
+2026-10-16T21:56:27.544313192Z 2026-10-16 21:56:27.544288 I | dragonboat: [00008:00002] initial index set to 0
+2026-10-16T21:56:27.544316061Z 2026-10-16 21:56:27.544295 I | dragonboat: [00007:00002] initialized using <00007:00002:0>
+2026-10-16T21:56:27.544317322Z 2026-10-16 21:56:27.544310 I | dragonboat: [00007:00002] initial index set to 0
+2026-10-16T21:56:27.571511949Z 2026-10-16 21:56:27.571308 W | raft: [f:1,l:3,t:1,c:3,a:0] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.572079319Z 2026-10-16 21:56:27.571995 I | rsm: [00002:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.572090434Z 2026-10-16 21:56:27.572031 I | rsm: [00002:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.572092048Z 2026-10-16 21:56:27.572046 I | rsm: [00002:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.574655049Z 2026-10-16 21:56:27.574524 W | raft: [f:1,l:3,t:1,c:3,a:0] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.575085588Z 2026-10-16 21:56:27.575001 I | rsm: [00003:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.575092808Z 2026-10-16 21:56:27.575025 I | rsm: [00003:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.575094110Z 2026-10-16 21:56:27.575035 I | rsm: [00003:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.578916153Z 2026-10-16 21:56:27.578744 W | raft: [f:1,l:3,t:1,c:3,a:0] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.579365879Z 2026-10-16 21:56:27.579301 I | rsm: [00004:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.579371312Z 2026-10-16 21:56:27.579328 I | rsm: [00004:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.579377703Z 2026-10-16 21:56:27.579342 I | rsm: [00004:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.582025864Z 2026-10-16 21:56:27.581880 W | raft: [f:1,l:3,t:1,c:3,a:0] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.582430189Z 2026-10-16 21:56:27.582381 I | rsm: [00005:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.582433559Z 2026-10-16 21:56:27.582406 I | rsm: [00005:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.582449717Z 2026-10-16 21:56:27.582424 I | rsm: [00005:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.586205321Z 2026-10-16 21:56:27.586076 W | raft: [f:1,l:3,t:1,c:3,a:0] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.586684576Z 2026-10-16 21:56:27.586599 I | rsm: [00006:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.586691873Z 2026-10-16 21:56:27.586653 I | rsm: [00006:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.586702649Z 2026-10-16 21:56:27.586666 I | rsm: [00006:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.590398650Z 2026-10-16 21:56:27.590270 W | raft: [f:1,l:3,t:1,c:3,a:0] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.590852753Z 2026-10-16 21:56:27.590801 I | rsm: [00007:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.590857193Z 2026-10-16 21:56:27.590829 I | rsm: [00007:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.590860963Z 2026-10-16 21:56:27.590840 I | rsm: [00007:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.594543050Z 2026-10-16 21:56:27.594430 W | raft: [f:1,l:3,t:1,c:3,a:0] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.594930689Z 2026-10-16 21:56:27.594880 I | rsm: [00008:00002] applied ADD ccid 0 (1), n00001 (bench-0.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.594938550Z 2026-10-16 21:56:27.594912 I | rsm: [00008:00002] applied ADD ccid 0 (2), n00002 (bench-1.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.594984299Z 2026-10-16 21:56:27.594945 I | rsm: [00008:00002] applied ADD ccid 0 (3), n00003 (bench-2.bench.kubemq.svc.cluster.local:5229)
+2026-10-16T21:56:27.622183881Z 2026-10-16 21:56:27.622060 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.625512029Z 2026-10-16 21:56:27.625400 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.629759784Z 2026-10-16 21:56:27.629640 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.632514980Z 2026-10-16 21:56:27.632443 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.636798966Z 2026-10-16 21:56:27.636709 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.641044810Z 2026-10-16 21:56:27.640963 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.645285903Z 2026-10-16 21:56:27.645207 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.672472483Z 2026-10-16 21:56:27.672377 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.675656280Z 2026-10-16 21:56:27.675584 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.679918091Z 2026-10-16 21:56:27.679830 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.683085526Z 2026-10-16 21:56:27.682997 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.687297156Z 2026-10-16 21:56:27.687189 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.691430488Z 2026-10-16 21:56:27.691343 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.695739382Z 2026-10-16 21:56:27.695642 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.723344548Z 2026-10-16 21:56:27.723254 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.726596014Z 2026-10-16 21:56:27.726501 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.730886695Z 2026-10-16 21:56:27.730809 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.734115178Z 2026-10-16 21:56:27.734046 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.738374847Z 2026-10-16 21:56:27.738302 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.741594262Z 2026-10-16 21:56:27.741522 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.745866342Z 2026-10-16 21:56:27.745798 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.774211937Z 2026-10-16 21:56:27.774090 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.777502002Z 2026-10-16 21:56:27.777402 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.781974119Z 2026-10-16 21:56:27.781894 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.785249285Z 2026-10-16 21:56:27.785182 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.788495064Z 2026-10-16 21:56:27.788438 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.791710289Z 2026-10-16 21:56:27.791646 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.795992475Z 2026-10-16 21:56:27.795915 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.824863670Z 2026-10-16 21:56:27.824737 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.828018695Z 2026-10-16 21:56:27.827952 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.832338678Z 2026-10-16 21:56:27.832270 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.835617006Z 2026-10-16 21:56:27.835554 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.838851222Z 2026-10-16 21:56:27.838774 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.842010307Z 2026-10-16 21:56:27.841931 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.845798258Z 2026-10-16 21:56:27.845669 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.845821365Z 2026-10-16 21:56:27.845722 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.845823325Z 2026-10-16 21:56:27.845740 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.845831488Z 2026-10-16 21:56:27.845764 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.845833261Z 2026-10-16 21:56:27.845777 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.845834864Z 2026-10-16 21:56:27.845796 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.845836531Z 2026-10-16 21:56:27.845812 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:27.846040560Z 2026-10-16 21:56:27.845978 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.875287270Z 2026-10-16 21:56:27.875130 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.878384204Z 2026-10-16 21:56:27.878285 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.882722934Z 2026-10-16 21:56:27.882639 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.885879293Z 2026-10-16 21:56:27.885808 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.889222508Z 2026-10-16 21:56:27.889141 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.892469807Z 2026-10-16 21:56:27.892398 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.896752064Z 2026-10-16 21:56:27.896685 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.925485940Z 2026-10-16 21:56:27.925387 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.928721443Z 2026-10-16 21:56:27.928645 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.932995769Z 2026-10-16 21:56:27.932907 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.936155697Z 2026-10-16 21:56:27.936082 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.939344658Z 2026-10-16 21:56:27.939276 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.942550680Z 2026-10-16 21:56:27.942485 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.946862794Z 2026-10-16 21:56:27.946794 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.975628084Z 2026-10-16 21:56:27.975542 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.978866664Z 2026-10-16 21:56:27.978806 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.983119565Z 2026-10-16 21:56:27.983052 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.986257629Z 2026-10-16 21:56:27.986181 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.989521847Z 2026-10-16 21:56:27.989443 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.992721742Z 2026-10-16 21:56:27.992651 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:27.996980644Z 2026-10-16 21:56:27.996877 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.006629769Z 2026-10-16 21:56:28.006488 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.006648882Z 2026-10-16 21:56:28.006509 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.006650246Z 2026-10-16 21:56:28.006537 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.006656100Z 2026-10-16 21:56:28.006599 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.006657485Z 2026-10-16 21:56:28.006609 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.006658684Z 2026-10-16 21:56:28.006618 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.006659689Z 2026-10-16 21:56:28.006628 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.026598502Z 2026-10-16 21:56:28.026448 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.029821127Z 2026-10-16 21:56:28.029740 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.034072054Z 2026-10-16 21:56:28.033990 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.037224578Z 2026-10-16 21:56:28.037150 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.040403688Z 2026-10-16 21:56:28.040325 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.043713175Z 2026-10-16 21:56:28.043630 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.048040895Z 2026-10-16 21:56:28.047957 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.064474981Z 2026-10-16 21:56:28.064359 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.064494544Z 2026-10-16 21:56:28.064384 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.064497006Z 2026-10-16 21:56:28.064403 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.064498571Z 2026-10-16 21:56:28.064407 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.064500126Z 2026-10-16 21:56:28.064422 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.064508748Z 2026-10-16 21:56:28.064437 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.064516504Z 2026-10-16 21:56:28.064467 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:28.077006083Z 2026-10-16 21:56:28.076906 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.080171418Z 2026-10-16 21:56:28.080057 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.084436652Z 2026-10-16 21:56:28.084368 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.087621240Z 2026-10-16 21:56:28.087513 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.090847816Z 2026-10-16 21:56:28.090766 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.094095082Z 2026-10-16 21:56:28.094028 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.098358231Z 2026-10-16 21:56:28.098294 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.127317852Z 2026-10-16 21:56:28.127204 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.130416506Z 2026-10-16 21:56:28.130329 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.134823121Z 2026-10-16 21:56:28.134747 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.138049754Z 2026-10-16 21:56:28.137952 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.141195910Z 2026-10-16 21:56:28.141133 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.144480964Z 2026-10-16 21:56:28.144406 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.148807730Z 2026-10-16 21:56:28.148729 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.177874521Z 2026-10-16 21:56:28.177763 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.181105984Z 2026-10-16 21:56:28.180991 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.185470881Z 2026-10-16 21:56:28.185348 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.188702020Z 2026-10-16 21:56:28.188586 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.191820903Z 2026-10-16 21:56:28.191735 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.195031070Z 2026-10-16 21:56:28.194933 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.199306526Z 2026-10-16 21:56:28.199205 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.228297963Z 2026-10-16 21:56:28.228164 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.231540999Z 2026-10-16 21:56:28.231424 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.235798129Z 2026-10-16 21:56:28.235692 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.239152211Z 2026-10-16 21:56:28.239024 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.242394709Z 2026-10-16 21:56:28.242272 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.245559713Z 2026-10-16 21:56:28.245460 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.249724192Z 2026-10-16 21:56:28.249645 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.279025243Z 2026-10-16 21:56:28.278901 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.282246874Z 2026-10-16 21:56:28.282142 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.286620661Z 2026-10-16 21:56:28.286525 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.289859381Z 2026-10-16 21:56:28.289780 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.293160993Z 2026-10-16 21:56:28.293048 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.296506413Z 2026-10-16 21:56:28.296394 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.300627051Z 2026-10-16 21:56:28.300539 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.329670354Z 2026-10-16 21:56:28.329523 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.332864414Z 2026-10-16 21:56:28.332753 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.337121836Z 2026-10-16 21:56:28.337024 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.340296537Z 2026-10-16 21:56:28.340226 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.343624718Z 2026-10-16 21:56:28.343530 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.346911146Z 2026-10-16 21:56:28.346822 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.351060860Z 2026-10-16 21:56:28.350970 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.380203166Z 2026-10-16 21:56:28.380077 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.383372262Z 2026-10-16 21:56:28.383260 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.387734012Z 2026-10-16 21:56:28.387656 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.390909789Z 2026-10-16 21:56:28.390839 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.394233442Z 2026-10-16 21:56:28.394132 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.397437390Z 2026-10-16 21:56:28.397344 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.401641428Z 2026-10-16 21:56:28.401547 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.430654483Z 2026-10-16 21:56:28.430533 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.434686477Z 2026-10-16 21:56:28.433780 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.438221835Z 2026-10-16 21:56:28.438111 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.441396606Z 2026-10-16 21:56:28.441300 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.444582684Z 2026-10-16 21:56:28.444469 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.447793535Z 2026-10-16 21:56:28.447721 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.451962749Z 2026-10-16 21:56:28.451892 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.481700741Z 2026-10-16 21:56:28.481580 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.484901939Z 2026-10-16 21:56:28.484820 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.489241634Z 2026-10-16 21:56:28.489160 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.492534534Z 2026-10-16 21:56:28.492444 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.495753897Z 2026-10-16 21:56:28.495679 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.498903731Z 2026-10-16 21:56:28.498837 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.502080463Z 2026-10-16 21:56:28.502014 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.532981363Z 2026-10-16 21:56:28.532846 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.535024516Z 2026-10-16 21:56:28.534947 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.539377029Z 2026-10-16 21:56:28.539297 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.542701948Z 2026-10-16 21:56:28.542607 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.545969429Z 2026-10-16 21:56:28.545888 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.549013396Z 2026-10-16 21:56:28.548942 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.553196426Z 2026-10-16 21:56:28.553105 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.583689248Z 2026-10-16 21:56:28.583537 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.585831687Z 2026-10-16 21:56:28.585736 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.590240183Z 2026-10-16 21:56:28.590085 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.593418291Z 2026-10-16 21:56:28.593291 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.596720353Z 2026-10-16 21:56:28.596629 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.599881896Z 2026-10-16 21:56:28.599763 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.604116052Z 2026-10-16 21:56:28.604000 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.633932451Z 2026-10-16 21:56:28.633807 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.636079026Z 2026-10-16 21:56:28.636005 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.640531778Z 2026-10-16 21:56:28.640415 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.643761534Z 2026-10-16 21:56:28.643637 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.646985247Z 2026-10-16 21:56:28.646851 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.650122687Z 2026-10-16 21:56:28.650029 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.654240631Z 2026-10-16 21:56:28.654123 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.685082878Z 2026-10-16 21:56:28.684945 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.687267549Z 2026-10-16 21:56:28.687163 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.691630764Z 2026-10-16 21:56:28.691527 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.695373926Z 2026-10-16 21:56:28.694654 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.698071538Z 2026-10-16 21:56:28.697955 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.701202349Z 2026-10-16 21:56:28.701075 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.707219796Z 2026-10-16 21:56:28.705293 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.735500707Z 2026-10-16 21:56:28.735419 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.737594149Z 2026-10-16 21:56:28.737501 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.741990785Z 2026-10-16 21:56:28.741909 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.745188770Z 2026-10-16 21:56:28.745120 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.748347437Z 2026-10-16 21:56:28.748301 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.751540254Z 2026-10-16 21:56:28.751464 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.755713427Z 2026-10-16 21:56:28.755633 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.786658157Z 2026-10-16 21:56:28.786525 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.787723606Z 2026-10-16 21:56:28.787615 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.793127504Z 2026-10-16 21:56:28.792996 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.795331135Z 2026-10-16 21:56:28.795230 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.799551518Z 2026-10-16 21:56:28.799453 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.802703159Z 2026-10-16 21:56:28.802623 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.806889060Z 2026-10-16 21:56:28.806800 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.837206436Z 2026-10-16 21:56:28.837087 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.838244438Z 2026-10-16 21:56:28.838188 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.843637070Z 2026-10-16 21:56:28.843550 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.845802387Z 2026-10-16 21:56:28.845717 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.849989207Z 2026-10-16 21:56:28.849912 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.853163061Z 2026-10-16 21:56:28.853090 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.857301134Z 2026-10-16 21:56:28.857241 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.887345776Z 2026-10-16 21:56:28.887254 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.888422772Z 2026-10-16 21:56:28.888369 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.893810757Z 2026-10-16 21:56:28.893745 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.895961161Z 2026-10-16 21:56:28.895912 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.900086697Z 2026-10-16 21:56:28.900021 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.904340133Z 2026-10-16 21:56:28.904274 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.907420959Z 2026-10-16 21:56:28.907344 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.937675983Z 2026-10-16 21:56:28.937594 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.938714041Z 2026-10-16 21:56:28.938663 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.944109178Z 2026-10-16 21:56:28.944033 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.946372779Z 2026-10-16 21:56:28.946311 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.950488624Z 2026-10-16 21:56:28.950430 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.954710967Z 2026-10-16 21:56:28.954636 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.957843353Z 2026-10-16 21:56:28.957782 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.988182227Z 2026-10-16 21:56:28.988081 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.989201061Z 2026-10-16 21:56:28.989150 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.994628529Z 2026-10-16 21:56:28.994545 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:28.996790294Z 2026-10-16 21:56:28.996731 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.000985008Z 2026-10-16 21:56:29.000923 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.005147766Z 2026-10-16 21:56:29.005081 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.008335532Z 2026-10-16 21:56:29.008276 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.039325446Z 2026-10-16 21:56:29.039229 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.039331253Z 2026-10-16 21:56:29.039258 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.045725297Z 2026-10-16 21:56:29.045653 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.047837478Z 2026-10-16 21:56:29.047773 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.052071837Z 2026-10-16 21:56:29.052006 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.055266794Z 2026-10-16 21:56:29.055197 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.059437725Z 2026-10-16 21:56:29.059376 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.089859994Z 2026-10-16 21:56:29.089743 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.089882533Z 2026-10-16 21:56:29.089766 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.096197461Z 2026-10-16 21:56:29.096094 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.098313005Z 2026-10-16 21:56:29.098243 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.102484664Z 2026-10-16 21:56:29.102406 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.105658148Z 2026-10-16 21:56:29.105579 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.109872533Z 2026-10-16 21:56:29.109805 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.140441903Z 2026-10-16 21:56:29.140335 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.140461749Z 2026-10-16 21:56:29.140367 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.146823555Z 2026-10-16 21:56:29.146731 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.148963328Z 2026-10-16 21:56:29.148893 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.153111815Z 2026-10-16 21:56:29.153041 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.156274635Z 2026-10-16 21:56:29.156213 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.160493212Z 2026-10-16 21:56:29.160429 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.190951811Z 2026-10-16 21:56:29.190876 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.190958937Z 2026-10-16 21:56:29.190894 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.197348738Z 2026-10-16 21:56:29.197278 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.199516707Z 2026-10-16 21:56:29.199448 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.203751438Z 2026-10-16 21:56:29.203684 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.206934038Z 2026-10-16 21:56:29.206866 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.211175915Z 2026-10-16 21:56:29.211111 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.241750924Z 2026-10-16 21:56:29.241636 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.241769647Z 2026-10-16 21:56:29.241689 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.248146921Z 2026-10-16 21:56:29.248056 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.250404558Z 2026-10-16 21:56:29.250332 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.254602860Z 2026-10-16 21:56:29.254537 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.257797073Z 2026-10-16 21:56:29.257726 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.261614709Z 2026-10-16 21:56:29.261533 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.292826734Z 2026-10-16 21:56:29.292700 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.292847338Z 2026-10-16 21:56:29.292746 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.299167506Z 2026-10-16 21:56:29.299093 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.301317978Z 2026-10-16 21:56:29.301254 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.305590375Z 2026-10-16 21:56:29.305512 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.308693118Z 2026-10-16 21:56:29.308628 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.311933565Z 2026-10-16 21:56:29.311874 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.343541088Z 2026-10-16 21:56:29.343441 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.343549571Z 2026-10-16 21:56:29.343490 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.349931308Z 2026-10-16 21:56:29.349838 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.352252875Z 2026-10-16 21:56:29.352170 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.356390948Z 2026-10-16 21:56:29.356294 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.359551023Z 2026-10-16 21:56:29.359479 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.362689052Z 2026-10-16 21:56:29.362623 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.394214121Z 2026-10-16 21:56:29.394105 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.394230109Z 2026-10-16 21:56:29.394159 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.400449764Z 2026-10-16 21:56:29.400387 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.402118022Z 2026-10-16 21:56:29.402053 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 cast preVote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:29.402532527Z 2026-10-16 21:56:29.402489 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.402601258Z 2026-10-16 21:56:29.402560 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 cast preVote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:29.402609485Z 2026-10-16 21:56:29.402582 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 cast preVote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:29.403226495Z 2026-10-16 21:56:29.403154 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 received RequestVote with higher term (2) from n00003
+2026-10-16T21:56:29.403232985Z 2026-10-16 21:56:29.403163 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t1 become followerKE after receiving higher term from n00003
+2026-10-16T21:56:29.403235022Z 2026-10-16 21:56:29.403174 I | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t2 became follower
+2026-10-16T21:56:29.403236977Z 2026-10-16 21:56:29.403178 W | raft: [f:1,l:3,t:1,c:3,a:3] [00005:00002] t2 cast vote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:29.404065315Z 2026-10-16 21:56:29.404001 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 received RequestVote with higher term (2) from n00003
+2026-10-16T21:56:29.404069699Z 2026-10-16 21:56:29.404023 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t1 become followerKE after receiving higher term from n00003
+2026-10-16T21:56:29.404071436Z 2026-10-16 21:56:29.404033 I | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t2 became follower
+2026-10-16T21:56:29.404072933Z 2026-10-16 21:56:29.404039 W | raft: [f:1,l:3,t:1,c:3,a:3] [00006:00002] t2 cast vote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:29.404146913Z 2026-10-16 21:56:29.404098 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 received RequestVote with higher term (2) from n00003
+2026-10-16T21:56:29.404149774Z 2026-10-16 21:56:29.404111 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t1 become followerKE after receiving higher term from n00003
+2026-10-16T21:56:29.404151577Z 2026-10-16 21:56:29.404120 I | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t2 became follower
+2026-10-16T21:56:29.404153208Z 2026-10-16 21:56:29.404126 W | raft: [f:1,l:3,t:1,c:3,a:3] [00002:00002] t2 cast vote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:29.408122458Z {"level":"INFO","time":"2026-10-16T21:56:29.407Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":6,"replica":2,"leader":false,"probe_wait_ms":1872,"probe_attempts":38,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:29.410136103Z 2026-10-16 21:56:29.410067 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.412767151Z 2026-10-16 21:56:29.412697 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.445013713Z 2026-10-16 21:56:29.444887 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.445915281Z {"level":"INFO","time":"2026-10-16T21:56:29.445Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":2,"replica":2,"leader":false,"probe_wait_ms":1925,"probe_attempts":39,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:29.450961786Z 2026-10-16 21:56:29.450874 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.453786361Z {"level":"INFO","time":"2026-10-16T21:56:29.453Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":5,"replica":2,"leader":false,"probe_wait_ms":1922,"probe_attempts":39,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:29.459952060Z 2026-10-16 21:56:29.459810 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 became PreVote candidate
+2026-10-16T21:56:29.459980785Z 2026-10-16 21:56:29.459825 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 received RequestPreVoteResp from n00002
+2026-10-16T21:56:29.459983048Z 2026-10-16 21:56:29.459831 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 sent RequestPreVote to n00003
+2026-10-16T21:56:29.459984705Z 2026-10-16 21:56:29.459835 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 sent RequestPreVote to n00001
+2026-10-16T21:56:29.459986833Z 2026-10-16 21:56:29.459884 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 became PreVote candidate
+2026-10-16T21:56:29.459988482Z 2026-10-16 21:56:29.459899 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 received RequestPreVoteResp from n00002
+2026-10-16T21:56:29.459990350Z 2026-10-16 21:56:29.459907 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 sent RequestPreVote to n00001
+2026-10-16T21:56:29.459992155Z 2026-10-16 21:56:29.459912 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 sent RequestPreVote to n00003
+2026-10-16T21:56:29.460348293Z 2026-10-16 21:56:29.460221 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.461510999Z 2026-10-16 21:56:29.461429 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 received RequestPreVoteResp from n00001
+2026-10-16T21:56:29.461520471Z 2026-10-16 21:56:29.461441 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t1 received 2 preVotes and 0 rejections, quorum is 2
+2026-10-16T21:56:29.461525128Z 2026-10-16 21:56:29.461458 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 became candidate
+2026-10-16T21:56:29.461527524Z 2026-10-16 21:56:29.461461 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 received RequestVoteResp from n00002
+2026-10-16T21:56:29.461528983Z 2026-10-16 21:56:29.461466 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 sent RequestVote to n00001
+2026-10-16T21:56:29.461530570Z 2026-10-16 21:56:29.461471 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 sent RequestVote to n00003
+2026-10-16T21:56:29.461532438Z 2026-10-16 21:56:29.461474 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 received RequestPreVoteResp from n00001
+2026-10-16T21:56:29.461545558Z 2026-10-16 21:56:29.461483 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t1 received 2 preVotes and 0 rejections, quorum is 2
+2026-10-16T21:56:29.461552218Z 2026-10-16 21:56:29.461492 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 became candidate
+2026-10-16T21:56:29.461553861Z 2026-10-16 21:56:29.461500 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 received RequestVoteResp from n00002
+2026-10-16T21:56:29.461555505Z 2026-10-16 21:56:29.461506 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 sent RequestVote to n00001
+2026-10-16T21:56:29.461557154Z 2026-10-16 21:56:29.461514 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 sent RequestVote to n00003
+2026-10-16T21:56:29.462651703Z 2026-10-16 21:56:29.462595 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 received RequestVoteResp from n00001
+2026-10-16T21:56:29.462660226Z 2026-10-16 21:56:29.462611 W | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 received 2 votes and 0 rejections, quorum is 2
+2026-10-16T21:56:29.462662362Z 2026-10-16 21:56:29.462619 I | raft: [f:1,l:3,t:1,c:3,a:3] [00003:00002] t2 became leader
+2026-10-16T21:56:29.462742916Z 2026-10-16 21:56:29.462681 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 received RequestVoteResp from n00001
+2026-10-16T21:56:29.462750889Z 2026-10-16 21:56:29.462696 W | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 received 2 votes and 0 rejections, quorum is 2
+2026-10-16T21:56:29.462766771Z 2026-10-16 21:56:29.462708 I | raft: [f:1,l:3,t:1,c:3,a:3] [00008:00002] t2 became leader
+2026-10-16T21:56:29.463667512Z {"level":"INFO","time":"2026-10-16T21:56:29.463Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":8,"replica":2,"leader":true,"probe_wait_ms":1919,"probe_attempts":39,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:29.497010267Z {"level":"INFO","time":"2026-10-16T21:56:29.496Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":3,"replica":2,"leader":true,"probe_wait_ms":1972,"probe_attempts":40,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:29.502124531Z 2026-10-16 21:56:29.502040 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.511090864Z 2026-10-16 21:56:29.510982 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.553207006Z 2026-10-16 21:56:29.553090 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.561599923Z 2026-10-16 21:56:29.561489 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.603447885Z 2026-10-16 21:56:29.603327 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.611787838Z 2026-10-16 21:56:29.611657 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.653996934Z 2026-10-16 21:56:29.653848 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.662873402Z 2026-10-16 21:56:29.662769 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.704890906Z 2026-10-16 21:56:29.704781 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.713255476Z 2026-10-16 21:56:29.713146 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.755267696Z 2026-10-16 21:56:29.755163 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.763666235Z 2026-10-16 21:56:29.763529 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.806224004Z 2026-10-16 21:56:29.806068 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.814465045Z 2026-10-16 21:56:29.814357 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.845979020Z 2026-10-16 21:56:29.845819 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:29.846041328Z 2026-10-16 21:56:29.845848 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:29.857130274Z 2026-10-16 21:56:29.857010 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.865060575Z 2026-10-16 21:56:29.864968 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.907946323Z 2026-10-16 21:56:29.907811 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.915753044Z 2026-10-16 21:56:29.915659 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.958324986Z 2026-10-16 21:56:29.958216 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:29.966087696Z 2026-10-16 21:56:29.966007 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.006557296Z 2026-10-16 21:56:30.006422 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:30.006658944Z 2026-10-16 21:56:30.006538 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:30.008535035Z 2026-10-16 21:56:30.008447 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.016412810Z 2026-10-16 21:56:30.016325 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.059281193Z 2026-10-16 21:56:30.059150 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.064246766Z 2026-10-16 21:56:30.064129 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:30.064263621Z 2026-10-16 21:56:30.064168 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped ReadIndex, no leader
+2026-10-16T21:56:30.067556323Z 2026-10-16 21:56:30.067452 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.110326823Z 2026-10-16 21:56:30.110229 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.118681359Z 2026-10-16 21:56:30.118589 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.160705855Z 2026-10-16 21:56:30.160591 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.169636994Z 2026-10-16 21:56:30.169534 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.211308058Z 2026-10-16 21:56:30.211197 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.220100128Z 2026-10-16 21:56:30.219983 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.262378765Z 2026-10-16 21:56:30.262259 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.271283579Z 2026-10-16 21:56:30.271149 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.312892225Z 2026-10-16 21:56:30.312773 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.322287042Z 2026-10-16 21:56:30.322162 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.363936200Z 2026-10-16 21:56:30.363805 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.373262265Z 2026-10-16 21:56:30.373157 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.414960902Z 2026-10-16 21:56:30.414805 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.424307155Z 2026-10-16 21:56:30.424194 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.465163773Z 2026-10-16 21:56:30.465057 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.474510681Z 2026-10-16 21:56:30.474371 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.515408527Z 2026-10-16 21:56:30.515278 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.524822471Z 2026-10-16 21:56:30.524710 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.565681680Z 2026-10-16 21:56:30.565536 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.575095584Z 2026-10-16 21:56:30.575002 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.601809287Z 2026-10-16 21:56:30.601689 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 cast preVote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:30.602702757Z 2026-10-16 21:56:30.602642 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 received RequestVote with higher term (2) from n00003
+2026-10-16T21:56:30.602708007Z 2026-10-16 21:56:30.602654 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t1 become followerKE after receiving higher term from n00003
+2026-10-16T21:56:30.602710599Z 2026-10-16 21:56:30.602677 I | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t2 became follower
+2026-10-16T21:56:30.602712675Z 2026-10-16 21:56:30.602682 W | raft: [f:1,l:3,t:1,c:3,a:3] [00007:00002] t2 cast vote from n00003 index 3 term 2, log term: 1
+2026-10-16T21:56:30.616391947Z 2026-10-16 21:56:30.616309 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.626792461Z {"level":"INFO","time":"2026-10-16T21:56:30.626Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":7,"replica":2,"leader":false,"probe_wait_ms":3086,"probe_attempts":62,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:30.666890925Z 2026-10-16 21:56:30.666744 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.717028619Z 2026-10-16 21:56:30.716873 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.768070703Z 2026-10-16 21:56:30.767932 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.819052914Z 2026-10-16 21:56:30.818929 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 dropped proposal, no leader
+2026-10-16T21:56:30.841918513Z 2026-10-16 21:56:30.841781 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 cast preVote from n00001 index 3 term 2, log term: 1
+2026-10-16T21:56:30.842766593Z 2026-10-16 21:56:30.842701 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 received RequestVote with higher term (2) from n00001
+2026-10-16T21:56:30.842778390Z 2026-10-16 21:56:30.842713 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t1 become followerKE after receiving higher term from n00001
+2026-10-16T21:56:30.842780134Z 2026-10-16 21:56:30.842729 I | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t2 became follower
+2026-10-16T21:56:30.842781805Z 2026-10-16 21:56:30.842737 W | raft: [f:1,l:3,t:1,c:3,a:3] [00004:00002] t2 cast vote from n00001 index 3 term 2, log term: 1
+2026-10-16T21:56:30.870229702Z {"level":"INFO","time":"2026-10-16T21:56:30.870Z","component":"nextengine","caller":"nextengine/engine_next.go:1529","msg":"next engine shard ready","host":"bench-1","shard":4,"replica":2,"leader":false,"probe_wait_ms":3342,"probe_attempts":67,"complete_ready_ms":0,"sm_open_applied":0,"sm_log_end_at_open":0,"sm_appends_since_open":0}
+2026-10-16T21:56:30.888072211Z {"level":"INFO","time":"2026-10-16T21:56:30.887Z","component":"sharding","caller":"sharding/engine.go:1439","msg":"sharding: boot-scan complete — assignment index seeded","shards":8,"known_channels":1}
+2026-10-16T21:56:30.888092799Z {"level":"INFO","time":"2026-10-16T21:56:30.887Z","component":"sharding","caller":"sharding/engine.go:1187","msg":"sharding: boot-scan timing","total_ms":6824,"control_shard_ready_ms":3453,"start_shards_ms":26,"all_shards_ready_ms":3340,"seed_retry_ms":0,"seed_ms":3,"seed_attempts":1,"known_channels":1}
+2026-10-16T21:56:31.063956097Z {"level":"INFO","time":"2026-10-16T21:56:31.063Z","component":"transport-server","caller":"broker/enginemode.go:681","msg":"next engine ready — quorum joined","host":"bench-1","clustered":true,"leader":false}
+2026-10-16T21:56:31.066753451Z {"level":"INFO","time":"2026-10-16T21:56:31.066Z","component":"services","caller":"services/services.go:243","msg":"component started","host":"bench-1","component":"broker_ready_wait","duration_ms":7002}
+2026-10-16T21:56:31.070947721Z {"level":"INFO","time":"2026-10-16T21:56:31.070Z","component":"audit","caller":"audit/service.go:101","msg":"audit service started","host":"bench-1","retention":"720h0m0s"}
+2026-10-16T21:56:31.070966173Z {"level":"INFO","time":"2026-10-16T21:56:31.070Z","component":"services","caller":"services/services.go:267","msg":"component started","host":"bench-1","component":"audit","duration_ms":4}
+2026-10-16T21:56:31.071276125Z {"level":"INFO","time":"2026-10-16T21:56:31.071Z","component":"cluster-comm-internal","caller":"cluster_comm_internal/service.go:110","msg":"subscribed to events channel","host":"bench-1","channel":"kubemq.cluster.internal.events.snapshots"}
+2026-10-16T21:56:31.071283679Z {"level":"INFO","time":"2026-10-16T21:56:31.071Z","component":"cluster-comm-internal","caller":"cluster_comm_internal/service.go:110","msg":"subscribed to events channel","host":"bench-1","channel":"kubemq.cluster.internal.events.accounts"}
+2026-10-16T21:56:31.071291010Z {"level":"INFO","time":"2026-10-16T21:56:31.071Z","component":"cluster-comm-internal","caller":"cluster_comm_internal/service.go:168","msg":"subscribed to queries channel","host":"bench-1","channel":"kubemq.cluster.internal.requests"}
+2026-10-16T21:56:31.071293131Z {"level":"INFO","time":"2026-10-16T21:56:31.071Z","component":"cluster-comm-internal","caller":"cluster_comm_internal/service.go:168","msg":"subscribed to queries channel","host":"bench-1","channel":"kubemq.cluster.internal.requests.accounts"}
+2026-10-16T21:56:31.071315842Z {"level":"INFO","time":"2026-10-16T21:56:31.071Z","component":"services","caller":"services/services.go:275","msg":"component started","host":"bench-1","component":"cluster_comm","duration_ms":0}
+2026-10-16T21:56:31.079683210Z {"level":"INFO","time":"2026-10-16T21:56:31.079Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=1 r2=3 r3=4","self_replica":2,"shards":8,"members":3}
+2026-10-16T21:56:31.079697881Z {"level":"INFO","time":"2026-10-16T21:56:31.079Z","component":"sharding","caller":"sharding/engine.go:2447","msg":"sharding: leader-balancer not offering leadership to members not yet serving clients","members":"r1 r3","self_replica":2}
+2026-10-16T21:56:31.081890059Z {"level":"INFO","time":"2026-10-16T21:56:31.081Z","component":"services","caller":"services/services.go:328","msg":"component started","host":"bench-1","component":"routing","duration_ms":0}
+2026-10-16T21:56:31.082179840Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"array","caller":"array/array.go:260","msg":"try to connect to stream server for shared store client","host":"bench-1","attempt":0}
+2026-10-16T21:56:31.082378796Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"array","caller":"array/array.go:271","msg":"connection to stream server for shared store client succeeded","host":"bench-1"}
+2026-10-16T21:56:31.082382119Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"array","caller":"array/array.go:293","msg":"try to connect to stream server for shared queue client","host":"bench-1","attempt":0}
+2026-10-16T21:56:31.082589862Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"array","caller":"array/array.go:304","msg":"connection to stream server for shared queue client succeeded","host":"bench-1"}
+2026-10-16T21:56:31.082800105Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"services","caller":"services/services.go:344","msg":"component started","host":"bench-1","component":"array","duration_ms":0}
+2026-10-16T21:56:31.082945861Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"agent-registry","caller":"agent_registry/service.go:94","msg":"agent registry service started","host":"bench-1","existing_agents":0,"ttl_seconds":300,"max_agents":0}
+2026-10-16T21:56:31.082953975Z {"level":"INFO","time":"2026-10-16T21:56:31.082Z","component":"services","caller":"services/services.go:371","msg":"component started","host":"bench-1","component":"agent_registry","duration_ms":0}
+2026-10-16T21:56:31.083741951Z {"level":"INFO","time":"2026-10-16T21:56:31.083Z","component":"agent-registry-replicator","caller":"agent_registry/replication.go:279","msg":"replication started","host":"bench-1","channel":"_AGENTS_.discovery","replay_from_sequence":1}
+2026-10-16T21:56:31.083753614Z {"level":"INFO","time":"2026-10-16T21:56:31.083Z","component":"services","caller":"services/services.go:401","msg":"component started","host":"bench-1","component":"agent_registry_replicator"}
+2026-10-16T21:56:31.083902025Z {"level":"INFO","time":"2026-10-16T21:56:31.083Z","component":"audit","caller":"audit/service.go:113","msg":"audit cluster sync started","host":"bench-1"}
+2026-10-16T21:56:31.088426388Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"api","caller":"api/service.go:754","msg":"no persisted metrics accumulator to load, starting at zero","host":"bench-1"}
+2026-10-16T21:56:31.088453666Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"api","caller":"api/service.go:796","msg":"no persisted entities to load, cold start","host":"bench-1"}
+2026-10-16T21:56:31.088468900Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"api","caller":"api/service.go:806","msg":"no persisted topology to load, cold start","host":"bench-1"}
+2026-10-16T21:56:31.088656311Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"api","caller":"api/service.go:869","msg":"api service is ready","host":"bench-1"}
+2026-10-16T21:56:31.088664694Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"api","caller":"api/service.go:1016","msg":"starting api snapshot service","host":"bench-1"}
+2026-10-16T21:56:31.088666846Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"api","caller":"api/service.go:6541","msg":"starting clean queue data process","host":"bench-1"}
+2026-10-16T21:56:31.088668995Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:422","msg":"agent platform API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088675238Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:427","msg":"channels detail chart API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088691378Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:430","msg":"CE metrics API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088703948Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:434","msg":"MCP API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088754117Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:437","msg":"MQTT API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088863429Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:442","msg":"AMQP API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088897922Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:447","msg":"AMQP 1.0 API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.088979737Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:452","msg":"AWS metrics API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.089017761Z {"level":"INFO","time":"2026-10-16T21:56:31.088Z","component":"services","caller":"services/services.go:457","msg":"Pub/Sub metrics API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.089045797Z {"level":"INFO","time":"2026-10-16T21:56:31.089Z","component":"services","caller":"services/services.go:462","msg":"STOMP API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.089098014Z {"level":"INFO","time":"2026-10-16T21:56:31.089Z","component":"services","caller":"services/services.go:468","msg":"Kafka API routes registered","host":"bench-1"}
+2026-10-16T21:56:31.089127493Z {"level":"INFO","time":"2026-10-16T21:56:31.089Z","component":"services","caller":"services/services.go:483","msg":"server ready","host":"bench-1","duration_ms":9066}
+2026-10-16T21:56:31.089385902Z {"level":"WARN","time":"2026-10-16T21:56:31.089Z","component":"grpc","caller":"grpc/grpc.go:158","msg":"started insecure grpc server at port ","host":"bench-1","port":"50000"}
+2026-10-16T21:56:31.089392449Z {"level":"WARN","time":"2026-10-16T21:56:31.089Z","component":"grpc","caller":"grpc/grpc.go:200","msg":"grpc interface is accepting traffic","host":"bench-1"}
+2026-10-16T21:56:31.095729274Z {"level":"INFO","time":"2026-10-16T21:56:31.095Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"offsets_replay","duration_ms":6,"listings":1,"listed_channels":0,"listing_ms":6,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.106515576Z {"level":"INFO","time":"2026-10-16T21:56:31.106Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"topic_config_replay","duration_ms":10,"listings":2,"listed_channels":2,"listing_ms":10,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.112296139Z {"level":"INFO","time":"2026-10-16T21:56:31.112Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"group_config_replay","duration_ms":5,"listings":1,"listed_channels":1,"listing_ms":5,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.123551286Z {"level":"INFO","time":"2026-10-16T21:56:31.123Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"admin_store_replay","duration_ms":11,"listings":2,"listed_channels":2,"listing_ms":11,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.129429541Z {"level":"INFO","time":"2026-10-16T21:56:31.129Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"topic_policy_apply","duration_ms":5,"listings":0,"listed_channels":0,"listing_ms":0,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.135156549Z {"level":"INFO","time":"2026-10-16T21:56:31.135Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"txn_replay","duration_ms":5,"listings":1,"listed_channels":1,"listing_ms":5,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.142677264Z {"level":"INFO","time":"2026-10-16T21:56:31.142Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"pid_block_replay","duration_ms":7,"listings":1,"listed_channels":1,"listing_ms":5,"bounds_reads":1,"bounds_ms":0,"scans":1,"scanned_records":1,"scan_ms":1}
+2026-10-16T21:56:31.149184102Z {"level":"INFO","time":"2026-10-16T21:56:31.149Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"pid_seed_scan","duration_ms":6,"listings":1,"listed_channels":1,"listing_ms":5,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.154727832Z {"level":"INFO","time":"2026-10-16T21:56:31.154Z","component":"kafka","caller":"kafka/bootreads.go:54","msg":"kafka boot step done","host":"bench-1","step":"legacy_name_scan","duration_ms":5,"listings":1,"listed_channels":1,"listing_ms":5,"bounds_reads":0,"bounds_ms":0,"scans":0,"scanned_records":0,"scan_ms":0}
+2026-10-16T21:56:31.160513901Z {"level":"WARN","time":"2026-10-16T21:56:31.160Z","component":"kafka","caller":"kafka/connector.go:2207","msg":"kafka TLS listener disabled: TlsPort set but security mode is none (no cert material) — no TLS listener will be opened","host":"bench-1","tls_port":"9093"}
+2026-10-16T21:56:31.160700283Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka","caller":"kafka/connector.go:2448","msg":"kafka connector started","host":"bench-1","tcp_port":"9092","tls_port":"9093","log_retention_ms":604800000,"ssl_principal_mapping_rules":"DEFAULT"}
+2026-10-16T21:56:31.160740732Z {"level":"WARN","time":"2026-10-16T21:56:31.160Z","component":"kafka","caller":"kafka/connector.go:2505","msg":"kafka connector: clustered produce forwards to the Raft leader transparently (produce to ANY node with acks>=1 is forwarded; offsets never fork/dup across a failover). CAVEAT: acks=0 is fire-and-forget and is DROPPED (not forwarded) when it reaches a non-leader node, so an acks=0 produce to a follower can be silently lost. Use acks>=1 on a clustered deployment; list all nodes in bootstrap.servers so the client's metadata refresh still finds the cluster on any node restart.","host":"bench-1"}
+2026-10-16T21:56:31.160776411Z {"level":"WARN","time":"2026-10-16T21:56:31.160Z","component":"kafka","caller":"kafka/connector.go:2467","msg":"kafka connector: records older than 7 days are evicted from every topic that sets no retention.ms of its own (default log.retention.ms=604800000; releases before 3.6.17 kept such topics forever). To keep records forever set CONNECTORS_KAFKA_LOG_RETENTION_MS=-1 on every server; set a value to choose another window and silence this warning. A log.retention.ms set at runtime with kafka-configs overrides this static setting","host":"bench-1","log_retention_ms":604800000}
+2026-10-16T21:56:31.160779921Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"connectors-manager","caller":"connectors/kafka_enabled.go:121","msg":"Kafka connector started","host":"bench-1"}
+2026-10-16T21:56:31.160782605Z {"level":"WARN","time":"2026-10-16T21:56:31.160Z","component":"http-server","caller":"http/server.go:107","msg":"CORS allows all origins - not recommended for production","host":"bench-1"}
+2026-10-16T21:56:31.160795417Z 2026-10-16 21:56:31.160638 W | dragonboat: StaleRead called, linearizability not guaranteed for stale read
+2026-10-16T21:56:31.160895897Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"http-server","caller":"http/server.go:136","msg":"shared HTTP server: WriteTimeout disabled for SSE streaming support; per-route timeouts are enforced via middleware","host":"bench-1"}
+2026-10-16T21:56:31.160911025Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"connectors-manager","caller":"connectors/connectors.go:306","msg":"MCP connector registered","host":"bench-1"}
+2026-10-16T21:56:31.160912774Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"connectors-manager","caller":"connectors/connectors.go:327","msg":"A2A connector registered","host":"bench-1"}
+2026-10-16T21:56:31.160914221Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"http-server","caller":"http/server.go:250","msg":"shared HTTP server accepting traffic","host":"bench-1"}
+2026-10-16T21:56:31.160917677Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:941","msg":"kafka produce: producer state warm on every shard","host":"bench-1","time_to_all_warm":"103.84µs","built_from_store":0,"saved_loaded":0,"saved_anchor_ahead_of_tail":0,"saved_identity_mismatch":0,"saved_first_sequence_pruned_past":0,"saved_first_sequence_before_saved":0,"saved_checksum":0,"saved_version":0,"saved_missing_partition":0,"saved_store_unreadable":0}
+2026-10-16T21:56:31.160919817Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":0,"raft_shard_id":1,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160921314Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":1,"raft_shard_id":2,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160922784Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":2,"raft_shard_id":3,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160924221Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":3,"raft_shard_id":4,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160925715Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":4,"raft_shard_id":5,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160937139Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":5,"raft_shard_id":6,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160939503Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":6,"raft_shard_id":7,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160941158Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":7,"raft_shard_id":8,"since_first_pass":"0s"}
+2026-10-16T21:56:31.160943348Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"http-server","caller":"http/server.go:202","msg":"starting shared HTTP server (insecure)","host":"bench-1","port":"9090"}
+2026-10-16T21:56:31.161005084Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"mcp","caller":"mcp/connector.go:86","msg":"MCP bridge tools enabled (agent registry injected)","host":"bench-1"}
+2026-10-16T21:56:31.161021311Z {"level":"INFO","time":"2026-10-16T21:56:31.160Z","component":"connectors-manager","caller":"connectors/connectors.go:612","msg":"wire-protocol connectors disabled (opt-in)","host":"bench-1","connectors":"mqtt,amqp,stomp,aws,gcp"}
+2026-10-16T21:56:31.164525306Z {"level":"INFO","time":"2026-10-16T21:56:31.164Z","component":"kafka","caller":"kafka/clusterid.go:113","msg":"kafka: cluster id","host":"bench-1","cluster_id":"bDkboUMzx8cokpH66Gjkuw"}
+2026-10-16T21:56:32.018997973Z 2026-10-16 21:56:32.018875 W | raft: [f:1,l:8,t:2,c:8,a:8] [00002:00002] t2 received RequestVote with higher term (3) from n00001
+2026-10-16T21:56:32.019017326Z 2026-10-16 21:56:32.018891 W | raft: [f:1,l:8,t:2,c:8,a:8] [00002:00002] t2 become followerKE after receiving higher term from n00001
+2026-10-16T21:56:32.019019223Z 2026-10-16 21:56:32.018906 I | raft: [f:1,l:8,t:2,c:8,a:8] [00002:00002] t3 became follower
+2026-10-16T21:56:32.019021444Z 2026-10-16 21:56:32.018912 W | raft: [f:1,l:8,t:2,c:8,a:8] [00002:00002] t3 cast vote from n00001 index 8 term 3, log term: 2
+2026-10-16T21:56:32.085375262Z {"level":"INFO","time":"2026-10-16T21:56:32.084Z","component":"sharding","caller":"sharding/engine.go:2111","msg":"sharding: leader-balancer holding: a shard's leadership changed without a transfer from this node","shard":2,"lost_by":3,"restarted":false,"hold":"10s","self_replica":2}
+2026-10-16T21:56:32.085394898Z {"level":"INFO","time":"2026-10-16T21:56:32.084Z","component":"sharding","caller":"sharding/engine.go:2523","msg":"sharding: leader-balancer distribution","leaders_per_node":"r1=2 r2=3 r3=3","self_replica":2,"shards":8,"members":3}
+2026-10-16T21:56:33.161001953Z {"level":"INFO","time":"2026-10-16T21:56:33.160Z","component":"kafka","caller":"kafka/clusterfeatures.go:493","msg":"kafka cluster features: cluster not ready for the consumer group protocol yet","host":"bench-1","reason":"replica 1 did not answer the capability query: context deadline exceeded"}
+2026-10-16T21:56:33.169735871Z {"level":"INFO","time":"2026-10-16T21:56:33.169Z","component":"kafka","caller":"kafka/clusterfeatures.go:381","msg":"kafka cluster features: every server is upgraded; cluster marker written","host":"bench-1","channel":"_KAFKA_CLUSTER_.features","feature_level":4}
+2026-10-16T21:56:36.083067018Z {"level":"INFO","time":"2026-10-16T21:56:36.082Z","component":"array","caller":"array/storage_guard.go:263","msg":"disk guard thresholds: new data is refused first, then Kafka control records; the rest is kept for the engine","host":"bench-1","volume_bytes":791251738624,"data_refused_below_free_bytes":39562586931,"data_refused_above_used_pct":95.00000000002528,"control_refused_below_free_bytes":23737552158,"control_refused_above_used_pct":97.00000000009099,"snapshot_floor_free_bytes":15825034772,"snapshot_floor_used_pct":98.00000000006067,"snapshot_floor_note":"the snapshot disk budget's floor, max(volume/50, 8 MiB), computed here","engine":"next","shards":8,"segment_bytes":67108864,"engine_reserve_bytes":1610612736}
+2026-10-16T21:56:36.089458848Z {"level":"INFO","time":"2026-10-16T21:56:36.089Z","component":"api","caller":"api/service.go:1046","msg":"no last entities group to load, starting with empty entities group","host":"bench-1"}
+2026-10-16T21:56:36.089481159Z {"level":"INFO","time":"2026-10-16T21:56:36.089Z","component":"api","caller":"api/service.go:1064","msg":"no last topology to load, starting with empty topology","host":"bench-1"}
+2026-10-16T21:56:42.108536406Z {"level":"INFO","time":"2026-10-16T21:56:42.108Z","component":"sharding","caller":"sharding/engine.go:2030","msg":"sharding: leader-balancer hold ended","self_replica":2}
+2026-10-16T21:56:42.108559496Z {"level":"INFO","time":"2026-10-16T21:56:42.108Z","component":"sharding","caller":"sharding/engine.go:2450","msg":"sharding: leader-balancer: every member serves clients again; all eligible","previously":"r1 r3","self_replica":2,"shards_ready":"r1:all r3:all"}
+2026-10-16T21:57:43.163543354Z {"level":"INFO","time":"2026-10-16T21:57:43.163Z","component":"kafka-groups","caller":"kafka/groupmembership.go:810","msg":"kafka groups: classic coordinator loaded; serving classic groups","host":"bench-1","term":2,"restored_groups":0,"not_restored_groups":0,"since_takeover_ms":51,"restore_ms":0,"restore_us":1}
+2026-10-16T21:57:47.387091927Z {"level":"INFO","time":"2026-10-16T21:57:47.386Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":1,"raft_shard_id":2,"since_first_pass":"1m16.226s"}
+2026-10-16T21:57:49.394559870Z {"level":"INFO","time":"2026-10-16T21:57:49.394Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":1,"raft_shard_id":2,"since_first_pass":"1m18.234s"}
+2026-10-16T21:57:49.394603478Z {"level":"INFO","time":"2026-10-16T21:57:49.394Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":3,"raft_shard_id":4,"since_first_pass":"1m18.234s"}
+2026-10-16T21:57:49.394609145Z {"level":"INFO","time":"2026-10-16T21:57:49.394Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":4,"raft_shard_id":5,"since_first_pass":"1m18.234s"}
+2026-10-16T21:57:49.394612170Z {"level":"INFO","time":"2026-10-16T21:57:49.394Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":5,"raft_shard_id":6,"since_first_pass":"1m18.234s"}
+2026-10-16T21:57:49.394615568Z {"level":"INFO","time":"2026-10-16T21:57:49.394Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":6,"raft_shard_id":7,"since_first_pass":"1m18.234s"}
+2026-10-16T21:58:01.400717120Z 2026-10-16 21:58:01.400547 I | dragonboat: [00001:00002] saved <00001:00002:10001>, term 2, file count 0
+2026-10-16T21:58:02.230060881Z 2026-10-16 21:58:02.229840 I | dragonboat: [00002:00002] saved <00002:00002:11251>, term 3, file count 0
+2026-10-16T21:58:11.949724483Z 2026-10-16 21:58:11.949583 I | dragonboat: [00004:00002] saved <00004:00002:13751>, term 2, file count 0
+2026-10-16T21:58:13.203851049Z 2026-10-16 21:58:13.203659 I | dragonboat: [00001:00002] saved <00001:00002:20002>, term 2, file count 0
+2026-10-16T21:58:13.206359441Z 2026-10-16 21:58:13.206254 I | raftpb: going to call compact on 10001
+2026-10-16T21:58:14.387425712Z 2026-10-16 21:58:14.387269 I | dragonboat: [00005:00002] saved <00005:00002:15001>, term 2, file count 0
+2026-10-16T21:58:15.727338323Z 2026-10-16 21:58:15.727204 I | dragonboat: [00002:00002] saved <00002:00002:22502>, term 3, file count 0
+2026-10-16T21:58:15.730371049Z 2026-10-16 21:58:15.730269 I | raftpb: going to call compact on 11251
+2026-10-16T21:58:17.503602573Z 2026-10-16 21:58:17.503446 I | dragonboat: [00007:00002] saved <00007:00002:17501>, term 2, file count 0
+2026-10-16T21:58:17.631416904Z 2026-10-16 21:58:17.631279 I | dragonboat: [00003:00002] saved <00003:00002:12501>, term 2, file count 0
+2026-10-16T21:58:19.505453823Z 2026-10-16 21:58:19.505343 I | dragonboat: [00008:00002] saved <00008:00002:18751>, term 2, file count 0
+2026-10-16T21:58:25.310172287Z 2026-10-16 21:58:25.310016 I | dragonboat: [00001:00002] saved <00001:00002:30003>, term 2, file count 0
+2026-10-16T21:58:25.313125306Z 2026-10-16 21:58:25.312981 I | raftpb: going to call compact on 20002
+2026-10-16T21:58:28.378847200Z 2026-10-16 21:58:28.378735 I | dragonboat: [00006:00002] saved <00006:00002:16251>, term 2, file count 0
+2026-10-16T21:58:28.458564042Z 2026-10-16 21:58:28.458302 I | dragonboat: [00002:00002] saved <00002:00002:33753>, term 3, file count 0
+2026-10-16T21:58:28.461218837Z 2026-10-16 21:58:28.461139 I | raftpb: going to call compact on 22502
+2026-10-16T21:58:34.914347789Z 2026-10-16 21:58:34.914228 I | dragonboat: [00004:00002] saved <00004:00002:27502>, term 2, file count 0
+2026-10-16T21:58:34.916399643Z 2026-10-16 21:58:34.916309 I | raftpb: going to call compact on 13751
+2026-10-16T21:58:37.680193219Z 2026-10-16 21:58:37.680053 I | dragonboat: [00001:00002] saved <00001:00002:40004>, term 2, file count 0
+2026-10-16T21:58:37.682697404Z 2026-10-16 21:58:37.682587 I | raftpb: going to call compact on 30003
+2026-10-16T21:58:39.199856614Z 2026-10-16 21:58:39.199643 I | dragonboat: [00005:00002] saved <00005:00002:30002>, term 2, file count 0
+2026-10-16T21:58:39.202886725Z 2026-10-16 21:58:39.202790 I | raftpb: going to call compact on 15001
+2026-10-16T21:58:43.271091261Z 2026-10-16 21:58:43.270942 I | dragonboat: [00002:00002] saved <00002:00002:45004>, term 3, file count 0
+2026-10-16T21:58:43.273756694Z 2026-10-16 21:58:43.273671 I | raftpb: going to call compact on 33753
+2026-10-16T21:58:46.519207453Z 2026-10-16 21:58:46.518988 I | dragonboat: [00003:00002] saved <00003:00002:25003>, term 2, file count 0
+2026-10-16T21:58:46.521293052Z 2026-10-16 21:58:46.521197 I | raftpb: going to call compact on 12501
+2026-10-16T21:58:47.493016196Z 2026-10-16 21:58:47.492895 I | dragonboat: [00007:00002] saved <00007:00002:35002>, term 2, file count 0
+2026-10-16T21:58:47.496093112Z 2026-10-16 21:58:47.495946 I | raftpb: going to call compact on 17501
+2026-10-16T21:58:48.178822960Z 2026-10-16 21:58:48.178678 I | dragonboat: [00008:00002] saved <00008:00002:37502>, term 2, file count 0
+2026-10-16T21:58:48.181561580Z 2026-10-16 21:58:48.181461 I | raftpb: going to call compact on 18751
+2026-10-16T21:58:50.911108977Z 2026-10-16 21:58:50.911003 I | dragonboat: [00001:00002] saved <00001:00002:50005>, term 2, file count 0
+2026-10-16T21:58:50.914121732Z 2026-10-16 21:58:50.914012 I | raftpb: going to call compact on 40004
+2026-10-16T21:58:50.916125571Z 2026-10-16 21:58:50.916046 I | dragonboat: [00001:00002] compacted log up to index 3
+2026-10-16T21:58:56.571384258Z 2026-10-16 21:58:56.571256 I | dragonboat: [00002:00002] saved <00002:00002:56255>, term 3, file count 0
+2026-10-16T21:58:56.573768852Z 2026-10-16 21:58:56.573682 I | raftpb: going to call compact on 45004
+2026-10-16T21:58:56.575484579Z 2026-10-16 21:58:56.575414 I | dragonboat: [00002:00002] compacted log up to index 3
+2026-10-16T21:58:57.520929667Z {"level":"INFO","time":"2026-10-16T21:58:57.520Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"1","raft_shard_id":2,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~1","raft_log_file":2}
+2026-10-16T21:58:57.698477058Z 2026-10-16 21:58:57.698365 I | dragonboat: [00004:00002] saved <00004:00002:41253>, term 2, file count 0
+2026-10-16T21:58:57.701675267Z 2026-10-16 21:58:57.701554 I | raftpb: going to call compact on 27502
+2026-10-16T21:59:02.161557601Z 2026-10-16 21:59:02.161428 I | dragonboat: [00001:00002] saved <00001:00002:60006>, term 2, file count 0
+2026-10-16T21:59:02.164850075Z 2026-10-16 21:59:02.164740 I | raftpb: going to call compact on 50005
+2026-10-16T21:59:03.269504058Z 2026-10-16 21:59:03.269168 I | dragonboat: [00005:00002] saved <00005:00002:45003>, term 2, file count 0
+2026-10-16T21:59:03.272261740Z 2026-10-16 21:59:03.271989 I | raftpb: going to call compact on 30002
+2026-10-16T21:59:04.063591693Z {"level":"INFO","time":"2026-10-16T21:59:04.063Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"0","raft_shard_id":1,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk","raft_log_file":2}
+2026-10-16T21:59:08.994840708Z 2026-10-16 21:59:08.994716 I | dragonboat: [00006:00002] saved <00006:00002:32502>, term 2, file count 0
+2026-10-16T21:59:08.997019817Z 2026-10-16 21:59:08.996888 I | raftpb: going to call compact on 16251
+2026-10-16T21:59:09.635920910Z 2026-10-16 21:59:09.635801 I | dragonboat: [00002:00002] saved <00002:00002:67506>, term 3, file count 0
+2026-10-16T21:59:09.638846007Z 2026-10-16 21:59:09.638564 I | raftpb: going to call compact on 56255
+2026-10-16T21:59:13.995515725Z 2026-10-16 21:59:13.995171 I | dragonboat: [00001:00002] saved <00001:00002:70007>, term 2, file count 0
+2026-10-16T21:59:13.998326311Z 2026-10-16 21:59:13.998152 I | raftpb: going to call compact on 60006
+2026-10-16T21:59:14.812789561Z 2026-10-16 21:59:14.812600 I | dragonboat: [00003:00002] saved <00003:00002:37504>, term 2, file count 0
+2026-10-16T21:59:14.815120495Z 2026-10-16 21:59:14.815012 I | raftpb: going to call compact on 25003
+2026-10-16T21:59:15.589772597Z 2026-10-16 21:59:15.589660 I | dragonboat: [00007:00002] saved <00007:00002:52503>, term 2, file count 0
+2026-10-16T21:59:15.592063387Z 2026-10-16 21:59:15.591960 I | raftpb: going to call compact on 35002
+2026-10-16T21:59:15.594785969Z 2026-10-16 21:59:15.594723 I | dragonboat: [00007:00002] compacted log up to index 3
+2026-10-16T21:59:19.252756999Z 2026-10-16 21:59:19.252562 I | dragonboat: [00008:00002] saved <00008:00002:56253>, term 2, file count 0
+2026-10-16T21:59:19.255357074Z 2026-10-16 21:59:19.255187 I | raftpb: going to call compact on 37502
+2026-10-16T21:59:19.257212977Z 2026-10-16 21:59:19.257134 I | dragonboat: [00008:00002] compacted log up to index 3
+2026-10-16T21:59:20.878071527Z 2026-10-16 21:59:20.877899 I | dragonboat: [00004:00002] saved <00004:00002:55004>, term 2, file count 0
+2026-10-16T21:59:20.881331855Z 2026-10-16 21:59:20.881230 I | raftpb: going to call compact on 41253
+2026-10-16T21:59:20.892998575Z 2026-10-16 21:59:20.892917 I | dragonboat: [00004:00002] compacted log up to index 3
+2026-10-16T21:59:22.543826321Z {"level":"INFO","time":"2026-10-16T21:59:22.543Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"7","raft_shard_id":8,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~14","raft_log_file":2}
+2026-10-16T21:59:23.270734761Z 2026-10-16 21:59:23.270632 I | dragonboat: [00002:00002] saved <00002:00002:78757>, term 3, file count 0
+2026-10-16T21:59:23.273516495Z 2026-10-16 21:59:23.273445 I | raftpb: going to call compact on 67506
+2026-10-16T21:59:25.789607423Z 2026-10-16 21:59:25.789399 I | dragonboat: [00001:00002] saved <00001:00002:80008>, term 2, file count 0
+2026-10-16T21:59:25.792613922Z 2026-10-16 21:59:25.792461 I | raftpb: going to call compact on 70007
+2026-10-16T21:59:27.750092332Z 2026-10-16 21:59:27.749992 I | dragonboat: [00005:00002] saved <00005:00002:60004>, term 2, file count 0
+2026-10-16T21:59:27.752431705Z 2026-10-16 21:59:27.752337 I | raftpb: going to call compact on 45003
+2026-10-16T21:59:27.754062248Z 2026-10-16 21:59:27.754001 I | dragonboat: [00005:00002] compacted log up to index 3
+2026-10-16T21:59:32.531865938Z {"level":"INFO","time":"2026-10-16T21:59:32.531Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"4","raft_shard_id":5,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~15","raft_log_file":2}
+2026-10-16T21:59:36.737026538Z 2026-10-16 21:59:36.736909 I | dragonboat: [00002:00002] saved <00002:00002:90008>, term 3, file count 0
+2026-10-16T21:59:36.739347667Z 2026-10-16 21:59:36.739145 I | raftpb: going to call compact on 78757
+2026-10-16T21:59:37.466044727Z 2026-10-16 21:59:37.465895 I | dragonboat: [00001:00002] saved <00001:00002:90009>, term 2, file count 0
+2026-10-16T21:59:37.468321250Z 2026-10-16 21:59:37.468235 I | raftpb: going to call compact on 80008
+2026-10-16T21:59:41.846313755Z 2026-10-16 21:59:41.845908 I | dragonboat: [00007:00002] saved <00007:00002:70004>, term 2, file count 0
+2026-10-16T21:59:41.848961302Z 2026-10-16 21:59:41.848873 I | raftpb: going to call compact on 52503
+2026-10-16T21:59:42.540114086Z {"level":"INFO","time":"2026-10-16T21:59:42.539Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"6","raft_shard_id":7,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~13","raft_log_file":2}
+2026-10-16T21:59:43.988765389Z 2026-10-16 21:59:43.988646 I | dragonboat: [00003:00002] saved <00003:00002:50006>, term 2, file count 0
+2026-10-16T21:59:43.992481047Z 2026-10-16 21:59:43.992401 I | raftpb: going to call compact on 37504
+2026-10-16T21:59:43.994133989Z 2026-10-16 21:59:43.994051 I | dragonboat: [00003:00002] compacted log up to index 3
+2026-10-16T21:59:44.398430311Z 2026-10-16 21:59:44.398164 I | dragonboat: [00004:00002] saved <00004:00002:68755>, term 2, file count 0
+2026-10-16T21:59:44.405639029Z 2026-10-16 21:59:44.400890 I | raftpb: going to call compact on 55004
+2026-10-16T21:59:47.528073969Z {"level":"INFO","time":"2026-10-16T21:59:47.527Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"3","raft_shard_id":4,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~10","raft_log_file":2}
+2026-10-16T21:59:47.563361199Z 2026-10-16 21:59:47.563254 I | dragonboat: [00006:00002] saved <00006:00002:48753>, term 2, file count 0
+2026-10-16T21:59:47.566278980Z 2026-10-16 21:59:47.566170 I | raftpb: going to call compact on 32502
+2026-10-16T21:59:48.137311456Z 2026-10-16 21:59:48.137141 I | dragonboat: [00008:00002] saved <00008:00002:75004>, term 2, file count 0
+2026-10-16T21:59:48.139677037Z 2026-10-16 21:59:48.139582 I | raftpb: going to call compact on 56253
+2026-10-16T21:59:49.450920094Z 2026-10-16 21:59:49.450765 I | dragonboat: [00001:00002] saved <00001:00002:100011>, term 2, file count 0
+2026-10-16T21:59:49.453954650Z 2026-10-16 21:59:49.453662 I | raftpb: going to call compact on 90009
+2026-10-16T21:59:50.808783829Z 2026-10-16 21:59:50.808641 I | dragonboat: [00002:00002] saved <00002:00002:101260>, term 3, file count 0
+2026-10-16T21:59:50.811119030Z 2026-10-16 21:59:50.811027 I | raftpb: going to call compact on 90008
+2026-10-16T21:59:51.319465034Z 2026-10-16 21:59:51.319364 I | dragonboat: [00005:00002] saved <00005:00002:75005>, term 2, file count 0
+2026-10-16T21:59:51.321738676Z 2026-10-16 21:59:51.321670 I | raftpb: going to call compact on 60004
+2026-10-16T21:59:59.845250207Z {"level":"INFO","time":"2026-10-16T21:59:59.845Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":5,"raft_shard_id":6,"since_first_pass":"3m28.684s"}
+2026-10-16T22:00:00.856972050Z {"level":"INFO","time":"2026-10-16T22:00:00.856Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":1,"raft_shard_id":2,"since_first_pass":"3m29.696s"}
+2026-10-16T22:00:01.464115759Z {"level":"INFO","time":"2026-10-16T22:00:01.463Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":4,"raft_shard_id":5,"since_first_pass":"3m30.303s"}
+2026-10-16T22:00:01.489565435Z 2026-10-16 22:00:01.489442 I | dragonboat: [00001:00002] saved <00001:00002:110012>, term 2, file count 0
+2026-10-16T22:00:01.492100576Z 2026-10-16 22:00:01.491993 I | raftpb: going to call compact on 100011
+2026-10-16T22:00:02.475828274Z {"level":"INFO","time":"2026-10-16T22:00:02.475Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":5,"raft_shard_id":6,"since_first_pass":"3m31.315s"}
+2026-10-16T22:00:03.492467951Z {"level":"INFO","time":"2026-10-16T22:00:03.492Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":3,"raft_shard_id":4,"since_first_pass":"3m32.332s"}
+2026-10-16T22:00:04.941466906Z 2026-10-16 22:00:04.941343 I | dragonboat: [00002:00002] saved <00002:00002:112511>, term 3, file count 0
+2026-10-16T22:00:04.943956827Z 2026-10-16 22:00:04.943863 I | raftpb: going to call compact on 101260
+2026-10-16T22:00:05.716223181Z {"level":"INFO","time":"2026-10-16T22:00:05.716Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":1,"raft_shard_id":2,"since_first_pass":"3m34.555s"}
+2026-10-16T22:00:06.322836834Z {"level":"INFO","time":"2026-10-16T22:00:06.322Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":6,"raft_shard_id":7,"since_first_pass":"3m35.162s"}
+2026-10-16T22:00:06.801363434Z 2026-10-16 22:00:06.801226 I | dragonboat: [00004:00002] saved <00004:00002:82506>, term 2, file count 0
+2026-10-16T22:00:06.804101716Z 2026-10-16 22:00:06.804014 I | raftpb: going to call compact on 68755
+2026-10-16T22:00:10.850706549Z 2026-10-16 22:00:10.850586 I | dragonboat: [00007:00002] saved <00007:00002:87505>, term 2, file count 0
+2026-10-16T22:00:10.853621903Z 2026-10-16 22:00:10.853515 I | raftpb: going to call compact on 70004
+2026-10-16T22:00:11.178281783Z {"level":"INFO","time":"2026-10-16T22:00:11.178Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":3,"raft_shard_id":4,"since_first_pass":"3m40.017s"}
+2026-10-16T22:00:11.443648209Z 2026-10-16 22:00:11.443264 I | dragonboat: [00003:00002] saved <00003:00002:62507>, term 2, file count 0
+2026-10-16T22:00:11.446666776Z 2026-10-16 22:00:11.446493 I | raftpb: going to call compact on 50006
+2026-10-16T22:00:12.524301369Z {"level":"INFO","time":"2026-10-16T22:00:12.524Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"2","raft_shard_id":3,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~4","raft_log_file":2}
+2026-10-16T22:00:13.418479137Z 2026-10-16 22:00:13.418328 I | dragonboat: [00001:00002] saved <00001:00002:120013>, term 2, file count 0
+2026-10-16T22:00:13.421623227Z 2026-10-16 22:00:13.421248 I | raftpb: going to call compact on 110012
+2026-10-16T22:00:14.011464176Z {"level":"INFO","time":"2026-10-16T22:00:14.011Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":4,"raft_shard_id":5,"since_first_pass":"3m42.851s"}
+2026-10-16T22:00:15.425020507Z 2026-10-16 22:00:15.424850 I | dragonboat: [00005:00002] saved <00005:00002:90007>, term 2, file count 0
+2026-10-16T22:00:15.427594650Z 2026-10-16 22:00:15.427353 I | raftpb: going to call compact on 75005
+2026-10-16T22:00:17.857379309Z {"level":"INFO","time":"2026-10-16T22:00:17.857Z","component":"kafka-produce","caller":"kafka/statewarm.go:972","msg":"kafka produce: producer state built on this shard; this node is ready to lead it","host":"bench-1","shard":4,"raft_shard_id":5,"since_first_pass":"3m46.697s"}
+2026-10-16T22:00:18.121396846Z 2026-10-16 22:00:18.121263 I | dragonboat: [00008:00002] saved <00008:00002:93755>, term 2, file count 0
+2026-10-16T22:00:18.124432263Z 2026-10-16 22:00:18.124322 I | raftpb: going to call compact on 75004
+2026-10-16T22:00:18.543261571Z 2026-10-16 22:00:18.543126 I | dragonboat: [00002:00002] saved <00002:00002:123762>, term 3, file count 0
+2026-10-16T22:00:18.545895736Z 2026-10-16 22:00:18.545801 I | raftpb: going to call compact on 112511
+2026-10-16T22:00:24.834599377Z 2026-10-16 22:00:24.834469 I | dragonboat: [00001:00002] saved <00001:00002:130014>, term 2, file count 0
+2026-10-16T22:00:24.837707231Z 2026-10-16 22:00:24.837614 I | raftpb: going to call compact on 120013
+2026-10-16T22:00:26.638981361Z 2026-10-16 22:00:26.637489 I | dragonboat: [00006:00002] saved <00006:00002:65004>, term 2, file count 0
+2026-10-16T22:00:26.640784491Z 2026-10-16 22:00:26.640711 I | raftpb: going to call compact on 48753
+2026-10-16T22:00:26.643452234Z 2026-10-16 22:00:26.643180 I | dragonboat: [00006:00002] compacted log up to index 3
+2026-10-16T22:00:27.536136854Z {"level":"INFO","time":"2026-10-16T22:00:27.535Z","component":"nextengine","caller":"nextengine/engine_materialise_next.go:169","msg":"the channel holding the shard's raft log files for record value pointers changed","host":"bench-1","shard":"5","raft_shard_id":6,"channel":"_EVENTS_STORE_.kafka.test-topic-0000000-F0Aa4Kk~5","raft_log_file":2}
+2026-10-16T22:00:29.724788593Z 2026-10-16 22:00:29.724647 I | dragonboat: [00004:00002] saved <00004:00002:96257>, term 2, file count 0
+2026-10-16T22:00:29.727634599Z 2026-10-16 22:00:29.727557 I | raftpb: going to call compact on 82506
+2026-10-16T22:00:32.078324549Z 2026-10-16 22:00:32.078197 I | dragonboat: [00002:00002] saved <00002:00002:135013>, term 3, file count 0
+2026-10-16T22:00:32.083498178Z 2026-10-16 22:00:32.083406 I | raftpb: going to call compact on 123762
+2026-10-16T22:00:36.843983481Z 2026-10-16 22:00:36.843863 I | dragonboat: [00001:00002] saved <00001:00002:140015>, term 2, file count 0
+2026-10-16T22:00:36.847161834Z 2026-10-16 22:00:36.847056 I | raftpb: going to call compact on 130014
+2026-10-16T22:00:37.981149405Z 2026-10-16 22:00:37.980984 I | dragonboat: [00003:00002] saved <00003:00002:75008>, term 2, file count 0
+2026-10-16T22:00:37.983365317Z 2026-10-16 22:00:37.983203 I | raftpb: going to call compact on 62507
+2026-10-16T22:00:39.294975698Z 2026-10-16 22:00:39.294638 I | dragonboat: [00007:00002] saved <00007:00002:105006>, term 2, file count 0
+2026-10-16T22:00:39.297624018Z 2026-10-16 22:00:39.297521 I | raftpb: going to call compact on 87505
+2026-10-16T22:00:39.639265683Z 2026-10-16 22:00:39.639006 I | dragonboat: [00005:00002] saved <00005:00002:105008>, term 2, file count 0
+2026-10-16T22:00:39.641664215Z 2026-10-16 22:00:39.641565 I | raftpb: going to call compact on 90007
+2026-10-16T22:00:46.430561960Z 2026-10-16 22:00:46.430442 I | dragonboat: [00002:00002] saved <00002:00002:146264>, term 3, file count 0
+2026-10-16T22:00:46.432752457Z 2026-10-16 22:00:46.432655 I | raftpb: going to call compact on 135013
+2026-10-16T22:00:46.624033866Z 2026-10-16 22:00:46.623935 I | dragonboat: [00008:00002] saved <00008:00002:112506>, term 2, file count 0
+2026-10-16T22:00:46.627150479Z 2026-10-16 22:00:46.626979 I | raftpb: going to call compact on 93755
+2026-10-16T22:00:49.015323165Z 2026-10-16 22:00:49.015154 I | dragonboat: [00001:00002] saved <00001:00002:150016>, term 2, file count 0
+2026-10-16T22:00:49.017399835Z 2026-10-16 22:00:49.017327 I | raftpb: going to call compact on 140015
+2026-10-16T22:00:51.463334843Z 2026-10-16 22:00:51.463207 I | dragonboat: [00004:00002] saved <00004:00002:110008>, term 2, file count 0
+2026-10-16T22:00:51.465252290Z 2026-10-16 22:00:51.465170 I | raftpb: going to call compact on 96257
+2026-10-16T22:01:00.383603853Z 2026-10-16 22:01:00.383467 I | dragonboat: [00001:00002] saved <00001:00002:160017>, term 2, file count 0
+2026-10-16T22:01:00.386583811Z 2026-10-16 22:01:00.386476 I | raftpb: going to call compact on 150016
+2026-10-16T22:01:00.442071086Z 2026-10-16 22:01:00.441913 I | dragonboat: [00002:00002] saved <00002:00002:157515>, term 3, file count 0
+2026-10-16T22:01:00.445248207Z 2026-10-16 22:01:00.445055 I | raftpb: going to call compact on 146264
+2026-10-16T22:01:03.418966906Z 2026-10-16 22:01:03.418810 I | dragonboat: [00005:00002] saved <00005:00002:120009>, term 2, file count 0
+2026-10-16T22:01:03.423843868Z 2026-10-16 22:01:03.423625 I | raftpb: going to call compact on 105008
+2026-10-16T22:01:03.440345383Z 2026-10-16 22:01:03.440198 I | dragonboat: [00006:00002] saved <00006:00002:81255>, term 2, file count 0
+2026-10-16T22:01:03.443052701Z 2026-10-16 22:01:03.442926 I | raftpb: going to call compact on 65004
+2026-10-16T22:01:06.085845946Z 2026-10-16 22:01:06.085697 I | dragonboat: [00003:00002] saved <00003:00002:87509>, term 2, file count 0
+2026-10-16T22:01:06.088581596Z 2026-10-16 22:01:06.088453 I | raftpb: going to call compact on 75008
+2026-10-16T22:01:06.954802283Z 2026-10-16 22:01:06.954461 I | dragonboat: [00007:00002] saved <00007:00002:122507>, term 2, file count 0
+2026-10-16T22:01:06.957083665Z 2026-10-16 22:01:06.957000 I | raftpb: going to call compact on 105006
+2026-10-16T22:01:12.466414559Z 2026-10-16 22:01:12.466082 I | dragonboat: [00001:00002] saved <00001:00002:170018>, term 2, file count 0
+2026-10-16T22:01:12.469845481Z 2026-10-16 22:01:12.469740 I | raftpb: going to call compact on 160017
+2026-10-16T22:01:12.745612532Z 2026-10-16 22:01:12.745475 I | dragonboat: [00004:00002] saved <00004:00002:123759>, term 2, file count 0
+2026-10-16T22:01:12.748470546Z 2026-10-16 22:01:12.748350 I | raftpb: going to call compact on 110008
+2026-10-16T22:01:14.740630972Z 2026-10-16 22:01:14.740517 I | dragonboat: [00002:00002] saved <00002:00002:168766>, term 3, file count 0
+2026-10-16T22:01:14.743129822Z 2026-10-16 22:01:14.743038 I | raftpb: going to call compact on 157515
+2026-10-16T22:01:16.102344972Z 2026-10-16 22:01:16.102220 I | dragonboat: [00008:00002] saved <00008:00002:131257>, term 2, file count 0
+2026-10-16T22:01:16.105342725Z 2026-10-16 22:01:16.105022 I | raftpb: going to call compact on 112506
+2026-10-16T22:01:24.544719497Z 2026-10-16 22:01:24.544545 I | dragonboat: [00001:00002] saved <00001:00002:180019>, term 2, file count 0
+2026-10-16T22:01:24.547895888Z 2026-10-16 22:01:24.547783 I | raftpb: going to call compact on 170018
+2026-10-16T22:01:26.839659309Z 2026-10-16 22:01:26.839522 I | dragonboat: [00005:00002] saved <00005:00002:135010>, term 2, file count 0
+2026-10-16T22:01:26.842644753Z 2026-10-16 22:01:26.842507 I | raftpb: going to call compact on 120009
+2026-10-16T22:01:28.399121439Z 2026-10-16 22:01:28.398992 I | dragonboat: [00002:00002] saved <00002:00002:180017>, term 3, file count 0
+2026-10-16T22:01:28.401279150Z 2026-10-16 22:01:28.401185 I | raftpb: going to call compact on 168766
+2026-10-16T22:01:34.118805803Z 2026-10-16 22:01:34.118613 I | dragonboat: [00003:00002] saved <00003:00002:100010>, term 2, file count 0
+2026-10-16T22:01:34.121590759Z 2026-10-16 22:01:34.121465 I | raftpb: going to call compact on 87509
+2026-10-16T22:01:34.893458337Z 2026-10-16 22:01:34.893358 I | dragonboat: [00004:00002] saved <00004:00002:137510>, term 2, file count 0
+2026-10-16T22:01:34.895863642Z 2026-10-16 22:01:34.895779 I | raftpb: going to call compact on 123759
+2026-10-16T22:01:35.103731971Z 2026-10-16 22:01:35.103616 I | dragonboat: [00007:00002] saved <00007:00002:140009>, term 2, file count 0
+2026-10-16T22:01:35.106833857Z 2026-10-16 22:01:35.106673 I | raftpb: going to call compact on 122507
+2026-10-16T22:01:35.947740256Z 2026-10-16 22:01:35.947612 I | dragonboat: [00001:00002] saved <00001:00002:190020>, term 2, file count 0
+2026-10-16T22:01:35.950508809Z 2026-10-16 22:01:35.950433 I | raftpb: going to call compact on 180019
+2026-10-16T22:01:41.858399949Z 2026-10-16 22:01:41.858272 I | dragonboat: [00006:00002] saved <00006:00002:97506>, term 2, file count 0
+2026-10-16T22:01:41.861248785Z 2026-10-16 22:01:41.861122 I | raftpb: going to call compact on 81255
+2026-10-16T22:01:42.466228138Z 2026-10-16 22:01:42.466080 I | dragonboat: [00002:00002] saved <00002:00002:191268>, term 3, file count 0
+2026-10-16T22:01:42.469419221Z 2026-10-16 22:01:42.469326 I | raftpb: going to call compact on 180017
+2026-10-16T22:01:46.038053145Z 2026-10-16 22:01:46.037772 I | dragonboat: [00008:00002] saved <00008:00002:150008>, term 2, file count 0
+2026-10-16T22:01:46.040615291Z 2026-10-16 22:01:46.040470 I | raftpb: going to call compact on 131257
+2026-10-16T22:01:47.890937293Z 2026-10-16 22:01:47.890810 I | dragonboat: [00001:00002] saved <00001:00002:200022>, term 2, file count 0
+2026-10-16T22:01:47.894375869Z 2026-10-16 22:01:47.894288 I | raftpb: going to call compact on 190020
+2026-10-16T22:01:51.169665092Z 2026-10-16 22:01:51.169512 I | dragonboat: [00005:00002] saved <00005:00002:150011>, term 2, file count 0
+2026-10-16T22:01:51.172794354Z 2026-10-16 22:01:51.172671 I | raftpb: going to call compact on 135010
+2026-10-16T22:01:56.166322827Z 2026-10-16 22:01:56.166202 I | dragonboat: [00002:00002] saved <00002:00002:202519>, term 3, file count 0
+2026-10-16T22:01:56.169151435Z 2026-10-16 22:01:56.169024 I | raftpb: going to call compact on 191268
+2026-10-16T22:01:57.811675581Z 2026-10-16 22:01:57.811512 I | dragonboat: [00004:00002] saved <00004:00002:151261>, term 2, file count 0
+2026-10-16T22:01:57.814716235Z 2026-10-16 22:01:57.814624 I | raftpb: going to call compact on 137510
+2026-10-16T22:01:59.970527701Z 2026-10-16 22:01:59.970355 I | dragonboat: [00001:00002] saved <00001:00002:210023>, term 2, file count 0
+2026-10-16T22:01:59.973326699Z 2026-10-16 22:01:59.973235 I | raftpb: going to call compact on 200022
+2026-10-16T22:02:01.866664802Z 2026-10-16 22:02:01.866516 I | dragonboat: [00003:00002] saved <00003:00002:112511>, term 2, file count 0
+2026-10-16T22:02:01.869213542Z 2026-10-16 22:02:01.868997 I | raftpb: going to call compact on 100010
+2026-10-16T22:02:03.918008687Z 2026-10-16 22:02:03.917905 I | dragonboat: [00007:00002] saved <00007:00002:157510>, term 2, file count 0
+2026-10-16T22:02:03.920296720Z 2026-10-16 22:02:03.920197 I | raftpb: going to call compact on 140009
+2026-10-16T22:02:09.554725828Z 2026-10-16 22:02:09.554605 I | dragonboat: [00002:00002] saved <00002:00002:213770>, term 3, file count 0
+2026-10-16T22:02:09.557196870Z 2026-10-16 22:02:09.557097 I | raftpb: going to call compact on 202519
+2026-10-16T22:02:11.702906201Z 2026-10-16 22:02:11.702778 I | dragonboat: [00001:00002] saved <00001:00002:220024>, term 2, file count 0
+2026-10-16T22:02:11.705704773Z 2026-10-16 22:02:11.705611 I | raftpb: going to call compact on 210023
+2026-10-16T22:02:15.714783676Z 2026-10-16 22:02:15.714611 I | dragonboat: [00005:00002] saved <00005:00002:165012>, term 2, file count 0
+2026-10-16T22:02:15.717819415Z 2026-10-16 22:02:15.717640 I | raftpb: going to call compact on 150011
+2026-10-16T22:02:15.739314248Z 2026-10-16 22:02:15.739194 I | dragonboat: [00008:00002] saved <00008:00002:168759>, term 2, file count 0
+2026-10-16T22:02:15.741909838Z 2026-10-16 22:02:15.741810 I | raftpb: going to call compact on 150008
+2026-10-16T22:02:21.033145718Z 2026-10-16 22:02:21.032960 I | dragonboat: [00006:00002] saved <00006:00002:113757>, term 2, file count 0
+2026-10-16T22:02:21.035893770Z 2026-10-16 22:02:21.035794 I | raftpb: going to call compact on 97506
+2026-10-16T22:02:21.378672142Z 2026-10-16 22:02:21.378549 I | dragonboat: [00004:00002] saved <00004:00002:165012>, term 2, file count 0
+2026-10-16T22:02:21.381156558Z 2026-10-16 22:02:21.381000 I | raftpb: going to call compact on 151261
+2026-10-16T22:02:23.588135245Z 2026-10-16 22:02:23.588025 I | dragonboat: [00002:00002] saved <00002:00002:225022>, term 3, file count 0
+2026-10-16T22:02:23.590330548Z 2026-10-16 22:02:23.590215 I | raftpb: going to call compact on 213770
+2026-10-16T22:02:23.808296465Z 2026-10-16 22:02:23.808163 I | dragonboat: [00001:00002] saved <00001:00002:230025>, term 2, file count 0
+2026-10-16T22:02:23.811336834Z 2026-10-16 22:02:23.811222 I | raftpb: going to call compact on 220024
+2026-10-16T22:02:30.736494551Z 2026-10-16 22:02:30.736343 I | dragonboat: [00003:00002] saved <00003:00002:125012>, term 2, file count 0
+2026-10-16T22:02:30.739215307Z 2026-10-16 22:02:30.739108 I | raftpb: going to call compact on 112511
+2026-10-16T22:02:31.716883440Z 2026-10-16 22:02:31.716762 I | dragonboat: [00007:00002] saved <00007:00002:175011>, term 2, file count 0
+2026-10-16T22:02:31.719527616Z 2026-10-16 22:02:31.719441 I | raftpb: going to call compact on 157510
+2026-10-16T22:02:35.476561679Z 2026-10-16 22:02:35.476446 I | dragonboat: [00001:00002] saved <00001:00002:240026>, term 2, file count 0
+2026-10-16T22:02:35.479263249Z 2026-10-16 22:02:35.479161 I | raftpb: going to call compact on 230025
+2026-10-16T22:02:37.623200596Z 2026-10-16 22:02:37.623096 I | dragonboat: [00002:00002] saved <00002:00002:236273>, term 3, file count 0
+2026-10-16T22:02:37.625619502Z 2026-10-16 22:02:37.625477 I | raftpb: going to call compact on 225022
+2026-10-16T22:02:39.999716462Z 2026-10-16 22:02:39.999613 I | dragonboat: [00005:00002] saved <00005:00002:180013>, term 2, file count 0
+2026-10-16T22:02:40.002054518Z 2026-10-16 22:02:40.001958 I | raftpb: going to call compact on 165012
+2026-10-16T22:02:42.822824931Z 2026-10-16 22:02:42.822684 I | dragonboat: [00004:00002] saved <00004:00002:178763>, term 2, file count 0
+2026-10-16T22:02:42.825668209Z 2026-10-16 22:02:42.825585 I | raftpb: going to call compact on 165012
+2026-10-16T22:02:46.583515564Z 2026-10-16 22:02:46.583383 I | dragonboat: [00008:00002] saved <00008:00002:187510>, term 2, file count 0
+2026-10-16T22:02:46.586172793Z 2026-10-16 22:02:46.586040 I | raftpb: going to call compact on 168759
+2026-10-16T22:02:47.690163035Z 2026-10-16 22:02:47.690005 I | dragonboat: [00001:00002] saved <00001:00002:250028>, term 2, file count 0
+2026-10-16T22:02:47.692734545Z 2026-10-16 22:02:47.692638 I | raftpb: going to call compact on 240026
+2026-10-16T22:02:49.270349530Z {"level":"WARN","time":"2026-10-16T22:02:49.269Z","component":"kafka-produce","caller":"kafka/produce.go:2501","msg":"kafka produce: answering an idempotent batch OUT_OF_ORDER_SEQUENCE_NUMBER (45)","host":"bench-1","channel":"kafka.cr-kafka-k1-1792187992~14","phase":"admission","producer_id":1005,"producer_epoch":2,"first_sequence":13690,"last_sequence":13698,"producer_known":true,"stored_last_sequence":13649,"admitted_last_sequence":13649,"stored_epoch":2}
+2026-10-16T22:02:50.650759298Z 2026-10-16 22:02:50.650634 I | dragonboat: [00002:00002] saved <00002:00002:247524>, term 3, file count 0
+2026-10-16T22:02:50.654739867Z 2026-10-16 22:02:50.654636 I | raftpb: going to call compact on 236273
+2026-10-16T22:02:58.914092539Z 2026-10-16 22:02:58.913965 I | dragonboat: [00003:00002] saved <00003:00002:137513>, term 2, file count 0
+2026-10-16T22:02:58.918168661Z 2026-10-16 22:02:58.918048 I | raftpb: going to call compact on 125012
+2026-10-16T22:02:59.744343258Z 2026-10-16 22:02:59.744206 I | dragonboat: [00001:00002] saved <00001:00002:260029>, term 2, file count 0
+2026-10-16T22:02:59.747992026Z 2026-10-16 22:02:59.747764 I | raftpb: going to call compact on 250028
+2026-10-16T22:03:00.639743726Z 2026-10-16 22:03:00.639617 I | dragonboat: [00007:00002] saved <00007:00002:192512>, term 2, file count 0
+2026-10-16T22:03:00.642664927Z 2026-10-16 22:03:00.642531 I | raftpb: going to call compact on 175011
+2026-10-16T22:03:01.073177705Z 2026-10-16 22:03:01.073008 I | dragonboat: [00006:00002] saved <00006:00002:130008>, term 2, file count 0
+2026-10-16T22:03:01.076242165Z 2026-10-16 22:03:01.076091 I | raftpb: going to call compact on 113757
+2026-10-16T22:03:03.941726659Z 2026-10-16 22:03:03.941588 I | dragonboat: [00002:00002] saved <00002:00002:258775>, term 3, file count 0
+2026-10-16T22:03:03.945155254Z 2026-10-16 22:03:03.944802 I | raftpb: going to call compact on 247524
+2026-10-16T22:03:04.672789066Z 2026-10-16 22:03:04.672676 I | dragonboat: [00005:00002] saved <00005:00002:195014>, term 2, file count 0
+2026-10-16T22:03:04.675079826Z 2026-10-16 22:03:04.674989 I | raftpb: going to call compact on 180013
+2026-10-16T22:03:05.854092831Z 2026-10-16 22:03:05.853931 I | dragonboat: [00004:00002] saved <00004:00002:192514>, term 2, file count 0
+2026-10-16T22:03:05.856496780Z 2026-10-16 22:03:05.856376 I | raftpb: going to call compact on 178763
+2026-10-16T22:03:11.618078745Z 2026-10-16 22:03:11.617948 I | dragonboat: [00001:00002] saved <00001:00002:270030>, term 2, file count 0
+2026-10-16T22:03:11.621477225Z 2026-10-16 22:03:11.621334 I | raftpb: going to call compact on 260029
+2026-10-16T22:03:15.664283492Z 2026-10-16 22:03:15.664155 I | dragonboat: [00008:00002] saved <00008:00002:206261>, term 2, file count 0
+2026-10-16T22:03:15.667280377Z 2026-10-16 22:03:15.667160 I | raftpb: going to call compact on 187510
+2026-10-16T22:03:17.851078079Z 2026-10-16 22:03:17.850973 I | dragonboat: [00002:00002] saved <00002:00002:270026>, term 3, file count 0
+2026-10-16T22:03:17.853564357Z 2026-10-16 22:03:17.853490 I | raftpb: going to call compact on 258775
+2026-10-16T22:03:23.522902895Z 2026-10-16 22:03:23.522600 I | dragonboat: [00001:00002] saved <00001:00002:280031>, term 2, file count 0
+2026-10-16T22:03:23.525655299Z 2026-10-16 22:03:23.525514 I | raftpb: going to call compact on 270030
+2026-10-16T22:03:26.193789740Z 2026-10-16 22:03:26.193653 I | dragonboat: [00003:00002] saved <00003:00002:150014>, term 2, file count 0
+2026-10-16T22:03:26.196776803Z 2026-10-16 22:03:26.196615 I | raftpb: going to call compact on 137513
+2026-10-16T22:03:28.189820732Z 2026-10-16 22:03:28.189688 I | dragonboat: [00005:00002] saved <00005:00002:210015>, term 2, file count 0
+2026-10-16T22:03:28.192269159Z 2026-10-16 22:03:28.192200 I | raftpb: going to call compact on 195014
+2026-10-16T22:03:28.649688047Z 2026-10-16 22:03:28.649548 I | dragonboat: [00004:00002] saved <00004:00002:206265>, term 2, file count 0
+2026-10-16T22:03:28.652720357Z 2026-10-16 22:03:28.652621 I | raftpb: going to call compact on 192514
+2026-10-16T22:03:29.684751383Z 2026-10-16 22:03:29.684615 I | dragonboat: [00007:00002] saved <00007:00002:210013>, term 2, file count 0
+2026-10-16T22:03:29.687604699Z 2026-10-16 22:03:29.687496 I | raftpb: going to call compact on 192512
+2026-10-16T22:03:31.327475526Z 2026-10-16 22:03:31.327284 I | dragonboat: [00002:00002] saved <00002:00002:281277>, term 3, file count 0
+2026-10-16T22:03:31.330035087Z 2026-10-16 22:03:31.329961 I | raftpb: going to call compact on 270026
+2026-10-16T22:03:35.370846512Z 2026-10-16 22:03:35.370704 I | dragonboat: [00001:00002] saved <00001:00002:290032>, term 2, file count 0
+2026-10-16T22:03:35.373704442Z 2026-10-16 22:03:35.373623 I | raftpb: going to call compact on 280031
+2026-10-16T22:03:41.930518408Z 2026-10-16 22:03:41.930274 I | dragonboat: [00006:00002] saved <00006:00002:146259>, term 2, file count 0
+2026-10-16T22:03:41.933698684Z 2026-10-16 22:03:41.933558 I | raftpb: going to call compact on 130008
+2026-10-16T22:03:44.703218508Z 2026-10-16 22:03:44.703106 I | dragonboat: [00008:00002] saved <00008:00002:225012>, term 2, file count 0
+2026-10-16T22:03:44.705914139Z 2026-10-16 22:03:44.705809 I | raftpb: going to call compact on 206261
+2026-10-16T22:03:45.013110554Z 2026-10-16 22:03:45.012994 I | dragonboat: [00002:00002] saved <00002:00002:292528>, term 3, file count 0
+2026-10-16T22:03:45.017254015Z 2026-10-16 22:03:45.016841 I | raftpb: going to call compact on 281277
+2026-10-16T22:03:47.389488476Z 2026-10-16 22:03:47.389303 I | dragonboat: [00001:00002] saved <00001:00002:300033>, term 2, file count 0
+2026-10-16T22:03:47.392269571Z 2026-10-16 22:03:47.392207 I | raftpb: going to call compact on 290032
+2026-10-16T22:03:49.336754867Z 2026-10-16 22:03:49.336642 I | dragonboat: [00004:00002] saved <00004:00002:220016>, term 2, file count 0
+2026-10-16T22:03:49.339983116Z 2026-10-16 22:03:49.339894 I | raftpb: going to call compact on 206265
+2026-10-16T22:03:52.263207553Z 2026-10-16 22:03:52.263060 I | dragonboat: [00005:00002] saved <00005:00002:225017>, term 2, file count 0
+2026-10-16T22:03:52.266138814Z 2026-10-16 22:03:52.266036 I | raftpb: going to call compact on 210015
+2026-10-16T22:03:54.402863156Z 2026-10-16 22:03:54.402719 I | dragonboat: [00003:00002] saved <00003:00002:162515>, term 2, file count 0
+2026-10-16T22:03:54.405598556Z 2026-10-16 22:03:54.405451 I | raftpb: going to call compact on 150014
+2026-10-16T22:03:56.721057578Z 2026-10-16 22:03:56.720946 I | dragonboat: [00007:00002] saved <00007:00002:227514>, term 2, file count 0
+2026-10-16T22:03:56.723754247Z 2026-10-16 22:03:56.723640 I | raftpb: going to call compact on 210013
+2026-10-16T22:03:58.060920225Z 2026-10-16 22:03:58.060623 I | dragonboat: [00002:00002] saved <00002:00002:303779>, term 3, file count 0
+2026-10-16T22:03:58.063758801Z 2026-10-16 22:03:58.063490 I | raftpb: going to call compact on 292528
+2026-10-16T22:03:58.618464799Z 2026-10-16 22:03:58.618349 I | dragonboat: [00001:00002] saved <00001:00002:310034>, term 2, file count 0
+2026-10-16T22:03:58.620702725Z 2026-10-16 22:03:58.620631 I | raftpb: going to call compact on 300033
+2026-10-16T22:04:10.322802630Z 2026-10-16 22:04:10.322642 I | dragonboat: [00001:00002] saved <00001:00002:320035>, term 2, file count 0
+2026-10-16T22:04:10.326813279Z 2026-10-16 22:04:10.326702 I | raftpb: going to call compact on 310034
+2026-10-16T22:04:11.019653688Z 2026-10-16 22:04:11.019506 I | dragonboat: [00004:00002] saved <00004:00002:233767>, term 2, file count 0
+2026-10-16T22:04:11.022250503Z 2026-10-16 22:04:11.022175 I | raftpb: going to call compact on 220016
+2026-10-16T22:04:11.934256633Z 2026-10-16 22:04:11.934117 I | dragonboat: [00008:00002] saved <00008:00002:243763>, term 2, file count 0
+2026-10-16T22:04:11.937067063Z 2026-10-16 22:04:11.936897 I | raftpb: going to call compact on 225012
+2026-10-16T22:04:11.974927109Z 2026-10-16 22:04:11.974817 I | dragonboat: [00002:00002] saved <00002:00002:315031>, term 3, file count 0
+2026-10-16T22:04:11.977943949Z 2026-10-16 22:04:11.977867 I | raftpb: going to call compact on 303779
+2026-10-16T22:04:15.405761958Z 2026-10-16 22:04:15.405639 I | dragonboat: [00005:00002] saved <00005:00002:240018>, term 2, file count 0
+2026-10-16T22:04:15.408240999Z 2026-10-16 22:04:15.408128 I | raftpb: going to call compact on 225017
+2026-10-16T22:04:17.863049065Z 2026-10-16 22:04:17.862820 I | dragonboat: [00006:00002] saved <00006:00002:162510>, term 2, file count 0
+2026-10-16T22:04:17.865567127Z 2026-10-16 22:04:17.865458 I | raftpb: going to call compact on 146259
+2026-10-16T22:04:20.880587807Z 2026-10-16 22:04:20.880463 I | dragonboat: [00003:00002] saved <00003:00002:175017>, term 2, file count 0
+2026-10-16T22:04:20.882956518Z 2026-10-16 22:04:20.882861 I | raftpb: going to call compact on 162515
+2026-10-16T22:04:22.732432880Z 2026-10-16 22:04:22.732325 I | dragonboat: [00001:00002] saved <00001:00002:330036>, term 2, file count 0
+2026-10-16T22:04:22.735300207Z 2026-10-16 22:04:22.735136 I | raftpb: going to call compact on 320035
+2026-10-16T22:04:25.042502922Z 2026-10-16 22:04:25.042387 I | dragonboat: [00007:00002] saved <00007:00002:245015>, term 2, file count 0
+2026-10-16T22:04:25.045239700Z 2026-10-16 22:04:25.045133 I | raftpb: going to call compact on 227514
+2026-10-16T22:04:25.602371492Z 2026-10-16 22:04:25.602227 I | dragonboat: [00002:00002] saved <00002:00002:326282>, term 3, file count 0
+2026-10-16T22:04:25.605443779Z 2026-10-16 22:04:25.605142 I | raftpb: going to call compact on 315031
+2026-10-16T22:04:33.082395091Z 2026-10-16 22:04:33.082272 I | dragonboat: [00004:00002] saved <00004:00002:247518>, term 2, file count 0
+2026-10-16T22:04:33.084817179Z 2026-10-16 22:04:33.084724 I | raftpb: going to call compact on 233767
+2026-10-16T22:04:34.213255867Z 2026-10-16 22:04:34.212738 I | dragonboat: [00001:00002] saved <00001:00002:340037>, term 2, file count 0
+2026-10-16T22:04:34.215541484Z 2026-10-16 22:04:34.215468 I | raftpb: going to call compact on 330036
+2026-10-16T22:04:38.206060020Z 2026-10-16 22:04:38.205733 I | dragonboat: [00002:00002] saved <00002:00002:337533>, term 3, file count 0
+2026-10-16T22:04:38.208833410Z 2026-10-16 22:04:38.208673 I | raftpb: going to call compact on 326282
+2026-10-16T22:04:38.996528711Z 2026-10-16 22:04:38.996357 I | dragonboat: [00005:00002] saved <00005:00002:255019>, term 2, file count 0
+2026-10-16T22:04:38.998466390Z 2026-10-16 22:04:38.998391 I | raftpb: going to call compact on 240018
+2026-10-16T22:04:40.284403822Z 2026-10-16 22:04:40.284257 I | dragonboat: [00008:00002] saved <00008:00002:262514>, term 2, file count 0
+2026-10-16T22:04:40.286888526Z 2026-10-16 22:04:40.286806 I | raftpb: going to call compact on 243763
+2026-10-16T22:04:46.101275955Z 2026-10-16 22:04:46.101169 I | dragonboat: [00001:00002] saved <00001:00002:350038>, term 2, file count 0
+2026-10-16T22:04:46.104343718Z 2026-10-16 22:04:46.104182 I | raftpb: going to call compact on 340037
+2026-10-16T22:04:47.715537953Z 2026-10-16 22:04:47.715388 I | dragonboat: [00003:00002] saved <00003:00002:187518>, term 2, file count 0
+2026-10-16T22:04:47.717932472Z 2026-10-16 22:04:47.717857 I | raftpb: going to call compact on 175017
+2026-10-16T22:04:51.590876518Z 2026-10-16 22:04:51.590747 I | dragonboat: [00002:00002] saved <00002:00002:348784>, term 3, file count 0
+2026-10-16T22:04:51.593815310Z 2026-10-16 22:04:51.593716 I | raftpb: going to call compact on 337533
+2026-10-16T22:04:52.205711685Z 2026-10-16 22:04:52.205562 I | dragonboat: [00007:00002] saved <00007:00002:262516>, term 2, file count 0
+2026-10-16T22:04:52.208268801Z 2026-10-16 22:04:52.208176 I | raftpb: going to call compact on 245015
+2026-10-16T22:04:55.560680520Z 2026-10-16 22:04:55.560560 I | dragonboat: [00004:00002] saved <00004:00002:261269>, term 2, file count 0
+2026-10-16T22:04:55.563530237Z 2026-10-16 22:04:55.563454 I | raftpb: going to call compact on 247518
+2026-10-16T22:04:56.097152805Z 2026-10-16 22:04:56.097006 I | dragonboat: [00006:00002] saved <00006:00002:178761>, term 2, file count 0
+2026-10-16T22:04:56.100500501Z 2026-10-16 22:04:56.100219 I | raftpb: going to call compact on 162510
+2026-10-16T22:04:57.938988039Z 2026-10-16 22:04:57.938864 I | dragonboat: [00001:00002] saved <00001:00002:360039>, term 2, file count 0
+2026-10-16T22:04:57.941547693Z 2026-10-16 22:04:57.941470 I | raftpb: going to call compact on 350038
+2026-10-16T22:05:02.314701206Z 2026-10-16 22:05:02.314493 I | dragonboat: [00005:00002] saved <00005:00002:270020>, term 2, file count 0
+2026-10-16T22:05:02.317470122Z 2026-10-16 22:05:02.317382 I | raftpb: going to call compact on 255019
+2026-10-16T22:05:04.971897266Z 2026-10-16 22:05:04.971737 I | dragonboat: [00002:00002] saved <00002:00002:360035>, term 3, file count 0
+2026-10-16T22:05:04.974679234Z 2026-10-16 22:05:04.974544 I | raftpb: going to call compact on 348784
+2026-10-16T22:05:09.035333118Z 2026-10-16 22:05:09.035224 I | dragonboat: [00001:00002] saved <00001:00002:370040>, term 2, file count 0
+2026-10-16T22:05:09.038374842Z 2026-10-16 22:05:09.038280 I | raftpb: going to call compact on 360039
+2026-10-16T22:05:09.546696029Z 2026-10-16 22:05:09.546548 I | dragonboat: [00008:00002] saved <00008:00002:281265>, term 2, file count 0
+2026-10-16T22:05:09.549309748Z 2026-10-16 22:05:09.549211 I | raftpb: going to call compact on 262514
+2026-10-16T22:05:15.119665877Z 2026-10-16 22:05:15.119546 I | dragonboat: [00003:00002] saved <00003:00002:200019>, term 2, file count 0
+2026-10-16T22:05:15.122517233Z 2026-10-16 22:05:15.122415 I | raftpb: going to call compact on 187518
+2026-10-16T22:05:16.974316694Z 2026-10-16 22:05:16.974204 I | dragonboat: [00004:00002] saved <00004:00002:275020>, term 2, file count 0
+2026-10-16T22:05:16.976765906Z 2026-10-16 22:05:16.976666 I | raftpb: going to call compact on 261269
+2026-10-16T22:05:18.135354398Z 2026-10-16 22:05:18.135168 I | dragonboat: [00002:00002] saved <00002:00002:371286>, term 3, file count 0
+2026-10-16T22:05:18.137842090Z 2026-10-16 22:05:18.137725 I | raftpb: going to call compact on 360035
+2026-10-16T22:05:19.626210329Z 2026-10-16 22:05:19.626019 I | dragonboat: [00007:00002] saved <00007:00002:280017>, term 2, file count 0
+2026-10-16T22:05:19.629136695Z 2026-10-16 22:05:19.629049 I | raftpb: going to call compact on 262516
+2026-10-16T22:05:20.622334196Z 2026-10-16 22:05:20.622156 I | dragonboat: [00001:00002] saved <00001:00002:380041>, term 2, file count 0
+2026-10-16T22:05:20.625128774Z 2026-10-16 22:05:20.625057 I | raftpb: going to call compact on 370040

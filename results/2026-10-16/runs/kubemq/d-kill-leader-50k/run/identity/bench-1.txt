@@ -1,0 +1,6 @@
+== current
+2026-10-16T22:05:26.003990660Z {"level":"INFO","time":"2026-10-16T22:05:26.003Z","component":"services","caller":"services/services.go:114","msg":"process identity","host":"bench-1","node":"bench-1","incarnation":"2ca9f39e4ee18587","pod":"bench-1","pod_uid":"","container_id":"","pid":1,"start_time":"2026-10-16T22:05:25.976774158Z","version":"v3.6.22"}
+== previous
+2026-10-16T21:56:22.022764639Z {"level":"INFO","time":"2026-10-16T21:56:22.022Z","component":"services","caller":"services/services.go:114","msg":"process identity","host":"bench-1","node":"bench-1","incarnation":"86f9938884ee6e4a","pod":"bench-1","pod_uid":"","container_id":"","pid":1,"start_time":"2026-10-16T21:56:21.796021145Z","version":"v3.6.22"}
+== terminated
+{"restartCount":1,"containerID":"containerd://0b8799f9937ba5a2f1d5a5e5df7244a57a10d1251036e9a9fcfee26e63d6de00","lastState":{"terminated":{"containerID":"containerd://c1d33ea11c025a30f9fee2560e63162b98390d445305506b2b8f66954e5a5e45","exitCode":137,"finishedAt":"2026-10-16T22:05:25Z","reason":"Error","startedAt":"2026-10-16T21:56:21Z"}},"state":{"running":{"startedAt":"2026-10-16T22:05:25Z"}}}

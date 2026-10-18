@@ -1,0 +1,6 @@
+gke-kkshow-b-broker-35790078-vqgs	broker	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074468Ki
+gke-kkshow-b-broker-35790078-0jnw	broker	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074472Ki
+gke-kkshow-b-broker-35790078-lf46	broker	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074472Ki
+gke-kkshow-b-driver-4991f61c-7g26	driver	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074464Ki
+gke-kkshow-b-driver-4991f61c-1753	driver	n2-standard-8	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	7910m	29074476Ki
+gke-kkshow-b-monitoring-14e612e7-5gx7	monitoring	e2-standard-4	Container-Optimized OS from Google	6.12.105+	v1.36.4-gke.1247000	3920m	13591656Ki

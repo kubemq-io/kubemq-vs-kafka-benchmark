@@ -1,0 +1,27 @@
+# Scrape the KubeMQ broker pods' own metrics at 1 s. Without this nothing the server exports
+# (kubemq_*, dragonboat_*, go_*, process_*) reaches the rig's Prometheus: the stack in
+# values.yaml deploys node-exporter and kube-state-metrics only.
+#
+# Applied by up.sh right after the KubemqCluster (the PodMonitor CRD comes with the monitoring
+# stack, installed earlier). `podMonitorSelectorNilUsesHelmValues: false` in values.yaml makes
+# the Prometheus select every PodMonitor, so the `release: kps` label is documentation, not a
+# requirement. `/metrics` on the API port (8080, container port `api-port`) is exempt from the
+# server's API auth (services/api/auth_middleware.go), so no bearer token is configured.
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: kubemq-bench
+  namespace: kubemq
+  labels:
+    release: kps
+spec:
+  selector:
+    matchLabels:
+      app: bench
+  namespaceSelector:
+    matchNames: [kubemq]
+  podMetricsEndpoints:
+    - port: api-port
+      path: /metrics
+      interval: 1s
+      scrapeTimeout: 1s

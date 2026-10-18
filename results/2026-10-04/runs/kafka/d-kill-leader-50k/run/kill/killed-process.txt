@@ -1,0 +1,1 @@
+/usr/bin/tini -w -e 143 -- /opt/kafka/bin/kafka-server-start.sh /tmp/strimzi.properties 

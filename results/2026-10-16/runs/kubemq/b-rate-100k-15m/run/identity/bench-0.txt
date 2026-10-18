@@ -1,0 +1,4 @@
+== current
+== previous
+== terminated
+{"restartCount":0,"containerID":"containerd://1351857833c13dab9bd991061a3144c726c08425999457b2453eadd389b70145","lastState":{},"state":{"running":{"startedAt":"2026-10-16T18:34:43Z"}}}

@@ -1,0 +1,28 @@
+# OpenMessaging Benchmark stock Kafka driver. kafka.yaml and kubemq.yaml must differ in the
+# bootstrap.servers line ONLY: run.sh diffs the two and refuses to run otherwise.
+# Client settings: docs/PLAN.md section 3.
+name: Kafka
+driverClass: io.openmessaging.benchmark.driver.kafka.KafkaBenchmarkDriver
+
+replicationFactor: 3
+
+topicConfig: |
+  min.insync.replicas=2
+
+commonConfig: |
+  bootstrap.servers=bench-kafka-bootstrap.kafka.svc.cluster.local:9092
+
+producerConfig: |
+  acks=all
+  enable.idempotence=true
+  linger.ms=1
+  batch.size=524288
+  buffer.memory=134217728
+  max.in.flight.requests.per.connection=5
+  compression.type=none
+
+consumerConfig: |
+  auto.offset.reset=earliest
+  enable.auto.commit=false
+  group.protocol=classic
+  max.partition.fetch.bytes=10485760

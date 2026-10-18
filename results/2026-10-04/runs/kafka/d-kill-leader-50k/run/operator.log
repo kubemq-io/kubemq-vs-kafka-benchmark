@@ -1,0 +1,50 @@
+2026-10-04T08:49:29.676998153Z 2026-10-04 08:49:29 INFO  AbstractOperator:521 - Reconciliation #182(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:51:27.861276026Z 2026-10-04 08:51:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:51:27.885259749Z 2026-10-04 08:51:27 INFO  AbstractOperator:242 - Reconciliation #183(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:51:29.944394922Z 2026-10-04 08:51:29 INFO  AbstractOperator:521 - Reconciliation #183(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:52:26.129718758Z 2026-10-04 08:52:26 INFO  StrimziPodSetController:350 - Reconciliation #184(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:52:26.131506351Z 2026-10-04 08:52:26 INFO  StrimziPodSetController:388 - Reconciliation #184(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:52:26.131749751Z 2026-10-04 08:52:26 INFO  StrimziPodSetController:350 - Reconciliation #185(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:52:26.132485614Z 2026-10-04 08:52:26 INFO  StrimziPodSetController:388 - Reconciliation #185(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:53:27.865860370Z 2026-10-04 08:53:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:53:27.890858215Z 2026-10-04 08:53:27 INFO  AbstractOperator:242 - Reconciliation #186(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:53:29.916557725Z 2026-10-04 08:53:29 INFO  AbstractOperator:521 - Reconciliation #186(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:55:27.862483761Z 2026-10-04 08:55:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:55:27.886391359Z 2026-10-04 08:55:27 INFO  AbstractOperator:242 - Reconciliation #187(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:55:29.839430863Z 2026-10-04 08:55:29 INFO  AbstractOperator:521 - Reconciliation #187(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:57:26.063390261Z 2026-10-04 08:57:26 INFO  StrimziPodSetController:350 - Reconciliation #188(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:57:26.065268297Z 2026-10-04 08:57:26 INFO  StrimziPodSetController:388 - Reconciliation #188(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:57:27.861527774Z 2026-10-04 08:57:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:57:27.888322051Z 2026-10-04 08:57:27 INFO  AbstractOperator:242 - Reconciliation #189(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:57:29.652516745Z 2026-10-04 08:57:29 INFO  AbstractOperator:521 - Reconciliation #189(timer) Kafka(kafka/bench): reconciled
+2026-10-04T08:57:57.310475393Z 2026-10-04 08:57:57 INFO  StrimziPodSetController:350 - Reconciliation #190(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:57:57.369705208Z 2026-10-04 08:57:57 INFO  StrimziPodSetController:388 - Reconciliation #190(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:57:57.375751731Z 2026-10-04 08:57:57 INFO  StrimziPodSetController:350 - Reconciliation #191(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:57:57.376782019Z 2026-10-04 08:57:57 INFO  StrimziPodSetController:388 - Reconciliation #191(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:57:57.390351038Z 2026-10-04 08:57:57 INFO  StrimziPodSetController:350 - Reconciliation #192(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:57:57.391943706Z 2026-10-04 08:57:57 INFO  StrimziPodSetController:388 - Reconciliation #192(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:58:18.518516130Z 2026-10-04 08:58:18 INFO  StrimziPodSetController:350 - Reconciliation #193(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:58:18.544080419Z 2026-10-04 08:58:18 INFO  StrimziPodSetController:388 - Reconciliation #193(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:58:18.555209366Z 2026-10-04 08:58:18 INFO  StrimziPodSetController:350 - Reconciliation #194(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T08:58:18.556297544Z 2026-10-04 08:58:18 INFO  StrimziPodSetController:388 - Reconciliation #194(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T08:59:27.857267672Z 2026-10-04 08:59:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T08:59:27.884395927Z 2026-10-04 08:59:27 INFO  AbstractOperator:242 - Reconciliation #195(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T08:59:30.039491027Z 2026-10-04 08:59:30 INFO  AbstractOperator:521 - Reconciliation #195(timer) Kafka(kafka/bench): reconciled
+2026-10-04T09:01:27.862733126Z 2026-10-04 09:01:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T09:01:27.885471583Z 2026-10-04 09:01:27 INFO  AbstractOperator:242 - Reconciliation #196(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T09:01:30.016190109Z 2026-10-04 09:01:30 INFO  AbstractOperator:521 - Reconciliation #196(timer) Kafka(kafka/bench): reconciled
+2026-10-04T09:02:26.062209785Z 2026-10-04 09:02:26 INFO  StrimziPodSetController:350 - Reconciliation #197(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T09:02:26.063773619Z 2026-10-04 09:02:26 INFO  StrimziPodSetController:388 - Reconciliation #197(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T09:02:26.128444449Z 2026-10-04 09:02:26 INFO  StrimziPodSetController:350 - Reconciliation #198(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T09:02:26.129578238Z 2026-10-04 09:02:26 INFO  StrimziPodSetController:388 - Reconciliation #198(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T09:02:26.129752477Z 2026-10-04 09:02:26 INFO  StrimziPodSetController:350 - Reconciliation #199(watch) StrimziPodSet(kafka/bench-combined): StrimziPodSet will be reconciled
+2026-10-04T09:02:26.130580200Z 2026-10-04 09:02:26 INFO  StrimziPodSetController:388 - Reconciliation #199(watch) StrimziPodSet(kafka/bench-combined): reconciled
+2026-10-04T09:03:27.866071071Z 2026-10-04 09:03:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T09:03:27.886413724Z 2026-10-04 09:03:27 INFO  AbstractOperator:242 - Reconciliation #200(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T09:03:29.785182932Z 2026-10-04 09:03:29 INFO  AbstractOperator:521 - Reconciliation #200(timer) Kafka(kafka/bench): reconciled
+2026-10-04T09:05:27.866193998Z 2026-10-04 09:05:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T09:05:27.892590750Z 2026-10-04 09:05:27 INFO  AbstractOperator:242 - Reconciliation #201(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T09:05:30.022489233Z 2026-10-04 09:05:30 INFO  AbstractOperator:521 - Reconciliation #201(timer) Kafka(kafka/bench): reconciled
+2026-10-04T09:07:27.864628756Z 2026-10-04 09:07:27 INFO  ClusterOperator:126 - Triggering periodic reconciliation for namespace kafka
+2026-10-04T09:07:27.888756162Z 2026-10-04 09:07:27 INFO  AbstractOperator:242 - Reconciliation #202(timer) Kafka(kafka/bench): Kafka bench will be checked for creation or modification
+2026-10-04T09:07:29.729191032Z 2026-10-04 09:07:29 INFO  AbstractOperator:521 - Reconciliation #202(timer) Kafka(kafka/bench): reconciled
